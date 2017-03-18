@@ -1,8 +1,8 @@
-myApp.controller('TwoController',['FactoryFactory',function(FactoryFactory) {
+myApp.controller('InputController',['FactoryFactory',function(FactoryFactory) {
 
-  console.log('TwoController running');
+  console.log('InputController running');
   var self = this;
-  this.testMessage = 'This is the view-2 test message';
+  this.testMessage = 'IC WORKING STATUS';
 
 //   self.newArray = [];
 //

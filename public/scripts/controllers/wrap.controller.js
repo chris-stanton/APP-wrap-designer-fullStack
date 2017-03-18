@@ -1,9 +1,9 @@
-myApp.controller('OneController',['FactoryFactory',function(FactoryFactory) {
+myApp.controller('WrapController',['FactoryFactory',function(FactoryFactory) {
 
-console.log('OneController running');
+console.log('WrapController running');
 
 var self = this;
-self.testMessage = 'This is the view-1 test message';
+self.testMessage = 'WC WORKING STATUS';
 
 // self.NewArrayOne = [];
 //

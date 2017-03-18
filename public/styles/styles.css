@@ -1,3 +1,4 @@
+/*<------- NAV VIEW ------->*/
 .views {
   font-size: 20px;
   box-shadow: 0px 1px 2px 1px rgba(135, 182, 245, 0.1) inset, 0px -2px 20px #24ee08, 0px 1px 5px rgba(135, 182, 245, 0.1), 0px 2px 10px rgba(135, 182, 245, 0.1);
@@ -5,8 +6,27 @@
   background-color: #696868;
 }
 
-/*nav text*/
 #liNav {
   color: #24ee08;
   background-color: #000000;
+}
+
+/*<------- GUIDE SPACING VIEW(home) ------->*/
+
+/*<------- WRAP DESIGNER VIEW(view1) ------->*/
+#comingSoon {
+  text-align: center;
+  color: red;
+  font-size: 100px;
+  margin-top: 125px;
+  font-family: fantasy;
+}
+
+/*<------- DB INPUT VIEW(view2) ------->*/
+#comingSoon {
+  text-align: center;
+  color: red;
+  font-size: 100px;
+  margin-top: 125px;
+  font-family: fantasy;
 }
