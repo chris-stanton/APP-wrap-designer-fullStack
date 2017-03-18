@@ -1,5 +1,7 @@
+
 //Initialize Firebase Athentication Key
 //Lukes Key
+
 // var config = {
 //   apiKey: "AIzaSyD60Y6DHyLLNzAPq5J5dFJ_T4tiWi4N6jA",
 //   authDomain: "phi-firebase-demo.firebaseapp.com",

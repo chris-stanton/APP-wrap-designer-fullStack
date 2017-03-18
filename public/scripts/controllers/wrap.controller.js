@@ -1,4 +1,4 @@
-myApp.controller('WrapController',['FactoryFactory',function(FactoryFactory) {
+myApp.controller('WrapController',['FactoryFactory',function($firebaseAuth, FactoryFactory) {
 
 console.log('WrapController running');
 

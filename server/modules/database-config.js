@@ -1,1 +1,2 @@
-module.exports = 'mongodb://localhost:27017/phi';
+// changed phi to solo
+module.exports = 'mongodb://localhost:27017/solo';

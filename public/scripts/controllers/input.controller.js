@@ -1,4 +1,4 @@
-myApp.controller('InputController',['FactoryFactory',function(FactoryFactory) {
+myApp.controller('InputController',['FactoryFactory',function($firebaseAuth, FactoryFactory) {
 
   console.log('InputController running');
   var self = this;
