@@ -1,0 +1,12 @@
+.views {
+  font-size: 20px;
+  box-shadow: 0px 1px 2px 1px rgba(135, 182, 245, 0.1) inset, 0px -2px 20px #24ee08, 0px 1px 5px rgba(135, 182, 245, 0.1), 0px 2px 10px rgba(135, 182, 245, 0.1);
+  color: #24ee08;
+  background-color: #696868;
+}
+
+/*nav text*/
+#liNav {
+  color: #24ee08;
+  background-color: #000000;
+}
