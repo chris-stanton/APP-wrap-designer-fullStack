@@ -1,5 +1,5 @@
 {
-  "name": "new-angular-project",
+  "name": "Solo-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,7 @@
     "body-parser": "^1.17.1",
     "bootstrap": "^3.3.7",
     "express": "^4.15.2",
+    "firebase": "^3.7.2",
     "pg": "^6.1.4"
   },
   "devDependencies": {},
