@@ -12,6 +12,10 @@
 }
 
 /*<------- GUIDE SPACING VIEW(home) ------->*/
+img {
+  width: 85%;
+  height: 50px;
+}
 
 /*<------- WRAP DESIGNER VIEW(view1) ------->*/
 #comingSoon {
