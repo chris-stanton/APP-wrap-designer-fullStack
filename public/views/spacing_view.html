@@ -1,4 +1,63 @@
 <body ng-controller="SpacingController">
-  <h2>spacing_view.html</h2>
+<!-- option selectors -->
+  <div class="">
+    <label for="blankName"> Blank Model </label>
+    <select name="blankName" ng-model="sc.newBlank.blankName"></select>
+  </div>
+
+  <div class="">
+    <label for="blankLength"> Blank Length </label>
+    <select name="blankLength" ng-model="sc.newBlank.blankLength"></select>
+  </div>
+
+  <div class="">
+    <label for="handleLength"> Handle Length </label>
+    <select name="handleLength" ng-model="sc.newBlank.handleLength"></select>
+  </div>
+
+  <button ng-click="sc.getBlanks(sc.newBlank)"> SUBMIT </button>
+<!-- end of option selectors -->
+
+<!-- Guide size table -->
+  <table>
+    <thead>
+      <tr>
+        <th> Guide Sizes </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="blank in sc.blankData">
+        <td> {{blank.guideSize.tipTop}} </td>
+        <td> {{blank.guideSize.2nd}} </td>
+        <td> {{blank.guideSize.3rd}} </td>
+        <td> {{blank.guideSize.4th}} </td>
+        <td> {{blank.guideSize.5th}} </td>
+        <td> {{blank.guideSize.6th}} </td>
+      </tr>
+    </tbody>
+  </table>
+
+<!-- reference image -->
+  <img src="assets/images/iceRod.png" alt="">
+
+<!-- guide spacing table -->
+  <table>
+    <thead>
+      <tr>
+        <th> Guide Spacing </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="blank in sc.blankData">
+        <td> {{blank.guideSpacing.tipTop}} </td>
+        <td> {{blank.guideSpacing.2nd}} </td>
+        <td> {{blank.guideSpacing.3rd}} </td>
+        <td> {{blank.guideSpacing.4th}} </td>
+        <td> {{blank.guideSpacing.5th}} </td>
+        <td> {{blank.guideSpacing.6th}} </td>
+      </tr>
+    </tbody>
+  </table>
+
   {{sc.testMessage}}
 </body>
