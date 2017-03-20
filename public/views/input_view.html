@@ -1,5 +1,121 @@
 <body ng-controller="InputController">
-  <h2>input_view.html</h2>
+
   {{ic.testMessage}}
-  <h3 id="comingSoon">Coming Soon!!</h3>
+
+<!-- blank stat's submit start -->
+<h1> Input New Blank DIM's! </h1>
+
+<!-- top page inputs -->
+  <div class="">
+    <label for="blankName"> Blank Name </label>
+    <input type="text" name="blankName" value="" ng-model="ic.newBlankOrder.blankName">
+  </div>
+  <div class="">
+    <label for="mfgName"> MFG Name </label>
+    <input type="text" name="mfgName" value="" ng-model="ic.newBlankOrder.mfgName">
+  </div>
+  <div class="">
+    <label for="blankLength"> Blank Length </label>
+    <input type="text" name="blankLength" value="" ng-model="ic.newBlankOrder.blankLength">
+  </div>
+  <div class="">
+    <label for="blankMaterial"> Blank Material </label>
+    <input type="text" name="blankMaterial" value="" ng-model="ic.newBlankOrder.blankMaterial">
+  </div>
+  <div class="">
+    <label for="handleLength"> Handle Length </label>
+    <input type="text" name="handleLength" value="" ng-model="ic.newBlankOrder.handleLength">
+  </div>
+
+<!-- guide size input table -->
+  <table>
+    <thead>
+      <tr>
+        <th> Guide Sizes </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <label for="tipTip"> Tip-Top </label>
+          <input type="text" name="tipTop" value="" ng-model="ic.newBlankOrder.guideSize.guideTipTop">
+        </td>
+        <td>
+          <label for="guideTwo"> Second Guide </label>
+          <input type="text" name="guidetwo" value="" ng-model="ic.newBlankOrder.guideSize.guideTwo">
+        </td>
+        <td>
+          <label for="guideThree"> Third Guide </label>
+          <input type="text" name="guideThree" value="" ng-model="ic.newBlankOrder.guideSize.guideThree">
+        </td>
+        <td>
+          <label for="guideFour"> Fourth Guide </label>
+          <input type="text" name="guideFour" value="" ng-model="ic.newBlankOrder.guideSize.guideFour">
+        </td>
+        <td>
+          <label for="guideFive"> Fifth Guide </label>
+          <input type="text" name="guideFive" value="" ng-model="ic.newBlankOrder.guideSize.guideFive">
+        </td>
+        <td>
+          <label for="guideSix"> Sixth Guide </label>
+          <input type="text" name="guideSix" value="" ng-model="ic.newBlankOrder.guideSize.guideSix">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+<!-- referance image -->
+  <img src="assets/images/iceRod.png" alt="">
+
+<!-- guide spacing input table -->
+  <table>
+    <thead>
+      <tr>
+        <td>
+          <label for="oneTwo"> TipTop - Second Guide </label>
+          <input type="text" name="oneTwo" value="" ng-model="ic.newBlankOrder.guideSpacing.oneTwo">
+        </td>
+        <td>
+          <label for="twoThree"> Second Guide - Third Guide </label>
+          <input type="text" name="twoThree" value="" ng-model="ic.newBlankOrder.guideSpacing.twoThree">
+        </td>
+        <td>
+          <label for="threeFour"> Third Guide - Fourth Guide </label>
+          <input type="text" name="threeFour" value="" ng-model="ic.newBlankOrder.guideSpacing.threeFour">
+        </td>
+        <td>
+          <label for="fourFive"> Fourth Guide - Fifth Guide </label>
+          <input type="text" name="fourFive" value="" ng-model="ic.newBlankOrder.guideSpacing.fourFive">
+        </td>
+        <td>
+          <label for="fiveSix"> Fifth Guide - Sixth Guide </label>
+          <input type="text" name="fiveSix" value="" ng-model="ic.newBlankOrder.guideSpacing.fiveSix">
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th> Measurements (guide to guide) </th>
+      </tr>
+    </tbody>
+  </table>
+
+<!-- new blank stats submit button -->
+  <button type="button" name="button" ng-click="addBlank(newBlankOrder)"> SUBMIT New Blank Stat's </button>
+
+<!-- thread color sumbit start -->
+  <h1> Input New Blank DIM's! </h1>
+
+  <label for="mfgName"> MFG Name </label>
+  <input type="text" name="mfgName" value="" ng-model="ic.newThreadOrder.mfgName">
+
+  <label for="color"> Color </label>
+  <input type="text" name="color" value="" ng-model="ic.newThreadOrder.color">
+
+  <label for="image"> Image </label>
+  <input type="text" name="image" value="" ng-model="ic.newThreadOrder.image">
+
+<!-- new thread color submit button -->
+  <button type="button" name="button" ng-click="addThread(newThreadOrder)"> SUBMIT New Blank Stat's </button>
+
 </body

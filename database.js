@@ -1,3 +1,12 @@
+//fixes to do
+//[ ] restructure guide size to nonstring keys
+//[ ] change guideSize key to guideTipTop, guideTwo, guideThree, guideFour, guideFive, guideSix
+//[ ] change guideSpacing key to oneTwo, twoThree, threeFour, fourFive, fiveSix
+
+
+
+
+
 
 /*DH blank mesurements, measure from guide to guide
 all other blanks measure from tip to butt*/

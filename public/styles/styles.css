@@ -12,10 +12,8 @@
 }
 
 /*<------- GUIDE SPACING VIEW(home) ------->*/
-img {
-  width: 85%;
-  height: 50px;
-}
+
+
 
 /*<------- WRAP DESIGNER VIEW(view1) ------->*/
 #comingSoon {
@@ -33,4 +31,23 @@ img {
   font-size: 100px;
   margin-top: 125px;
   font-family: fantasy;
+}
+
+/*<------- tables on stats and DB views ------->*/
+td {
+  text-align: center;
+    width: 20%;
+}
+
+th {
+text-align: center;
+}
+
+img {
+  width: 85%;
+  height: 100px;
+}
+
+button {
+  text-align: right;
 }
