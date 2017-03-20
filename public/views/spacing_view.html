@@ -2,18 +2,18 @@
 <!-- option selectors -->
   <div class="">
     <label for="blankName"> Blank Model: </label>
-    <select name="blankName" ng-model="sc.newBlank.blankName"></select>
+    <select name="blankName" ng-options="newBlank.id as newBlank.name for item in newBlank.blankModel track by newBlank.id" ng-model="sc.newBlank.blankName"></select>
   </div>
 
   <div class="">
     <label for="blankLength"> Blank Length: </label>
-    <select name="blankLength" ng-model="sc.newBlank.blankLength"></select>
+    <select name="blankLength" ng-options="item as item.name for item in item.blankLength track by item.id" ng-model="sc.newBlank.blankLength"></select>
   </div>
 
   <div class="">
     <label for="handleLength"> Handle Length: </label>
-    <select name="handleLength" ng-model="sc.newBlank.handleLength"></select>
-
+    <select name="handleLength" ng-options="item.id as item.name for item in item.handleLength track by item.id" ng-model="sc.newBlank.handleLength"></select>
+<!-- ng-options="power.id as power.name for power in entry.powers track by power.id" -->
   </div>
 
   <button ng-click="sc.getBlanks(sc.newBlank)"> SUBMIT </button>
@@ -37,12 +37,12 @@
     <tbody>
       <tr>
       <!-- <tr ng-repeat="blank in sc.blankData"> -->
-        <td> Tip-Top: {{sc.blank.guideSize.guideTipTop}} </td>
-        <td> 2nd: {{sc.blank.guideSize.guideTwo}} </td>
-        <td> 3rd: {{sc.blank.guideSize.guideThree}} </td>
-        <td> 4th: {{sc.blank.guideSize.guideFour}} </td>
-        <td> 5th: {{sc.blank.guideSize.guideFive}} </td>
-        <td> 6th: {{sc.blank.guideSize.guideSix}} </td>
+        <td> Tip-Top: {{sc.blank.guides.guideSize}} </td>
+        <td> 2nd: {{sc.blank.guides.guideSize}} </td>
+        <td> 3rd: {{sc.blank.guides.guideSize}} </td>
+        <td> 4th: {{sc.blank.guides.guideSize}} </td>
+        <td> 5th: {{sc.blank.guides.guideSize}} </td>
+        <td> 6th: {{sc.blank.guides.guideSize}} </td>
       </tr>
     </tbody>
   </table>
@@ -59,11 +59,11 @@
     </thead>
     <tbody>
       <tr>
-        <td> TipTop - Second Guide: {{sc.blank.guideSpacing.oneTwo}} </td>
-        <td> Second - Third Guide: {{sc.blank.guideSpacing.twoThree}} </td>
-        <td> Third - Fourth Guide: {{sc.blank.guideSpacing.threeFour}} </td>
-        <td> Fourth - Fifth Guide: {{sc.blank.guideSpacing.fourFive}} </td>
-        <td> Fifth - Sixth Guide: {{sc.blank.guideSpacing.fiveSix}} </td>
+        <td> TipTop - Second Guide: {{sc.blank.guides.guideSpacing}} </td>
+        <td> Second - Third Guide: {{sc.blank.guides.guideSpacing}} </td>
+        <td> Third - Fourth Guide: {{sc.blank.guides.guideSpacing}} </td>
+        <td> Fourth - Fifth Guide: {{sc.blank.guides.guideSpacing}} </td>
+        <td> Fifth - Sixth Guide: {{sc.blank.guides.guideSpacing}} </td>
       </tr>
     </tbody>
   </table>

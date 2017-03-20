@@ -3,40 +3,43 @@ console.log('FactoryFactory running');
 
 var blankFactory = { list: [] };
 
-
-
-//gets blanks for drop down options from spacing vi
+//gets blanks on startup
+getBlanks();
+//gets blanks for drop down options on spacing view
 function getBlanks() {
     $http.get('/spacing')
       .then(function(response) {
-        console.log("getBlanks Request: ", sresponse);
+        console.log("getBlanks Request: ", response);
         self.blankFactory.list = response.data;
     })//end of .then
 }//end of blanks()
 
-//adds blank to database from input view
+//adds blank to database from input view inputs
 function addBlank(someNewTask) { //update line
     $http({
       method: 'POST', //update line
-      url: '/tasks', //update line
-      data: someNewTask //update line
+      url: '/add', //update line
+      data: newBlankOrder
     }).then(function(response){
       console.log("addBlank Request: ", response);
       //getBlanks();
     });
   }
 
-  //adds thread color to database from input view
+  //adds thread color to database from input view inputs
   function addThread(someNewTask) { //update line
       $http({
         method: 'POST', //update line
-        url: '/tasks', //update line
-        data: someNewTask //update line
+        url: '/add', //update line
+        data: newThreadOrder
       }).then(function(response){
         console.log("addThread Request: ", response);
         //getBlanks();
       });
     }
+
+
+
 
 
   return {
