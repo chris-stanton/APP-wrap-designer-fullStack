@@ -5,7 +5,12 @@ console.log('SpacingController running');
 var self = this;
 self.testMessage = 'SC WORKING STATUS';
 
-// self.blankData = FactoryFactory.getBlanks();
+self.newBlank = {};
+
+//gets all blanks
+self.blankData = function() {
+  FactoryFactory.getBlanks(self.newBlank);
+}
 
 
 

@@ -5,14 +5,14 @@ var blankFactory = { list: [] };
 
 
 
-// //gets blanks for drop down options
-// function getBlanks() {
-//     $http.get('/spacing')
-//       .then(function(response) {
-//         console.log(response);
-//         self.blankFactory.list = response.data;
-//     })//end of .then
-// }//end of blanks()
+//gets blanks for drop down options
+function getBlanks() {
+    $http.get('/spacing')
+      .then(function(response) {
+        console.log(response);
+        self.blankFactory.list = response.data;
+    })//end of .then
+}//end of blanks()
 
 
 
