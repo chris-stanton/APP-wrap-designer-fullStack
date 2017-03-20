@@ -7,6 +7,10 @@ app.use('/inboundURLbase',router)
 
 //Serve back static files
 app.use(express.static(path.join(__dirname, './public')));
+app.use(express.static('server/public'));
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({extended: true}));
+
 
 //Handle index file separately
 app.get('/', function(req, res) {

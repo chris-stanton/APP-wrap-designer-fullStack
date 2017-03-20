@@ -1,8 +1,19 @@
 //fixes to do
-
+//[ ] verfiy correct dims for 'Gill Seeker 24'
 
 /*DH blank mesurements, measure from guide to guide
 all other blanks measure from tip to butt*/
+
+
+/////////////////////////////////////////////////////////////////////////////////
+// <------ DATABASE SETUP CODE ------>
+//specifies which database to use
+use solo
+
+//creates collections within "solo" database
+db.createCollection( ‘dhBlanks’ );
+db.createCollection( ‘mhxBlanks’ );
+db.createCollection( ‘threadColors’ );
 
 
 /*DH blanks*/
@@ -15,24 +26,26 @@ db.dhBlanks.insert(
       blankMaterial: 'Fiberglass',
       guides: [
         {
-          name: 'Tip Top',
+          name: 'tipTop',
           guideSize: 2,
           guideSpacing: 0
         },
-
-      ]
-      guideSize: [
-        {tipTop: 2},
-        {guideTwo: 3},
-        {guideThree: 5},
-        {guideFour: 10}
-        ],
-      guideSpacing: [
-        {2: 0},
-        {3: 2.25},
-        {5: 2.75},
-        {0: 3.5}
-        ],
+        {
+          name: 'guideTwo',
+          guideSize: 3,
+          guideSpacing: 2.25
+        },
+        {
+          name: 'guideThree',
+          guideSize: 5,
+          guideSpacing: 2.75
+        },
+        {
+          name: 'guideFour',
+          guideSize: 10,
+          guideSpacing: 3.5
+        }
+      ],
       handleLength: 3,
       handleType: 'Cork'
     },
@@ -42,20 +55,33 @@ db.dhBlanks.insert(
       mfgName: 'DH Custom Rods and Tackle',
       blankLength: '24',
       blankMaterial: 'Fiberglass',
-      guideSize: [
-        {tipTop: 2},
-        {guideTwo: 3},
-        {guideThree: 4},
-        {guideFour: 5},
-        {guideFifth: 10}
-        ],
-      guideSpacing: [
-        {2: 0},
-        {3: 2.25},
-        {4: 2.5},
-        {5: 3},
-        {10: 3.75}
-        ],
+      guides: [
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 3,
+          guideSpacing: 2.25
+        },
+        {
+          name: 'guideThree',
+          guideSize: 4,
+          guideSpacing: 2.50
+        },
+        {
+          name: 'guideFour',
+          guideSize: 5,
+          guideSpacing: 3.00
+        },
+        {
+          name: 'guideFive',
+          guideSize: 10,
+          guideSpacing: 3.75
+        }
+      ],
       handleLength: 3,
       handleType: 'Cork'
     },
@@ -65,20 +91,33 @@ db.dhBlanks.insert(
       mfgName: 'DH Custom Rods and Tackle',
       blankLength: 26,
       blankMaterial: 'Fiberglass',
-      guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 3'},
-        {'guideThree: 4'},
-        {'guideFour: 5'},
-        {'guideFifth: 10'}
-        ],
-      guideSpacing: [
-        {'2: 0'},
-        {'3: 2'},
-        {'4: 2.25'},
-        {'5: 2.875'},
-        {'10: 3.75'}
-        ],
+      guides: [
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 3,
+          guideSpacing: 2.00
+        },
+        {
+          name: 'guideThree',
+          guideSize: 4,
+          guideSpacing: 2.25
+        },
+        {
+          name: 'guideFour',
+          guideSize: 5,
+          guideSpacing: 2.875
+        },
+        {
+          name: 'guideFive',
+          guideSize: 10,
+          guideSpacing: 3.75
+        }
+      ],
       handleLength: 5,
       handleType: 'Cork'
     },
@@ -89,19 +128,32 @@ db.dhBlanks.insert(
       blankLength: 28,
       blankMaterial: "Fiberglass",
       guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 3'},
-        {'guideThree: 4'},
-        {'guideFour: 5'},
-        {'guideFifth: 10'}
-        ],
-      guideSpacing: [
-        {'2: 0'},
-        {'3: 2.25'},
-        {'4: 2.75'},
-        {'5: 3.5'},
-        {'10: 4.5'}
-        ],
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 3,
+          guideSpacing: 2.25
+        },
+        {
+          name: 'guideThree',
+          guideSize: 4,
+          guideSpacing: 2.75
+        },
+        {
+          name: 'guideFour',
+          guideSize: 5,
+          guideSpacing: 3.50
+        },
+        {
+          name: 'guideFive',
+          guideSize: 10,
+          guideSpacing: 4.50
+        }
+      ],
       handleLength: 5,
       handleType: 'Cork'
     },
@@ -112,21 +164,37 @@ db.dhBlanks.insert(
       blankLength: 32,
       blankMaterial: 'Fiberglass',
       guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 2'},
-        {'guideThree: 3'},
-        {'guideFour: 4'},
-        {'guideFifth: 5'},
-        {'guideSixth: 10'}
-        ],
-      guideSpacing: [
-        {'2: 0'},
-        {'2: 2.25'},
-        {'3: 2 11/16'},
-        {'4: 3 3/16'},
-        {'5: 3 11/16'},
-        {'10: 4.25'},
-        ],
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 2,
+          guideSpacing: 2.25
+        },
+        {
+          name: 'guideThree',
+          guideSize: 3,
+          guideSpacing: 2.69
+        },
+        {
+          name: 'guideFour',
+          guideSize: 4,
+          guideSpacing: 3.19
+        },
+        {
+          name: 'guideFive',
+          guideSize: 5,
+          guideSpacing: 3.69
+        },
+        {
+          name: 'guideSix',
+          guideSize: 10,
+          guideSpacing: 4.25
+        }
+      ],
       handleLength: 5,
       handleType: 'Cork'
     },
@@ -137,24 +205,45 @@ db.dhBlanks.insert(
       blankLength: 36,
       blankMaterial: 'Fiberglass',
       guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 2'},
-        {'guideThree: 3'},
-        {'guideFour: 4'},
-        {'guideFifth: 5'},
-        {'guideSixth: 10'}
-        ],
-      guideSpacing: [
-        {'2: 0'},
-        {'2: 2.25'},
-        {'3: 2.75'},
-        {'4: 3.5'},
-        {'5: 4.5'},
-        {'10: 5.75'}
-        ],
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 2,
+          guideSpacing: 2.25
+        },
+        {
+          name: 'guideThree',
+          guideSize: 3,
+          guideSpacing: 2.75
+        },
+        {
+          name: 'guideFour',
+          guideSize: 4,
+          guideSpacing: 3.50
+        },
+        {
+          name: 'guideFive',
+          guideSize: 5,
+          guideSpacing: 4.50
+        },
+        {
+          name: 'guideSix',
+          guideSize: 10,
+          guideSpacing: 5.75
+        }
+      ],
       handleLength: 5,
       handleType: 'Cork'
     },
+]);
+
+
+
+
 
     {
       blankName: 'Gill Seeker 20',
@@ -162,17 +251,27 @@ db.dhBlanks.insert(
       blankLength: 20,
       blankMaterial: 'Carbon',
       guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 3'},
-        {'3th: 5'},
-        {'guideFour: 10'}
-        ],
-      guideSpacing: [
-        {'2: 0'},
-        {'3: 2'},
-        {'5: 2 3/8'},
-        {'10: 3.5'}
-        ],
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 3,
+          guideSpacing: 2.00
+        },
+        {
+          name: 'guideThree',
+          guideSize: 5,
+          guideSpacing: 2.37
+        },
+        {
+          name: 'guideFour',
+          guideSize: 10,
+          guideSpacing: 3.50
+        }
+      ],
       handleLength: 3,
       handleType: 'Cork'
     },
@@ -183,21 +282,36 @@ db.dhBlanks.insert(
       blankLength: 24,
       blankMaterial: 'Carbon',
       guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 2'},
-        {'guideThree: 3'},
-        {'guideFour: 4'},
-        {'guideFifth: 5'},
-        {'guideSixth: 10'}
-        ],
-      guideSpacing: [
-        {'2: 0'},
-        {'2: 2.25'},
-        {'3: 2.75'},
-        {'4: 3.5'},
-        {'5: 4.5'},
-        {'10: 5.75'}
-        ],
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 2,
+          guideSpacing: 2.25
+        },
+        {
+          name: 'guideThree',
+          guideSize: 3,
+          guideSpacing: 2.75
+        },
+        {
+          name: 'guideFour',
+          guideSize: 4,
+          guideSpacing: 3.50
+        },
+        {
+          name: 'guideFive',
+          guideSize: 5,
+          guideSpacing: 4.50
+        },
+        {
+          name: 'guideSix',
+          guideSize: 10,
+          guideSpacing: 5.75
+      ],
       handleLength: 3,
       handleType: 'Cork'
     }
@@ -208,19 +322,32 @@ db.dhBlanks.insert(
       blankLength: 26,
       blankMaterial: 'Carbon',
       guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 3'},
-        {'guideThree: 4'},
-        {'guideFour: 5'},
-        {'guideFifth: 10'}
-        ],
-      guideSpacing: [
-        {'2: 0'},
-        {'3: 2 1/8'},
-        {'4: 2 3/8'},
-        {'5: 3'},
-        {'10: 4.25'}
-        ],
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 3,
+          guideSpacing: 2.12
+        },
+        {
+          name: 'guideThree',
+          guideSize: 4,
+          guideSpacing: 2.38
+        },
+        {
+          name: 'guideFour',
+          guideSize: 5,
+          guideSpacing: 3.00
+        },
+        {
+          name: 'guideFive',
+          guideSize: 10,
+          guideSpacing: 4.25
+        }
+      ],
       handleLength: 5,
       handleType: 'Cork'
     },
@@ -231,19 +358,32 @@ db.dhBlanks.insert(
       blankLength: 30,
       blankMaterial: 'Carbon',
       guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 3'},
-        {'guideThree: 4'},
-        {'guideFour: 5'},
-        {'guideFifth: 10'}
-        ],
-      guideSpacing: [
-        {'2: 0'},
-        {'3: 2 9/16'},
-        {'4: 3 3/16'},
-        {'5: 3 13/16'},
-        {'10: 4.5'}
-        ],
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 3,
+          guideSpacing: 2.56
+        },
+        {
+          name: 'guideThree',
+          guideSize: 4,
+          guideSpacing: 3.56
+        },
+        {
+          name: 'guideFour',
+          guideSize: 5,
+          guideSpacing: 3.19
+        },
+        {
+          name: 'guideFive',
+          guideSize: 10,
+          guideSpacing: 4.50
+        }
+      ],
       handleLength: 5,
       handleType: 'Cork'
     },
@@ -254,21 +394,37 @@ db.dhBlanks.insert(
       blankLength: 32,
       blankMaterial: 'Carbon',
       guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 2'},
-        {'guideThree: 3'},
-        {'guideFour: 4'},
-        {'guideFifth: 5'},
-        {'guideSixth: 10'}
-        ],
-      guideSpacing: [
-        {'2: 0'},
-        {'2: 2'},
-        {'3: 2 9/16'},
-        {'4: 3 3/16'},
-        {'5: 3 13/16'},
-        {'10: 4.5'}
-        ],
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 2,
+          guideSpacing: 2.00
+        },
+        {
+          name: 'guideThree',
+          guideSize: 3,
+          guideSpacing: 2.56
+        },
+        {
+          name: 'guideFour',
+          guideSize: 4,
+          guideSpacing: 3.19
+        },
+        {
+          name: 'guideFive',
+          guideSize: 5,
+          guideSpacing: 3.81
+        },
+        {
+          name: 'guideSix',
+          guideSize: 10,
+          guideSpacing: 4.50
+        }
+      ],
       handleLength: 5,
       handleType: 'Cork'
     },
@@ -279,19 +435,32 @@ db.dhBlanks.insert(
       blankLength: 24,
       blankMaterial: 'Carbon',
       guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 3'},
-        {'guideThree: 4'},
-        {'guideFour: 5'},
-        {'guideFifth: 10'}
-        ],
-      guideSpacing: [
-        {'2: 0'},
-        {'3: 2.25'},
-        {'4: 2.5'},
-        {'5: 3'},
-        {'10: 3.75'}
-        ],
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 3,
+          guideSpacing: 2.25
+        },
+        {
+          name: 'guideThree',
+          guideSize: 4,
+          guideSpacing: 2.50
+        },
+        {
+          name: 'guideFour',
+          guideSize: 5,
+          guideSpacing: 3.00
+        },
+        {
+          name: 'guideFive',
+          guideSize: 10,
+          guideSpacing: 3.75
+        }
+      ],
       handleLength: 3,
       handleType: 'Cork'
     },
@@ -302,19 +471,32 @@ db.dhBlanks.insert(
       blankLength: 26,
       blankMaterial: "Carbon",
       guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 3'},
-        {'guideThree: 4'},
-        {'guideFour: 5'},
-        {'guideFifth: 10'}
-        ],
-      guideSpacing: [
-        {'2: 0'},
-        {'3: 2 1/8'},
-        {'4: 2 3/8'},
-        {'5: 3.25'},
-        {'10: 4.5'}
-        ],
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 3,
+          guideSpacing: 2.13
+        },
+        {
+          name: 'guideThree',
+          guideSize: 4,
+          guideSpacing: 2.38
+        },
+        {
+          name: 'guideFour',
+          guideSize: 5,
+          guideSpacing: 3.25
+        },
+        {
+          name: 'guideFive',
+          guideSize: 10,
+          guideSpacing: 4.50
+        }
+      ],
       handleLength: 3,
       handleType: 'Cork'
     },
@@ -325,19 +507,32 @@ db.dhBlanks.insert(
       blankLength: 28,
       blankMaterial: "Carbon",
       guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 3'},
-        {'guideThree: 4'},
-        {'guideFour: 5'},
-        {'guideFifth: 10'}
-        ],
-      guideSpacing: [
-        {'2: 0'},
-        {'3: 2 1/8'},
-        {'4: 2 3/8'},
-        {'5: 3.25'},
-        {'10: 4.5'}
-        ],
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 3,
+          guideSpacing: 2.13
+        },
+        {
+          name: 'guideThree',
+          guideSize: 4,
+          guideSpacing: 2.38
+        },
+        {
+          name: 'guideFour',
+          guideSize: 5,
+          guideSpacing: 3.25
+        },
+        {
+          name: 'guideFive',
+          guideSize: 10,
+          guideSpacing: 4.50
+        }
+      ],
       handleLength: 5,
       handleType: 'Cork'
     },
@@ -348,21 +543,37 @@ db.dhBlanks.insert(
       blankLength: 30,
       blankMaterial: "Carbon",
       guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 2'},
-        {'guideThree: 3'},
-        {'guideFour: 4'},
-        {'guideFifth: 5'},
-        {'guideSixth: 10'}
-        ],
-      guideSpacing: [
-        {'2: 0'},
-        {'2: 2'},
-        {'3: 2 1/4'},
-        {'4: 2 7/8'},
-        {'5: 3.25'},
-        {'10: 4 3/8'}
-        ],
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 2,
+          guideSpacing: 2.00
+        },
+        {
+          name: 'guideThree',
+          guideSize: 3,
+          guideSpacing: 2.25
+        },
+        {
+          name: 'guideFour',
+          guideSize: 4,
+          guideSpacing: 2.88
+        },
+        {
+          name: 'guideFive',
+          guideSize: 5,
+          guideSpacing: 3.25
+        },
+        {
+          name: 'guideSix',
+          guideSize: 10,
+          guideSpacing: 4.38
+        }
+      ],
       handleLength: 5,
       handleType: 'Cork'
     },
@@ -373,21 +584,37 @@ db.dhBlanks.insert(
       blankLength: 32,
       blankMaterial: "Carbon",
       guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 2'},
-        {'guideThree: 3'},
-        {'guideFour: 4'},
-        {'guideFifth: 5'},
-        {'guideSixth: 10'}
-        ],
-      guideSpacing: [
-        {'2: 0'},
-        {'2: 2'},
-        {'3: 2 9/16'},
-        {'4: 2 3/16'},
-        {'5: 3 13/16'},
-        {'10: 4.5'}
-        ],
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 2,
+          guideSpacing: 2.00
+        },
+        {
+          name: 'guideThree',
+          guideSize: 3,
+          guideSpacing: 2.56
+        },
+        {
+          name: 'guideFour',
+          guideSize: 4,
+          guideSpacing: 3.19
+        },
+        {
+          name: 'guideFive',
+          guideSize: 5,
+          guideSpacing: 3.81
+        },
+        {
+          name: 'guideSix',
+          guideSize: 10,
+          guideSpacing: 4.50
+        }
+      ],
       handleLength: 5,
       handleType: 'Cork'
     },
@@ -398,19 +625,32 @@ db.dhBlanks.insert(
       blankLength: 26,
       blankMaterial: "Carbon",
       guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 3'},
-        {'guideThree: 4'},
-        {'guideFour: 5'},
-        {'guideFifth: 10'}
-        ],
-      guideSpacing: [
-        {'2: 0'},
-        {'3: 2 1/8'},
-        {'4: 2 3/8'},
-        {'5: 3.25'},
-        {'10: 4.5'}
-        ],
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 3,
+          guideSpacing: 2.13
+        },
+        {
+          name: 'guideThree',
+          guideSize: 4,
+          guideSpacing: 2.38
+        },
+        {
+          name: 'guideFour',
+          guideSize: 5,
+          guideSpacing: 3.25
+        },
+        {
+          name: 'guideFive',
+          guideSize: 10,
+          guideSpacing: 4.50
+        }
+      ],
       handleLength: 5,
       handleType: 'Cork'
     },
@@ -421,19 +661,32 @@ db.dhBlanks.insert(
       blankLength: 28,
       blankMaterial: "Carbon",
       guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 3'},
-        {'guideThree: 4'},
-        {'guideFour: 5'},
-        {'guideFifth: 10'}
-        ],
-      guideSpacing: [
-        {'2: 0'},
-        {'3: 2 1/8'},
-        {'4: 2 3/8'},
-        {'5: 3.25'},
-        {'10: 4.5'}
-        ],
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 3,
+          guideSpacing: 2.13
+        },
+        {
+          name: 'guideThree',
+          guideSize: 4,
+          guideSpacing: 2.38
+        },
+        {
+          name: 'guideFour',
+          guideSize: 5,
+          guideSpacing: 3.25
+        },
+        {
+          name: 'guideFive',
+          guideSize: 10,
+          guideSpacing: 4.50
+        }
+      ],
       handleLength: 5,
       handleType: 'Cork'
     },
@@ -444,21 +697,37 @@ db.dhBlanks.insert(
       blankLength: 30,
       blankMaterial: "Carbon",
       guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 2'},
-        {'guideThree: 3'},
-        {'guideFour: 4'},
-        {'guideFifth: 5'},
-        {'guideSixth: 10'}
-        ],
-      guideSpacing: [
-        {'2: 0'},
-        {'2: 2'},
-        {'3: 2.25'},
-        {'4: 2 7/8'},
-        {'5: 3.75'},
-        {'10: 4.5'}
-        ],
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 2,
+          guideSpacing: 2.00
+        },
+        {
+          name: 'guideThree',
+          guideSize: 3,
+          guideSpacing: 2.25
+        },
+        {
+          name: 'guideFour',
+          guideSize: 4,
+          guideSpacing: 2.88
+        },
+        {
+          name: 'guideFive',
+          guideSize: 5,
+          guideSpacing: 3.75
+        },
+        {
+          name: 'guideSix',
+          guideSize: 10,
+          guideSpacing: 4.50
+        }
+      ],
       handleLength: 5,
       handleType: 'Cork'
     },
@@ -469,21 +738,37 @@ db.dhBlanks.insert(
       blankLength: 32,
       blankMaterial: "Carbon",
       guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 2'},
-        {'guideThree: 3'},
-        {'guideFour: 4'},
-        {'guideFifth: 5'},
-        {'guideSixth: 10'}
-        ],
-      guideSpacing: [
-        {'2: 0'},
-        {'2: 2'},
-        {'3: 2 9/16'},
-        {'4: 3 3/16'},
-        {'5: 3 13/16'},
-        {'10: 4.5'}
-        ],
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 2,
+          guideSpacing: 2.00
+        },
+        {
+          name: 'guideThree',
+          guideSize: 3,
+          guideSpacing: 2.56
+        },
+        {
+          name: 'guideFour',
+          guideSize: 4,
+          guideSpacing: 3.19
+        },
+        {
+          name: 'guideFive',
+          guideSize: 5,
+          guideSpacing: 3.81
+        },
+        {
+          name: 'guideSix',
+          guideSize: 10,
+          guideSpacing: 4.50
+        }
+      ],
       handleLength: 5,
       handleType: 'Cork'
     },
@@ -494,21 +779,37 @@ db.dhBlanks.insert(
       blankLength: 34,
       blankMaterial: "Carbon",
       guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 2'},
-        {'guideThree: 3'},
-        {'guideFour: 4'},
-        {'guideFifth: 5'},
-        {'guideSixth: 10'}
-        ],
-      guideSpacing: [
-        {'2: 0'},
-        {'2: 2'},
-        {'3: 2 11/16'},
-        {'4: 3 7/16'},
-        {'5: 4.25'},
-        {'10: 5 1/8'}
-        ],
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 2,
+          guideSpacing: 2.00
+        },
+        {
+          name: 'guideThree',
+          guideSize: 3,
+          guideSpacing: 2.69
+        },
+        {
+          name: 'guideFour',
+          guideSize: 4,
+          guideSpacing: 3.44
+        },
+        {
+          name: 'guideFive',
+          guideSize: 5,
+          guideSpacing: 4.25
+        },
+        {
+          name: 'guideSix',
+          guideSize: 10,
+          guideSpacing: 5.13
+        }
+      ],
       handleLength: 5,
       handleType: 'Cork'
     },
@@ -519,13 +820,37 @@ db.dhBlanks.insert(
       blankLength: 36,
       blankMaterial: "Carbon",
       guideSize: [
-        {'tipTop: 2'},
-        {'guideTwo: 2'},
-        {'guideThree: 3'},
-        {'guideFour: 4'},
-        {'guideFifth: 5'},
-        {'guideSixth: 10'}
-        ],
+        {
+          name: 'tipTop',
+          guideSize: 2,
+          guideSpacing: 0
+        },
+        {
+          name: 'guideTwo',
+          guideSize: 2,
+          guideSpacing: 2.00
+        },
+        {
+          name: 'guideThree',
+          guideSize: 3,
+          guideSpacing: 2.69
+        },
+        {
+          name: 'guideFour',
+          guideSize: 4,
+          guideSpacing: 3.44
+        },
+        {
+          name: 'guideFive',
+          guideSize: 5,
+          guideSpacing: 4.25
+        },
+        {
+          name: 'guideSix',
+          guideSize: 10,
+          guideSpacing: 5.19
+        }
+      ],
       guideSpacing: [
         {'2: 0'},
         {'2: 2'},
@@ -887,174 +1212,176 @@ db.mhxBlanks.insert(
 ////Thread Colors////
 db.threadColors.insert(
   [
-//NCP
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Black",
       image: "assets/images/threads/0001.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "White",
       image: "assets/images/threads/0002.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Light Blue",
       image: "assets/images/threads/0037.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Cobalt Blue",
       image: "assets/images/threads/0050.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Peach",
       image: "assets/images/threads/0051.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Rose",
       image: "assets/images/threads/0052.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Navy",
       image: "assets/images/threads/0066.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Spring Green",
       image: "assets/images/threads/0105.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Sunburst",
       image: "assets/images/threads/0200.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Garnet",
       image: "assets/images/threads/0206.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Orange",
       image: "assets/images/threads/0221.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Royal Blue",
       image: "assets/images/threads/0245.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Dark Blue",
       image: "assets/images/threads/0246.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Rust",
       image: "assets/images/threads/0257.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Blue Dun",
       image: "assets/images/threads/0272.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Tan",
       image: "assets/images/threads/0290.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Scarlet",
       image: "assets/images/threads/0326.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Candy Apple",
       image: "assets/images/threads/0335.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Marron",
       image: "assets/images/threads/0337.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Gold",
       image: "assets/images/threads/0340.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Dark Brown",
       image: "assets/images/threads/0396.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Hot Pink",
       image: "assets/images/threads/0411.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Charcoal",
       image: "assets/images/threads/0441.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Purple",
       image: "assets/images/threads/0468.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Medium Brown",
       image: "assets/images/threads/0541.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Teal",
       image: "assets/images/threads/0638.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Medium Gray",
       image: "assets/images/threads/0720.jpg"
     },
 
     {
-      mfgName: NCP,
+      mfgName: "NCP",
       color: "Gun Metal",
       image: "assets/images/threads/1011.jpg"
     },
+  ]);
+
+
 
     {
       mfgName: 29,
