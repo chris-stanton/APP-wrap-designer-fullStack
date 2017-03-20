@@ -1,6 +1,7 @@
 myApp.factory('FactoryFactory',['$http',function($http) {
 console.log('FactoryFactory running');
 
+// var self = this;
 var blankFactory = { list: [] };
 
 //gets blanks on startup
@@ -10,7 +11,7 @@ function getBlanks() {
     $http.get('/spacing')
       .then(function(response) {
         console.log("getBlanks Request: ", response);
-        self.blankFactory.list = response.data;
+        blankFactory.list = response.data;
     })//end of .then
 }//end of blanks()
 
@@ -34,11 +35,19 @@ function addBlank(someNewTask) { //update line
         data: newThreadOrder
       }).then(function(response){
         console.log("addThread Request: ", response);
+        self.newEmployee = {};
         //getBlanks();
       });
     }
 
-
+   {
+        console.log(self.newEmployee);
+        // send to server
+        $http.post('/employees', self.newEmployee).then(function(response) {
+          self.newEmployee = {};
+          getEmployees();
+        });
+      };
 
 
 
