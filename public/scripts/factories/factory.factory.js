@@ -3,8 +3,8 @@ console.log('FactoryFactory running');
 
 var blankFactory = { list: [] };
 
-// getBlanks();
-//
+
+
 // //gets blanks for drop down options
 // function getBlanks() {
 //     $http.get('/spacing')
