@@ -10,7 +10,6 @@ blankName VARCHAR(80) NOT NULL,
 mfgName VARCHAR(80) NOT NULL,
 blankLength INT NOT NULL,
 blankMaterial VARCHAR(80),
-guides VARCHAR(200) NOT NULL,
 handleLength INT NOT NULL,
 handleType VARCHAR(80)
 );
@@ -22,7 +21,18 @@ VALUES
         ('Seven Douce', 'DH Custom Rods and Tackle', '24', 'Fiberglass', 'add array here', '3', 'Cork');
 
 
-ALTER TABLE blanks DROP COLUMN guides;
+CREATE TABLE guides (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(80),
+  guideSizeTipTop INT NOT NULL,
+  guideSizeTwo INT NOT NULL,
+  guideSizeThree INT NOT NULL,
+  guideSizeFour INT NOT NULL,
+  guideSizeFive INT,
+  guideSizeSix INT
+);
+
+
 
 
 CREATE TABLE threads (

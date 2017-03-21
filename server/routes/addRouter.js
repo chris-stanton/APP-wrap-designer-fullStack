@@ -35,6 +35,27 @@ router.post('/addBlank', function (req, res) {
 });//end of router.post
 
 
+//adds guides to database
+router.post('/addGuide', function (req, res) {
+  var newBlankOrder = req.body;
+  console.log('add blank: ', newBlankOrder);
+  pool.connect()
+    .then(function (client) {
+//adds guides data to table
+      client.query('INSERT INTO guides (guideSizeTipTop, guideSizeTwo, guideSizeThree, guideSizeFour, guideSizeFive, guideSizeSix) VALUES ($1, $2, $3, $4, $5, $6)',
+        [newBlankOrder.guideSize.guideTipTop, newBlankOrder.guideSize.guideTwo, newBlankOrder.guideSize.guideThree, newBlankOrder.guideSize.guideFour, newBlankOrder.guideSize.guideFive, newBlankOrder.guideSize.guideSix])
+        .then(function (result) {
+          client.release();
+          res.sendStatus(201);
+        })
+        .catch(function (err) {
+          console.log('error on INSERT', err);
+          res.sendStatus(500);
+        });//end of .catch
+    });//end of .then
+});//end of router.post
+
+
 //add newThreadOrder to database
 router.post('/addThread', function (req, res) {
   var newThreadOrder = req.body;

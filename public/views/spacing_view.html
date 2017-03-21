@@ -2,17 +2,23 @@
 <!-- option selectors -->
   <div class="">
     <label for="blankName"> Blank Model: </label>
-    <select name="blankName" ng-options="newBlank.id as newBlank.name for item in newBlank.blankModel track by newBlank.id" ng-model="sc.newBlank.blankName"></select>
+    <select name="blankName" ng-model="sc.newBlank.blankName">
+      <option value=""> Blank Name </option>
+    </select>
   </div>
 
   <div class="">
     <label for="blankLength"> Blank Length: </label>
-    <select name="blankLength" ng-options="item as item.name for item in item.blankLength track by item.id" ng-model="sc.newBlank.blankLength"></select>
+    <select name="blankLength" ng-model="sc.newBlank.blankLength">
+      <option value=""> Blank Length </option>
+    </select>
   </div>
 
   <div class="">
     <label for="handleLength"> Handle Length: </label>
-    <select name="handleLength" ng-options="item.id as item.name for item in item.handleLength track by item.id" ng-model="sc.newBlank.handleLength"></select>
+    <select name="handleLength" ng-model="sc.newBlank.handleLength">
+      <option value=""> Handle Length </option>
+    </select>
 <!-- ng-options="power.id as power.name for power in entry.powers track by power.id" -->
   </div>
 

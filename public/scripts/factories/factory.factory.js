@@ -8,7 +8,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
 //gets blanks on startup
   getBlanks();
 //gets blanks for drop down options on spacing view
-  function getBlanks() {
+  function getBlanks(newBlank) {
       $http({
         method: 'GET',
         url: '/spacing'
@@ -23,6 +23,19 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       $http({
         method: 'POST',
         url: '/add/addBlank',
+        data: newBlankOrder
+      }).then(function(response){
+        console.log("addBlank Request: ", response);
+        self.newblankOrder = {};
+        //getBlanks();
+      });//end of .then
+    }//end of addBlank()
+
+//adds guides to DB
+  function addBlanks(newBlankOrder) {
+      $http({
+        method: 'POST',
+        url: '/add/addGuide',
         data: newBlankOrder
       }).then(function(response){
         console.log("addBlank Request: ", response);
@@ -70,6 +83,8 @@ myApp.factory('FactoryFactory',['$http',function($http) {
 
 
   return {
+//gets blank stats for spacing view
+    getBlanks : getBlanks,
 //blank list for spacing view select options - object
     blankFactoryObject : blankFactoryObject,
 //database blank submission - function
