@@ -27,22 +27,32 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       }).then(function(response){
         console.log("addBlank Request: ", response);
         self.newblankOrder = {};
-        //getBlanks();
       });//end of .then
-    }//end of addBlank()
+    }
 
-//adds guides to DB
+//adds guides to database from input view
   function addBlanks(newBlankOrder) {
       $http({
         method: 'POST',
         url: '/add/addGuide',
         data: newBlankOrder
       }).then(function(response){
-        console.log("addBlank Request: ", response);
+        console.log("addGuide Request: ", response);
         self.newblankOrder = {};
-        //getBlanks();
       });//end of .then
-    }//end of addBlank()
+    }
+
+//adds guide measurments to database from input view
+  function addBlanks(newBlankOrder) {
+      $http({
+        method: 'POST',
+        url: '/add/addGuideMeasurement',
+        data: newBlankOrder
+      }).then(function(response){
+        console.log("addGuideMeasurement Request: ", response);
+        self.newblankOrder = {};
+      });//end of .then
+    }
 
 //adds thread color to database from input view inputs
   function addThreads(newThreadOrder) {
@@ -53,7 +63,6 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       }).then(function(response){
         console.log("addThread Request: ", response);
         self.newThreadOrder = {};
-        //getBlanks();
       });//end of .then
     }
 
@@ -96,8 +105,8 @@ myApp.factory('FactoryFactory',['$http',function($http) {
 //deauthenticate function - function
     deAuthUser : deAuthUser,
 //return after google authentication login - object
-    updateAuth : updateAuth, //not sure about this line
+    updateAuth : updateAuth, 
 //return after google authentication logout - object
-    updateDeAuth : updateDeAuth //not sure about this line
+    updateDeAuth : updateDeAuth
   }
 }]);

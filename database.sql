@@ -33,6 +33,16 @@ CREATE TABLE guides (
 );
 
 
+CREATE TABLE guideSpacing (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(80),
+  oneTwo INT NOT NULL,
+  twoThree INT NOT NULL,
+  threeFour INT,
+  fourFive INT,
+  fiveSix INT
+);
+
 
 
 CREATE TABLE threads (
