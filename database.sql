@@ -1,14 +1,27 @@
-//fixes to do
-//[ ] verfiy correct dims for 'Gill Seeker 24'
 
 /*DH blank mesurements, measure from guide to guide
 all other blanks measure from tip to butt*/
 
 
+CREATE TABLE blanks (
+id SERIAL PRIMARY KEY,
+email_address VARCHAR(80)
+);
+
+CREATE TABLE threads (
+id SERIAL PRIMARY KEY,
+mfgName VARCHAR(80)
+color VARCHAR(80)
+image
+{
+  mfgName: "NCP",
+  color: "Dark Brown",
+  image: "assets/images/threads/0396.jpg"
+},
+
 /////////////////////////////////////////////////////////////////////////////////
-// <------ DATABASE SETUP CODE ------>
+// <------ DATABASE SETUP CODE FOR MONGODB ------>
 //specifies which database to use
-use solo
 
 //creates collections within "solo" database
 db.createCollection( ‘dhBlanks’ );

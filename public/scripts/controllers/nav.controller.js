@@ -4,15 +4,14 @@ myApp.controller('InputController',['FactoryFactory',function($firebaseAuth, Fac
   var self = this;
   this.testMessage = 'IC WORKING STATUS';
 
+
 //google authenticate
-  self.authUser = function(){
-    FactoryFactory.authUser();
-  };
+  self.authUser = FactoryFactory.authUser;
+
 
 //google de-authedicate
-  self.deAuthUser = function(){
-    FactoryFactory.DeAuthUser();
-  };
+  self.deAuthUser = FactoryFactory.DeAuthUser;
+  
 
 
 

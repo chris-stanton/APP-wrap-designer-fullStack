@@ -1,17 +1,19 @@
+// var decoder = require('./modules/decoder');
+
 var express = require('express');
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
+
 var spacingRouter = require('./server/routes/spacingRouter.js');
 var addRouter = require('./server/routes/addRouter.js');
 var authRouter = require('./server/routes/authRouter.js');
 
-app.use('/inboundURLbase',spacingRouter);
-
 //static files
-app.use(express.static(path.join(__dirname, './public')));
+app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use('/inboundURLbase',spacingRouter);
 
 //routers
 app.use('/spacing', spacingRouter);
@@ -26,16 +28,7 @@ app.listen(app.get('port'), function() {
 });
 
 
-// var express = require('express');
-// var app = express();
-// var path = require('path');
-// var bodyParser = require('body-parser');
-// var decoder = require('./modules/decoder');
-// var mongoConnection = require('./modules/mongo-connection');
-// var privateData = require('./routes/private-data');
-//
-// var portDecision = process.env.PORT || 5000;
-//
+
 // app.get('/', function(req, res){
 //   res.sendFile(path.resolve('./public/views/index.html'));
 // });

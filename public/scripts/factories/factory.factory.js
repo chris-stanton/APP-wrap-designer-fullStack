@@ -1,7 +1,7 @@
 myApp.factory('FactoryFactory',['$http',function($http) {
 
   console.log('FactoryFactory running');
-  var blankFactory = { list: [] };
+  var blankFactoryObject = { list: [] };
   var updateAuth = { list: [] };
   var updateDeAuth = { list: [] };
 
@@ -19,7 +19,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     }//end of getblanks()
 
 //adds blank to database from input view inputs
-  function addBlanks() {
+  function addBlanks(newBlankOrder) {
       $http({
         method: 'POST',
         url: '/add',
@@ -32,7 +32,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     }//end of addBlank()
 
 //adds thread color to database from input view inputs
-  function addThreads() {
+  function addThreads(newThreadOrder) {
       $http({
         method: 'POST',
         url: '/add',
@@ -71,7 +71,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
 
   return {
 //blank list for spacing view select options - object
-    blankFactory : blankFactory,
+    blankFactoryObject : blankFactoryObject,
 //database blank submission - function
     addBlanks : addBlanks,
 //database blank submission - function
