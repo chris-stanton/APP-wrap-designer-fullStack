@@ -13,7 +13,7 @@ var config = {
 var pool = new pg.Pool(config);
 
 //gets all blanks
-router.get('/', function (req, res) {
+router.get('/allBlanks', function (req, res) {
   pool.connect()
     .then(function (client) {
       client.query('SELECT * FROM blanks')
@@ -28,11 +28,11 @@ router.get('/', function (req, res) {
     });
 });
 
-//gets all guide sizes
-router.get('/', function (req, res) {
+//gets specificBlank
+router.get('/specificBlanks', function (req, res) {
   pool.connect()
     .then(function (client) {
-      client.query('SELECT blankName, blanklength, handlelength FROM blanks')
+      client.query('SELECT blankName, blanklength FROM blanks')
         .then(function (result) {
           client.release();
           res.send(result.rows);

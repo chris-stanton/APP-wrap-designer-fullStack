@@ -17,7 +17,7 @@ var config = {
 var pool = new pg.Pool(config);
 
 //add blanks to database
-router.post('/addBlank', function (req, res) {
+router.post('/blank', function (req, res) {
   var newBlankOrder = req.body;
   console.log('add blank: ', newBlankOrder);
   pool.connect()
@@ -37,7 +37,7 @@ router.post('/addBlank', function (req, res) {
 });//end of router.post
 
 //adds guides to database
-router.post('/addGuide', function (req, res) {
+router.post('/guide', function (req, res) {
   var newBlankOrder = req.body;
   console.log('add guide: ', newBlankOrder);
   pool.connect()
@@ -56,7 +56,7 @@ router.post('/addGuide', function (req, res) {
 });//end of router.post
 
 //adds guide measurements to database - need to creat table
-router.post('/addGuideMeasurement', function (req, res) {
+router.post('/guideMeasurement', function (req, res) {
   var newBlankOrder = req.body;
   console.log('add guide measurement: ', newBlankOrder);
   pool.connect()

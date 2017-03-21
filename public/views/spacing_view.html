@@ -1,4 +1,4 @@
-
+{{sc.newBlank}}
 <!-- option selectors -->
   <div class="">
     <label for="blankName"> Blank Model: </label>
@@ -10,35 +10,35 @@
   <div class="">
     <label for="blankLength"> Blank Length: </label>
     <select name="blankLength" ng-model="sc.newBlank.blankLength">
-      <option ng-repeat="onLoad in sc.onLoad.list" value="{{onLoad.blanklength}}"> {{onLoad.blanklength}} </option>
+      <option ng-repeat="onLoad in sc.onLoad.list" value='{{onLoad.blanklength}}"'> {{onLoad.blanklength}} </option>
     </select>
   </div>
 
   <div class="">
     <label for="handleLength"> Handle Length: </label>
     <select name="handleLength" ng-model="sc.newBlank.handleLength">
-      <option value="3"> 3" </option>
-      <option value="5"> 5" </option>
-      <option value="6"> 6" </option>
-      <option value="8"> 8" </option>
+      <option value='3"'> 3" </option>
+      <option value='5"'> 5" </option>
+      <option value='6"'> 6" </option>
+      <option value='8"'> 8" </option>
     </select>
 <!-- ng-options="power.id as power.name for power in entry.powers track by power.id" -->
   </div>
 
-  <button ng-click="sc.getSpecificBlank(sc.newBlank)"> SUBMIT </button>
+  <button ng-click="sc.getSpecificBlank(newBlank)"> SUBMIT </button>
 
 <!-- current blank data display -->
-  <h2>
+  <h3>
     <div> Blank Name: {{sc.newBlank.blankName}} </div>
     <div> Blank Length: {{sc.newBlank.blankLength}} </div>
     <div> Handle Length: {{sc.newBlank.handleLength}} </div>
-  </h2>
+  </h3>
 
 <!-- Guide size table -->
   <table>
     <thead>
       <tr>
-        <th> Guide Sizes </th>
+        <th> Guide Sizes: </th>
       </tr>
     </thead>
     <tbody>
@@ -60,7 +60,7 @@
   <table>
     <thead>
       <tr>
-        <th> Guide Spacing </th>
+        <th> Guide Spacing: </th>
       </tr>
     </thead>
     <tbody>
