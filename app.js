@@ -2,16 +2,18 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
-var router = require('./server/routes/routes.js');
+var spacingRouter = require('./server/routes/spacingRouter.js');
+var addRouter = require('./server/routes/addRouter.js');
 
-app.use('/inboundURLbase',router)
+app.use('/inboundURLbase',spacingRouter);
 
 //Serve back static files
 app.use(express.static(path.join(__dirname, './public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use('/spacing', router);
+app.use('/spacing', spacingRouter);
+app.use('/add', addRouter)
 
 
 //Handle index file separately

@@ -1,62 +1,57 @@
 myApp.factory('FactoryFactory',['$http',function($http) {
-console.log('FactoryFactory running');
 
-// var self = this;
-var blankFactory = { list: [] };
+  console.log('FactoryFactory running');
+  var blankFactory = { list: [] };
 
 //gets blanks on startup
-getBlanks();
+  getBlanks();
 //gets blanks for drop down options on spacing view
-function getBlanks() {
-    $http.get('/spacing')
-      .then(function(response) {
-        console.log("getBlanks Request: ", response);
-        blankFactory.list = response.data;
-    })//end of .then
-}//end of blanks()
+  function getBlanks() {
+      $http({
+        method: 'GET',
+        url: '/spacing'
+      }).then(function(response) {
+          console.log("getBlanks Request: ", response);
+          blankFactory.list = response.data;
+      });//end of .then
+    }//end of getblanks()
 
 //adds blank to database from input view inputs
-function addBlank(someNewTask) { //update line
-    $http({
-      method: 'POST', //update line
-      url: '/add', //update line
-      data: newBlankOrder
-    }).then(function(response){
-      console.log("addBlank Request: ", response);
-      //getBlanks();
-    });
-  }
+  function addBlank() {
+      $http({
+        method: 'POST',
+        url: '/add',
+        data: newBlankOrder
+      }).then(function(response){
+        console.log("addBlank Request: ", response);
+        //self.newblankOrder = {};
+        //getBlanks();
+      });//end of .then
+    }//end of addBlank()
 
   //adds thread color to database from input view inputs
-  function addThread(someNewTask) { //update line
+  function addThread() {
       $http({
-        method: 'POST', //update line
-        url: '/add', //update line
+        method: 'POST',
+        url: '/add',
         data: newThreadOrder
       }).then(function(response){
         console.log("addThread Request: ", response);
-        self.newEmployee = {};
+        //self.newThreadOrder = {};
         //getBlanks();
-      });
+      });//end of .then
     }
 
-   {
-        console.log(self.newEmployee);
-        // send to server
-        $http.post('/employees', self.newEmployee).then(function(response) {
-          self.newEmployee = {};
-          getEmployees();
-        });
-      };
+
 
 
 
   return {
-//blank list for spacing view select options
+//blank list for spacing view select options - object
     blankFactory : blankFactory,
-//database blank submission
+//database blank submission - function
     addBlank : addBlank,
-//database blank submission
-    addThread : addThread,
+//database blank submission - function
+    addThread : addThread
   }
 }]);
