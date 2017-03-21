@@ -12,21 +12,21 @@ var config = {
 
 var pool = new pg.Pool(config);
 
-
-// router.get('/', function (req, res) {
-//   pool.connect()
-//     .then(function (client) {
-//       client.query('') //SELECT * FROM clients
-//         .then(function (result) {
-//           client.release();
-//           res.send(result.rows);
-//         })
-//         .catch(function (err) {
-//           console.log('error on SELECT', err);
-//           res.sendStatus(500);
-//         });
-//     });
-// });
+//gets all blanks
+router.get('/', function (req, res) {
+  pool.connect()
+    .then(function (client) {
+      client.query('SELECT * FROM blanks')
+        .then(function (result) {
+          client.release();
+          res.send(result.rows);
+        })
+        .catch(function (err) {
+          console.log('error on SELECT', err);
+          res.sendStatus(500);
+        });
+    });
+});
 
 
 

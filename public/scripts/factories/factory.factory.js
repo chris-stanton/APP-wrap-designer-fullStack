@@ -14,7 +14,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
         url: '/spacing'
       }).then(function(response) {
           console.log("getBlanks Request: ", response);
-          blankFactory.list = response.data;
+          blankFactoryObject.list = response.data;
       });//end of .then
     }//end of getblanks()
 
@@ -22,7 +22,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
   function addBlanks(newBlankOrder) {
       $http({
         method: 'POST',
-        url: '/add',
+        url: '/add/addBlank',
         data: newBlankOrder
       }).then(function(response){
         console.log("addBlank Request: ", response);
@@ -35,7 +35,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
   function addThreads(newThreadOrder) {
       $http({
         method: 'POST',
-        url: '/add',
+        url: '/add/addThread',
         data: newThreadOrder
       }).then(function(response){
         console.log("addThread Request: ", response);

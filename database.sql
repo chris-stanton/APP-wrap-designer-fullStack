@@ -1,23 +1,44 @@
 
 /*DH blank mesurements, measure from guide to guide
 all other blanks measure from tip to butt*/
-
+////////////////////////////////////////////////////////////////////////////////
+// <------ DATABASE SETUP CODE FOR SQL ------>
 
 CREATE TABLE blanks (
 id SERIAL PRIMARY KEY,
-email_address VARCHAR(80)
+blankName VARCHAR(80) NOT NULL,
+mfgName VARCHAR(80) NOT NULL,
+blankLength INT NOT NULL,
+blankMaterial VARCHAR(80),
+guides VARCHAR(200) NOT NULL,
+handleLength INT NOT NULL,
+handleType VARCHAR(80)
 );
+
+INSERT INTO blanks (blankName, mfgName, blankLength, blankMaterial, guides, handleLength, handleType)
+VALUES
+-- values have baan added to the database
+        ('Mini Bite', 'DH Custom Rods and Tackle', '21', 'Fiberglass', 'add array here', '3', 'Cork');
+        ('Seven Douce', 'DH Custom Rods and Tackle', '24', 'Fiberglass', 'add array here', '3', 'Cork');
+
 
 CREATE TABLE threads (
 id SERIAL PRIMARY KEY,
-mfgName VARCHAR(80)
-color VARCHAR(80)
-image
-{
-  mfgName: "NCP",
-  color: "Dark Brown",
-  image: "assets/images/threads/0396.jpg"
-},
+mfgName VARCHAR(80),
+color VARCHAR(80),
+image VARCHAR(80)
+);
+
+INSERT INTO threads (mfgName, color, image)
+VALUES
+-- values have baan added to the database
+        ('NCP', 'Black', "assets/images/threads/0001.jpg"),
+       ('NCP', 'White', "assets/images/threads/0002.jpg"),
+       ('NCP', 'Light Blue', "assets/images/threads/0037.jpg"),
+       ('NCP', 'Cobalt Blue', "assets/images/threads/0050.jpg"),
+       ('NCP', 'Peach', "assets/images/threads/0051.jpg");
+
+
 
 /////////////////////////////////////////////////////////////////////////////////
 // <------ DATABASE SETUP CODE FOR MONGODB ------>

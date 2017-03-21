@@ -7,7 +7,7 @@ self.testMessage = 'SC WORKING STATUS';
 self.newBlankOrder = {};
 self.blankData = [];
 
-self.blankData = FactoryFactory.blankFactoryObject;
+//self.blankData = FactoryFactory.blankFactoryObject;
 console.log(self.blankData);
 
 
