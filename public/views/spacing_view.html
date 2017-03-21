@@ -1,36 +1,39 @@
-<body ng-controller="SpacingController">
+{{sc.onLoad.list}}
 <!-- option selectors -->
   <div class="">
     <label for="blankName"> Blank Model: </label>
     <select name="blankName" ng-model="sc.newBlank.blankName">
-      <option value=""> Blank Name </option>
+      <option ng-repeat="onLoad in sc.onLoad.list" value="{{onLoad.blankname}}"> {{onLoad.blankname}} </option>
     </select>
   </div>
 
   <div class="">
     <label for="blankLength"> Blank Length: </label>
     <select name="blankLength" ng-model="sc.newBlank.blankLength">
-      <option value=""> Blank Length </option>
+      <option ng-repeat="onLoad in sc.onLoad.list" value="{{onLoad.blanklength}}"> {{onLoad.blanklength}} </option>
     </select>
   </div>
 
   <div class="">
     <label for="handleLength"> Handle Length: </label>
     <select name="handleLength" ng-model="sc.newBlank.handleLength">
-      <option value=""> Handle Length </option>
+      <option value="3"> 3" </option>
+      <option value="5"> 5" </option>
+      <option value="6"> 6" </option>
+      <option value="8"> 8" </option>
     </select>
 <!-- ng-options="power.id as power.name for power in entry.powers track by power.id" -->
   </div>
 
-  <button ng-click="sc.getBlanks(sc.newBlank)"> SUBMIT </button>
+  <button ng-click="sc.getSpecificBlank(sc.newBlank)"> SUBMIT </button>
 
 <!-- current blank data display -->
   <h2>
     <ul ng-repeat="blank in sc.blankData">
-    <div> Blank Length: {{sc.blank.blankName}} </div>
-    <div> MFG Name: {{sc.blank.mfgName}} </div>
-    <div> Blank Name: {{sc.blank.blankLength}} </div>
-    <div> Handle Length: {{sc.blank.handleLength}} </div>
+    <li> Blank Length: {{sc.blank.blankName}} </li>
+    <li> MFG Name: {{sc.blank.mfgName}} </li>
+    <li> Blank Name: {{sc.blank.blankLength}} </li>
+    <li> Handle Length: {{sc.blank.handleLength}} </li>
   </h2>
 
 <!-- Guide size table -->
@@ -42,7 +45,7 @@
     </thead>
     <tbody>
       <tr>
-      <!-- <tr ng-repeat="blank in sc.blankData"> -->
+      <tr ng-repeat="blank in sc.blankData">
         <td> Tip-Top: {{sc.blank.guides.guideSize}} </td>
         <td> 2nd: {{sc.blank.guides.guideSize}} </td>
         <td> 3rd: {{sc.blank.guides.guideSize}} </td>
@@ -64,7 +67,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr ng-repeat="blank in sc.blankData">
         <td> TipTop - Second Guide: {{sc.blank.guides.guideSpacing}} </td>
         <td> Second - Third Guide: {{sc.blank.guides.guideSpacing}} </td>
         <td> Third - Fourth Guide: {{sc.blank.guides.guideSpacing}} </td>
@@ -73,4 +76,3 @@
       </tr>
     </tbody>
   </table>
-</body>

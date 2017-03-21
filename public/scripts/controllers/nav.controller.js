@@ -1,4 +1,4 @@
-myApp.controller('InputController',['FactoryFactory',function($firebaseAuth, FactoryFactory) {
+myApp.controller('InputController',['FactoryFactory',function(FactoryFactory) {
 
   console.log('NavController running');
   var self = this;
@@ -11,7 +11,7 @@ myApp.controller('InputController',['FactoryFactory',function($firebaseAuth, Fac
 
 //google de-authedicate
   self.deAuthUser = FactoryFactory.DeAuthUser;
-  
+
 
 
 

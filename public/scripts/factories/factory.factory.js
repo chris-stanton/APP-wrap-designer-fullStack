@@ -1,6 +1,7 @@
 myApp.factory('FactoryFactory',['$http',function($http) {
 
   console.log('FactoryFactory running');
+
   var blankFactoryObject = { list: [] };
   var updateAuth = { list: [] };
   var updateDeAuth = { list: [] };
@@ -8,12 +9,12 @@ myApp.factory('FactoryFactory',['$http',function($http) {
 //gets blanks on startup
   getBlanks();
 //gets blanks for drop down options on spacing view
-  function getBlanks(newBlank) {
+  function getBlanks() {
       $http({
         method: 'GET',
         url: '/spacing'
       }).then(function(response) {
-          console.log("getBlanks Request: ", response);
+          console.log("getBlanks Request: ", response.data);
           blankFactoryObject.list = response.data;
       });//end of .then
     }//end of getblanks()
@@ -94,6 +95,8 @@ myApp.factory('FactoryFactory',['$http',function($http) {
   return {
 //gets blank stats for spacing view
     getBlanks : getBlanks,
+//gets specific blank info from select menu dropdowns for spacing view
+    getSpecificBlank : getSpecificBlank,
 //blank list for spacing view select options - object
     blankFactoryObject : blankFactoryObject,
 //database blank submission - function
@@ -105,7 +108,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
 //deauthenticate function - function
     deAuthUser : deAuthUser,
 //return after google authentication login - object
-    updateAuth : updateAuth, 
+    updateAuth : updateAuth,
 //return after google authentication logout - object
     updateDeAuth : updateDeAuth
   }

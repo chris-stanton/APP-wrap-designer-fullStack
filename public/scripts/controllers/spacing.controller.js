@@ -1,22 +1,15 @@
-myApp.controller('SpacingController', ['FactoryFactory',function($firebaseAuth, FactoryFactory) {
+myApp.controller('SpacingController', ['FactoryFactory',function(FactoryFactory) {
 
 console.log('SpacingController running');
 
 var self = this;
 self.testMessage = 'SC WORKING STATUS';
-self.newBlank = {};
-self.blankData = [];
-
-//self.blankData = FactoryFactory.blankFactoryObject;
-console.log(self.blankData);
-
-
-//gets all blanks
-self.getBlanks = function(newBlank) {
-  FactoryFactory.getBlanks();
-}
+self.onLoad = FactoryFactory.blankFactoryObject;
+self.getBlanks = FactoryFactory.getBlanks;
+self.getSpecificBlank = FactoryFactory.getSpecificBlank;
 
 
 
 
-}]); // end controller code block
+
+}]); //end controller code block
