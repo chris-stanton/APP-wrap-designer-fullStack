@@ -2,11 +2,18 @@ myApp.controller('InputController',['FactoryFactory',function($firebaseAuth, Fac
 
   console.log('InputController running');
   var self = this;
-  this.testMessage = 'IC WORKING STATUS';
+  self.testMessage = 'IC WORKING STATUS';
+  self.newBlankOrder = {};
+  self.newThreadOrder = {};
 
 //new blank pass-through to factory
-  self.newBlankOrder = FactoryFactory.addBlank;
+  self.addBlanks = function(){
+    FactoryFactory.addBlanks(self.newBlankOrder);
+  };
 //new thread pass-through to factory
-  self.newThreadOrder = FactoryFactory.addThread;
+  self.addThreads = function(){
+    FactoryFactory.addThreads(self.newThreadOrder);
+  };
+
 
 }]);//end of myApp.controller

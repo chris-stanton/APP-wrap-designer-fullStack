@@ -3,9 +3,10 @@ var router = express.Router();
 var Blanks = require('../models/blanks');//user
 var Threads = require('../models/threads');//secrets
 
+console.log("spacingRouter works!!");
+
 router.get('/', function(req, res) {
   console.log('hit router GET all blanks');
-
   // db query
   Blanks.find({}, function(err, result){
     if(err){
