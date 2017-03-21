@@ -5,6 +5,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
   var blankFactoryObject = { list: [] };
   var updateAuth = { list: [] };
   var updateDeAuth = { list: [] };
+  var getSpecificBlankObject = { list: [] };
 
 //gets blanks on startup
   getBlanks();
@@ -16,6 +17,17 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       }).then(function(response) {
           console.log("getBlanks Request: ", response.data);
           blankFactoryObject.list = response.data;
+      });//end of .then
+    }//end of getblanks()
+
+// gets results from spacing view drop down menu
+  function getSpecificBlank() {
+      $http({
+        method: 'GET',
+        url: '/spacing'
+      }).then(function(response) {
+          console.log("getSpecificBlank: ", response.data);
+          getSpecificBlankObject.list = response.data;
       });//end of .then
     }//end of getblanks()
 
@@ -74,7 +86,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
         url: '/auth'
       }).then(function(response) {
         console.log("authUser Request: ", response);
-        updateAuth.list = response.data;//not sure about this line
+        updateAuth.list = response.data;
       });//end of .then
     }//end of authUser()
 
@@ -85,7 +97,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
         url: '/auth'
       }).then(function(response) {
         console.log("deAuthUser Request: ", response);
-        updateDeAuth.list = response.data;//not sure about this line
+        updateDeAuth.list = response.data;
       });//end of .then
     }//end of deAuthUser()
 
@@ -93,10 +105,12 @@ myApp.factory('FactoryFactory',['$http',function($http) {
 
 
   return {
-//gets blank stats for spacing view
+//gets blank stats for spacing view 
     getBlanks : getBlanks,
-//gets specific blank info from select menu dropdowns for spacing view
+//gets specific blank info from select menu dropdowns for spacing view - object
     getSpecificBlank : getSpecificBlank,
+//adds stats to DOM on spacing view - object
+    getSpecificBlankObject : getSpecificBlankObject,
 //blank list for spacing view select options - object
     blankFactoryObject : blankFactoryObject,
 //database blank submission - function

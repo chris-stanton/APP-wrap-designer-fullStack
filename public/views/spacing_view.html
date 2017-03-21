@@ -1,4 +1,4 @@
-{{sc.onLoad.list}}
+
 <!-- option selectors -->
   <div class="">
     <label for="blankName"> Blank Model: </label>
@@ -29,11 +29,9 @@
 
 <!-- current blank data display -->
   <h2>
-    <ul ng-repeat="blank in sc.blankData">
-    <li> Blank Length: {{sc.blank.blankName}} </li>
-    <li> MFG Name: {{sc.blank.mfgName}} </li>
-    <li> Blank Name: {{sc.blank.blankLength}} </li>
-    <li> Handle Length: {{sc.blank.handleLength}} </li>
+    <div> Blank Name: {{sc.newBlank.blankName}} </div>
+    <div> Blank Length: {{sc.newBlank.blankLength}} </div>
+    <div> Handle Length: {{sc.newBlank.handleLength}} </div>
   </h2>
 
 <!-- Guide size table -->
@@ -44,14 +42,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-      <tr ng-repeat="blank in sc.blankData">
-        <td> Tip-Top: {{sc.blank.guides.guideSize}} </td>
-        <td> 2nd: {{sc.blank.guides.guideSize}} </td>
-        <td> 3rd: {{sc.blank.guides.guideSize}} </td>
-        <td> 4th: {{sc.blank.guides.guideSize}} </td>
-        <td> 5th: {{sc.blank.guides.guideSize}} </td>
-        <td> 6th: {{sc.blank.guides.guideSize}} </td>
+      <tr ng-repeat="blank in sc.getSpecificBlankObject.list">
+        <td> Tip-Top: {{blank.guides.guideSize}} </td>
+        <td> 2nd: {{blank.guides.guideSize}} </td>
+        <td> 3rd: {{blank.guides.guideSize}} </td>
+        <td> 4th: {{blank.guides.guideSize}} </td>
+        <td> 5th: {{blank.guides.guideSize}} </td>
+        <td> 6th: {{blank.guides.guideSize}} </td>
       </tr>
     </tbody>
   </table>
@@ -67,12 +64,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="blank in sc.blankData">
-        <td> TipTop - Second Guide: {{sc.blank.guides.guideSpacing}} </td>
-        <td> Second - Third Guide: {{sc.blank.guides.guideSpacing}} </td>
-        <td> Third - Fourth Guide: {{sc.blank.guides.guideSpacing}} </td>
-        <td> Fourth - Fifth Guide: {{sc.blank.guides.guideSpacing}} </td>
-        <td> Fifth - Sixth Guide: {{sc.blank.guides.guideSpacing}} </td>
+      <tr ng-repeat="blank in sc.getSpecificBlankObject.list">
+        <td> TipTop - Second Guide: {{blank.guides.guideSpacing}} </td>
+        <td> Second - Third Guide: {{blank.guides.guideSpacing}} </td>
+        <td> Third - Fourth Guide: {{blank.guides.guideSpacing}} </td>
+        <td> Fourth - Fifth Guide: {{blank.guides.guideSpacing}} </td>
+        <td> Fifth - Sixth Guide: {{blank.guides.guideSpacing}} </td>
       </tr>
     </tbody>
   </table>

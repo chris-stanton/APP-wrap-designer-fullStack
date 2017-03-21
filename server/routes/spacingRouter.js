@@ -28,7 +28,37 @@ router.get('/', function (req, res) {
     });
 });
 
+//gets all guide sizes
+router.get('/', function (req, res) {
+  pool.connect()
+    .then(function (client) {
+      client.query('SELECT blankName, blanklength, handlelength FROM blanks')
+        .then(function (result) {
+          client.release();
+          res.send(result.rows);
+        })
+        .catch(function (err) {
+          console.log('error on SELECT', err);
+          res.sendStatus(500);
+        });
+    });
+});
 
+//gets all guide measurements
+// router.get('/', function (req, res) {
+//   pool.connect()
+//     .then(function (client) {
+//       client.query('SELECT * FROM guideMeasurements')
+//         .then(function (result) {
+//           client.release();
+//           res.send(result.rows);
+//         })
+//         .catch(function (err) {
+//           console.log('error on SELECT', err);
+//           res.sendStatus(500);
+//         });
+//     });
+// });
 
 
 

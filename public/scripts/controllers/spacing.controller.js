@@ -7,7 +7,8 @@ self.testMessage = 'SC WORKING STATUS';
 self.onLoad = FactoryFactory.blankFactoryObject;
 self.getBlanks = FactoryFactory.getBlanks;
 self.getSpecificBlank = FactoryFactory.getSpecificBlank;
-
+self.getSpecificBlankObject = FactoryFactory.getSpecificBlankObject;
+console.log();
 
 
 
