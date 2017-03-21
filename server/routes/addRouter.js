@@ -17,12 +17,12 @@ var pool = new pg.Pool(config);
 //add blanks to database
 router.post('/addBlank', function (req, res) {
   var newBlankOrder = req.body;
-  console.log('add Hero: ', newBlankOrder);
+  console.log('add blank: ', newBlankOrder);
   pool.connect()
     .then(function (client) {
 //adds newBlankOrder data to table
-      client.query('INSERT INTO blanks (blankName, mfgName, blankLength, blankMaterial, guides, handleLength, handleType) VALUES  ($1, $2, $3, $4, $5, $6, $7)',
-        [newBlankOrder.blankName, newBlankOrder.mfgName, newBlankOrder.blankLength, newBlankOrder.blankMaterial, newBlankOrder.guides, newBlankOrder.handleLength, newBlankOrder.handleType])
+      client.query('INSERT INTO blanks (blankName, mfgName, blankLength, blankMaterial, handleLength, handleType) VALUES ($1, $2, $3, $4, $5, $6)',
+        [newBlankOrder.blankName, newBlankOrder.mfgName, newBlankOrder.blankLength, newBlankOrder.blankMaterial, newBlankOrder.handleLength, newBlankOrder.handleType])
         .then(function (result) {
           client.release();
           res.sendStatus(201);
@@ -38,7 +38,7 @@ router.post('/addBlank', function (req, res) {
 //add newThreadOrder to database
 router.post('/addThread', function (req, res) {
   var newThreadOrder = req.body;
-  console.log('add Hero: ', newThreadOrder);
+  console.log('add thread: ', newThreadOrder);
   pool.connect()
     .then(function (client) {
 //adds newThreadOrder data to table

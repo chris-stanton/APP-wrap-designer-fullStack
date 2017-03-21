@@ -22,6 +22,9 @@ VALUES
         ('Seven Douce', 'DH Custom Rods and Tackle', '24', 'Fiberglass', 'add array here', '3', 'Cork');
 
 
+ALTER TABLE blanks DROP COLUMN guides;
+
+
 CREATE TABLE threads (
 id SERIAL PRIMARY KEY,
 mfgName VARCHAR(80),
