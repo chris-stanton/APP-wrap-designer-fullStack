@@ -1,5 +1,3 @@
-//bugs to fix
-//[ ] will only post last router.post
 
 console.log("addRouter.js works!")
 

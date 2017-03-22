@@ -5,8 +5,8 @@ all other blanks measure from tip to butt*/
 // <------ DATABASE SETUP CODE FOR SQL ------>
 
 CREATE TABLE blanks (
-id SERIAL PRIMARY KEY,
-blankName VARCHAR(80) NOT NULL,
+  id SERIAL PRIMARY KEY,
+  blankName VARCHAR(80) NOT NULL,
 mfgName VARCHAR(80) NOT NULL,
 blankLength INT NOT NULL,
 blankMaterial VARCHAR(80),
@@ -51,6 +51,7 @@ mfgName VARCHAR(80),
 color VARCHAR(80),
 image VARCHAR(80)
 );
+
 
 INSERT INTO threads (mfgName, color, image)
 VALUES
