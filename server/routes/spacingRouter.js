@@ -25,8 +25,8 @@ router.get('/allBlanks', function (req, res) {
           console.log('error on SELECT', err);
           res.sendStatus(500);
         });
-    });
-});
+    });//end of .then
+});//end of router.get
 
 //gets specificBlank
 router.get('/specificBlanks', function (req, res) {
@@ -41,8 +41,8 @@ router.get('/specificBlanks', function (req, res) {
           console.log('error on SELECT', err);
           res.sendStatus(500);
         });
-    });
-});
+    });//end of .then
+});//end of router.get
 
 //gets all guide measurements
 // router.get('/', function (req, res) {
@@ -57,8 +57,8 @@ router.get('/specificBlanks', function (req, res) {
 //           console.log('error on SELECT', err);
 //           res.sendStatus(500);
 //         });
-//     });
-// });
+//     });//end of .then
+// });//end of router.get
 
 
 
