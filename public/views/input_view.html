@@ -5,29 +5,29 @@
 <h1> Input New Blank DIM's! </h1>
 
 <!-- top page inputs -->
-  <div class="">
+  <div class="animated slideInLeft">
     <label for="blankName"> Blank Name </label>
     <input type="text" name="blankName" value="" ng-model="ic.newBlankOrder.blankName">
   </div>
-  <div class="">
+  <div class="animated slideInLeft">
     <label for="mfgName"> MFG Name </label>
     <input type="text" name="mfgName" value="" ng-model="ic.newBlankOrder.mfgName">
   </div>
-  <div class="">
+  <div class="animated slideInLeft">
     <label for="blankLength"> Blank Length </label>
     <input type="text" name="blankLength" value="" ng-model="ic.newBlankOrder.blankLength">
   </div>
-  <div class="">
+  <div class="animated slideInLeft">
     <label for="blankMaterial"> Blank Material </label>
     <input type="text" name="blankMaterial" value="" ng-model="ic.newBlankOrder.blankMaterial">
   </div>
-  <div class="">
+  <div class="animated slideInLeft">
     <label for="handleLength"> Handle Length </label>
     <input type="text" name="handleLength" value="" ng-model="ic.newBlankOrder.handleLength">
   </div>
 
 <!-- guide size input table -->
-  <table>
+  <table class="animated rotateInDownRight">
     <thead>
       <tr>
         <th> Guide Sizes </th>
@@ -65,10 +65,10 @@
 
 
 <!-- referance image -->
-  <img src="assets/images/iceRod.png" alt="">
+  <img src="assets/images/iceRod.png" class="animated rotateIn" alt="">
 
 <!-- guide spacing input table -->
-  <table>
+  <table class="animated rotateInDownLeft">
     <thead>
       <tr>
         <td>
@@ -101,7 +101,7 @@
   </table>
 
 <!-- new blank stats submit button -->
-  <button type="button" name="button" ng-click="ic.addBlanks(ic.newBlankOrder)" onsubmit=" alert('New Blank Submitted!');"> SUBMIT New Blank Stat's </button>
+  <button type="button" name="button" ng-click="ic.addBlanks(ic.newBlankOrder)" onsubmit="alert('New Blank Submitted!')" class="animated slideInRight"> SUBMIT New Blank Stat's </button>
 
 <!-- thread color sumbit start -->
   <h1> Input New Blank DIM's! </h1>

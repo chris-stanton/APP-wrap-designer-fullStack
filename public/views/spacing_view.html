@@ -1,20 +1,22 @@
 {{sc.newBlank}}
 <!-- option selectors -->
-  <div class="">
+  <div class="animated slideInRight">
     <label for="blankName"> Blank Model: </label>
     <select name="blankName" ng-model="sc.newBlank.blankName">
       <option ng-repeat="onLoad in sc.onLoad.list" value="{{onLoad.blankname}}"> {{onLoad.blankname}} </option>
     </select>
   </div>
 
-  <div class="">
+
+
+  <div class="animated slideInRight">
     <label for="blankLength"> Blank Length: </label>
     <select name="blankLength" ng-model="sc.newBlank.blankLength">
       <option ng-repeat="onLoad in sc.onLoad.list" value='{{onLoad.blanklength}}"'> {{onLoad.blanklength}} </option>
     </select>
   </div>
 
-  <div class="">
+  <div class="animated slideInRight">
     <label for="handleLength"> Handle Length: </label>
     <select name="handleLength" ng-model="sc.newBlank.handleLength">
       <option value='3"'> 3" </option>
@@ -25,7 +27,7 @@
 <!-- ng-options="power.id as power.name for power in entry.powers track by power.id" -->
   </div>
 
-  <button ng-click="sc.getSpecificBlank(newBlank)"> SUBMIT </button>
+  <button ng-click="sc.getSpecificBlank(newBlank)" class="animated slideInDown"> SUBMIT </button>
 
 <!-- current blank data display -->
   <h3>
@@ -54,7 +56,7 @@
   </table>
 
 <!-- reference image -->
-  <img src="assets/images/iceRod.png" alt="">
+  <img src="assets/images/iceRod.png" class="animated rotateIn" alt="">
 
 <!-- guide spacing table -->
   <table>
