@@ -10,9 +10,6 @@ self.getSpecificBlank = FactoryFactory.getSpecificBlank;
 self.getSpecificBlankObject = FactoryFactory.getSpecificBlankObject;
 //object from drop down menu
 self.newBlank = {};
-console.log();
-
-
 
 
 }]); //end controller code block

@@ -6,9 +6,11 @@ myApp.factory('FactoryFactory',['$http',function($http) {
   var updateAuth = { list: [] };
   var updateDeAuth = { list: [] };
   var getSpecificBlankObject = { list: [] };
+  var colorFactoryObject = { list: [] };
 
   //gets blanks on startup
   getBlanks();
+  updateColor();
   //gets blanks for drop down options on spacing view
   function getBlanks() {
     $http({
@@ -19,6 +21,16 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       blankFactoryObject.list = response.data;
     });//end of .then
   }//end of getblanks()
+
+  function updateColor() {
+    $http({
+      method: 'GET',
+      url: '/color'
+    }).then(function(response) {
+      console.log("update colors Request: ", response.data);
+      colorFactoryObject.list = response.data;
+    });//end of .then
+  }//end of updatecolor()
 
   // gets results from spacing view drop down menu
   function getSpecificBlank() {
@@ -120,6 +132,10 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     //return after google authentication login - object
     updateAuth : updateAuth,
     //return after google authentication logout - object
-    updateDeAuth : updateDeAuth
+    updateDeAuth : updateDeAuth,
+    //calling function from button click on warp view - function
+    updateColor : updateColor,
+    //return of all thread colors from DB - object
+    colorFactoryObject : colorFactoryObject
   }
 }]);

@@ -1,10 +1,9 @@
 
 
-
 <!-- blank color selector -->
   <div>
     <label for="blankColor"> Blank Color: </label>
-    <select name="blankColor" ng-model="sc.newBlank.blankLength">
+    <select name="blankColor" ng-model="wc.newColor.blankColor">
       <option ng-repeat="onLoad in sc.onLoad.list" value=''> {{}} </option>
     </select>
   </div>
@@ -13,13 +12,13 @@
   <table id="wrapTable">
     <tbody>
       <tr>
-        <td> Blank Left: <img src="./assets/images/threads/0001.jpg"> </td>
-        <td> Color One: <img src="./assets/images/threads/0002.jpg"> </td>
-        <td> Color Two: <img src="./assets/images/threads/0209.jpg"> </td>
-        <td> Color Three: <img src="./assets/images/threads/0257.jpg"> </td>
-        <td> Color Four: <img src="./assets/images/threads/0209.jpg"> </td>
-        <td> Color Five: <img src="./assets/images/threads/0002.jpg"> </td>
-        <td> Blank Right: <img src="./assets/images/threads/0001.jpg"> </td>
+        <td> Blank Color: <img src="./assets/images/threads/0001.jpg"> </td>
+        <td> Color One: <img src="{{wc.newColor.colorOne}}"> </td>
+        <td> Color Two: <img src="{{wc.newColor.colorTwo}}"> </td>
+        <td> Color Three: <img src="{{wc.newColor.colorThree}}"> </td>
+        <td> Color Four: <img src="{{wc.newColor.colorFour}}"> </td>
+        <td> Color Five: <img src="{{wc.newColor.colorFive}}"> </td>
+        <td> Blank Color: <img src="./assets/images/threads/0001.jpg"> </td>
       </tr>
     </tbody>
   </table>
@@ -28,41 +27,41 @@
   <div>
     <label for="colorOne"> Color One: </label>
     <input type="text" name="colorOne" value="">
-    <select name="colorOne" ng-model="sc.newBlank.blankLength">
-      <option ng-repeat="onLoad in sc.onLoad.list" value='{{}}'> {{onLoad.blanklength}} </option>
+    <select name="colorOne" ng-model="wc.newColor.colorOne">
+      <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.color}} </option>
     </select>
   </div>
   <!-- colorTwo selector -->
   <div>
     <label for="colorTwo"> Color Two: </label>
     <input type="text" name="colorTwo" value="">
-    <select name="colorTwo" ng-model="sc.newBlank.blankLength">
-      <option ng-repeat="onLoad in sc.onLoad.list" value='{{}}'> {{onLoad.blanklength}} </option>
+    <select name="colorTwo" ng-model="wc.newColor.colorTwo">
+      <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.color}} </option>
     </select>
   </div>
 <!-- colorThree selector -->
   <div>
     <label for="colorThree"> Color Three: </label>
     <input type="text" name="colorThree" value="">
-    <select name="colorThree" ng-model="sc.newBlank.blankLength">
-      <option ng-repeat="onLoad in sc.onLoad.list" value='{{}}'> {{onLoad.blanklength}} </option>
+    <select name="colorThree" ng-model="wc.newColor.colorThree">
+      <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.color}} </option>
     </select>
   </div>
 <!-- colorFour selector -->
   <div>
     <label for="colorFour"> Color Four: </label>
     <input type="text" name="colorFour" value="">
-    <select name="colorFour" ng-model="sc.newBlank.blankLength">
-      <option ng-repeat="onLoad in sc.onLoad.list" value='{{}}'> {{onLoad.blanklength}} </option>
+    <select name="colorFour" ng-model="wc.newColor.colorFour">
+      <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.color}} </option>
     </select>
   </div>
 <!-- colorFive selector -->
   <div>
     <label for="colorFive"> Color Five: </label>
     <input type="text" name="colorFive" value="">
-    <select name="colorFive" ng-model="sc.newBlank.blankLength">
-      <option ng-repeat="onLoad in sc.onLoad.list" value='{{}}'> {{onLoad.blanklength}} </option>
+    <select name="colorFive" ng-model="wc.newColor.colorFive">
+      <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.color}} </option>
     </select>
   </div>
 
-  <button type="button" name="button" ng-click=""> SUBMIT </button>
+  <button type="button" name="button" ng-click="wc.updateColors()"> UPDATE </button>
