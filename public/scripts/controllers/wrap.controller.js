@@ -7,9 +7,9 @@ self.testMessage = 'WC WORKING STATUS';
 
 // update button click function
 self.updateColors = FactoryFactory.updateColor;
-//return color object from factory
+//return thread color object from factory
 self.colorObject = FactoryFactory.colorFactoryObject;
-
+//return blank color object from factory
 self.blankColorFactoryObject = FactoryFactory.blankColorFactoryObject;
 
 //thread color selecter value container

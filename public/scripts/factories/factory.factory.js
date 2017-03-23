@@ -1,7 +1,8 @@
 myApp.factory('FactoryFactory',['$http',function($http) {
 
   console.log('FactoryFactory running');
-
+  
+//object containers
   var blankFactoryObject = { list: [] };
   var updateAuth = { list: [] };
   var updateDeAuth = { list: [] };
@@ -9,11 +10,12 @@ myApp.factory('FactoryFactory',['$http',function($http) {
   var colorFactoryObject = { list: [] };
   var blankColorFactoryObject = { list: [] };
 
-  //gets blanks on startup
+//gets blanks on startup
   getBlanks();
   updateColor();
   updateColorBlank()
-  //gets blanks for drop down options on spacing view
+
+//gets blanks for drop down options on spacing view
   function getBlanks() {
     $http({
       method: 'GET',
@@ -24,6 +26,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     });//end of .then
   }//end of getblanks()
 
+//gets all thread colors for wrap view selecters
   function updateColor() {
     $http({
       method: 'GET',
@@ -34,6 +37,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     });//end of .then
   }//end of updatecolor()
 
+//gets all blank colors for wrap view selecters
   function updateColorBlank() {
     $http({
       method: 'GET',
@@ -44,7 +48,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     });//end of .then
   }//end of updatecolor()
 
-  // gets results from spacing view drop down menu
+//gets results from spacing view drop down menu
   function getSpecificBlank() {
     $http({
       method: 'GET',
@@ -55,6 +59,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     });//end of .then
   }//end of getblanks()
 
+//add blank stats to Database
   function addBlanks(newBlankOrder) {
     //adds blank to database from input view inputs
     $http({
@@ -66,7 +71,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       self.newblankOrder = {};
     });//end of .then
 
-    //adds guides to database from input view
+//adds guides to database from input view
     $http({
       method: 'POST',
       url: '/add/guide',
@@ -76,7 +81,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       self.newblankOrder = {};
     });//end of .then
 
-    //adds guide measurments to database from input view
+//adds guide measurments to database from input view
     $http({
       method: 'POST',
       url: '/add/guideMeasurement',
@@ -87,7 +92,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     });//end of .then
   }
 
-  //adds thread color to database from input view inputs
+//adds thread color to database from input view inputs
   function addThreads(newThreadOrder) {
     $http({
       method: 'POST',
@@ -111,7 +116,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     });//end of .then
   }//end of authUser()
 
-  //google authenticate logout
+//google authenticate logout
   function deAuthUser() {
     $http({
       method: 'GET',
