@@ -21,9 +21,18 @@
 
 
 /*<------- WRAP DESIGNER VIEW ------->*/
+.center {
+  text-align: center;
+}
+
 #wrapTable {
+  margin-top: 30px;
   width: 100%;
   height: 5px;
+}
+
+.thCenter {
+  text-align: center;
 }
 
 td {
@@ -46,8 +55,32 @@ td {
   width: 20px;
 }
 /*<------- DB INPUT VIEW ------->*/
+#inputInputs {
+  display: inline-block;
+  text-align: center;
+}
 
+#inputDiv {
+  margin: 40px 0px 40px 0px;
+}
 
+#threadInputDiv {
+  display: inline-block;
+  text-align: center;
+}
+
+#threadHeading{
+  margin: 75px 0px 40px 0px;
+}
+
+#threadButton {
+  margin-top: 20px;
+}
+
+#viewSelecterCenter{
+  text-align: center;
+  margin: 100px 0px 10px 0px;
+}
 
 /*<------- tables on stats and DB views ------->*/
 img {

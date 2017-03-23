@@ -1,22 +1,20 @@
 
-<!-- option selectors -->
+<!-- blank model selectors -->
   <div class="animated slideInRight">
     <label for="blankName"> Blank Model: </label>
     <select name="blankName" ng-model="sc.newBlank.blankName">
       <option ng-repeat="onLoad in sc.onLoad.list" value="{{onLoad.blankname}}"> {{onLoad.blankname}} </option>
     </select>
   </div>
-
-
-
-  <div class="animated slideInRight">
+<!-- blank length selectors -->
+  <div ng-hide="" class="animated slideInRight">
     <label for="blankLength"> Blank Length: </label>
     <select name="blankLength" ng-model="sc.newBlank.blankLength">
       <option ng-repeat="onLoad in sc.onLoad.list" value='{{onLoad.blanklength}}"'> {{onLoad.blanklength}} </option>
     </select>
   </div>
-
-  <div class="animated slideInRight">
+<!-- handle length selectors -->
+  <div ng-hide="" class="animated slideInRight">
     <label for="handleLength"> Handle Length: </label>
     <select name="handleLength" ng-model="sc.newBlank.handleLength">
       <option value='3"'> 3" </option>
@@ -24,11 +22,9 @@
       <option value='6"'> 6" </option>
       <option value='8"'> 8" </option>
     </select>
-<!-- ng-options="power.id as power.name for power in entry.powers track by power.id" -->
+<!-- submit button -->
+    <button ng-click="sc.getSpecificBlank(newBlank)" class="animated slideInRight" ng-hide=""> SUBMIT </button>
   </div>
-
-  <button ng-click="sc.getSpecificBlank(newBlank)" class="animated slideInDown"> SUBMIT </button>
-
 <!-- current blank data display -->
   <h3>
     <div> Blank Name: {{sc.newBlank.blankName}} </div>

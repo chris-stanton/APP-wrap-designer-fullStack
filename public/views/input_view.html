@@ -1,31 +1,31 @@
 
-<body ng-controller="InputController">
-
+<div class="center">
 <!-- blank stat's submit start -->
-<h1> Input New Blank DIM's! </h1>
+  <h1 class="animated slideInRight"> Add New Blank! </h1>
 
 <!-- top page inputs -->
-  <div class="animated slideInLeft">
-    <label for="blankName"> Blank Name </label>
-    <input type="text" name="blankName" value="" ng-model="ic.newBlankOrder.blankName">
+  <div id="inputDiv">
+    <div id="inputInputs" class="animated slideInLeft">
+      <label for="blankName"> Blank Name </label>
+      <input type="text" name="blankName" value="" ng-model="ic.newBlankOrder.blankName">
+    </div>
+    <div id="inputInputs" class="animated slideInLeft">
+      <label for="mfgName"> MFG Name </label>
+      <input type="text" name="mfgName" value="" ng-model="ic.newBlankOrder.mfgName">
+    </div>
+    <div id="inputInputs" class="animated slideInLeft">
+      <label for="blankLength"> Blank Length </label>
+      <input type="text" name="blankLength" value="" ng-model="ic.newBlankOrder.blankLength">
+    </div>
+    <div id="inputInputs" class="animated slideInLeft">
+      <label for="blankMaterial"> Blank Material </label>
+      <input type="text" name="blankMaterial" value="" ng-model="ic.newBlankOrder.blankMaterial">
+    </div>
+    <div id="inputInputs" class="animated slideInLeft">
+      <label for="handleLength"> Handle Length </label>
+      <input type="text" name="handleLength" value="" ng-model="ic.newBlankOrder.handleLength">
+    </div>
   </div>
-  <div class="animated slideInLeft">
-    <label for="mfgName"> MFG Name </label>
-    <input type="text" name="mfgName" value="" ng-model="ic.newBlankOrder.mfgName">
-  </div>
-  <div class="animated slideInLeft">
-    <label for="blankLength"> Blank Length </label>
-    <input type="text" name="blankLength" value="" ng-model="ic.newBlankOrder.blankLength">
-  </div>
-  <div class="animated slideInLeft">
-    <label for="blankMaterial"> Blank Material </label>
-    <input type="text" name="blankMaterial" value="" ng-model="ic.newBlankOrder.blankMaterial">
-  </div>
-  <div class="animated slideInLeft">
-    <label for="handleLength"> Handle Length </label>
-    <input type="text" name="handleLength" value="" ng-model="ic.newBlankOrder.handleLength">
-  </div>
-
 <!-- guide size input table -->
   <table class="animated rotateInDownRight">
     <thead>
@@ -63,7 +63,6 @@
     </tbody>
   </table>
 
-
 <!-- referance image -->
   <img src="assets/images/iceRod.png" class="animated rotateIn" alt="">
 
@@ -95,27 +94,37 @@
     </thead>
     <tbody>
       <tr>
-        <th> Measurements (guide to guide) </th>
+        <th class="thCenter"> Measurements (guide to guide) </th>
       </tr>
     </tbody>
   </table>
-
 <!-- new blank stats submit button -->
-  <button type="button" name="button" ng-click="ic.addBlanks(ic.newBlankOrder)" onsubmit="alert('New Blank Submitted!')" class="animated slideInRight"> SUBMIT New Blank Stat's </button>
+  <div class="animated slideInRight">
+    <button ng-click="ic.addBlanks(ic.newBlankOrder)"  class="c-button c-button--rounded c-button--ghost-success">SUBMIT New Blank </button>
+  </div>
+</div>
 
+
+
+<div class="center">
 <!-- thread color sumbit start -->
-  <h1> Input New Blank DIM's! </h1>
-
-  <label for="mfgName"> MFG Name </label>
-  <input type="text" name="mfgName" value="" ng-model="ic.newThreadOrder.mfgName">
-
-  <label for="color"> Color </label>
-  <input type="text" name="color" value="" ng-model="ic.newThreadOrder.color">
-
-  <label for="image"> Image </label>
-  <input type="text" name="image" value="" ng-model="ic.newThreadOrder.image">
-
+  <h1 class="animated slideInRight" id="threadHeading"> Add New Thread! </h1>
+    <div id="threadInputDiv">
+      <div class="animated slideInLeft" id="threadInputDiv">
+        <label for="mfgName"> MFG Name </label>
+        <input type="text" name="mfgName" value="" ng-model="ic.newThreadOrder.mfgName">
+      </div>
+      <div class="animated slideInLeft" id="threadInputDiv">
+        <label for="color"> Color </label>
+        <input type="text" name="color" value="" ng-model="ic.newThreadOrder.color">
+      </div>
+      <div class="animated slideInLeft" id="threadInputDiv">
+        <label for="image"> Image </label>
+        <input type="text" name="image" value="" ng-model="ic.newThreadOrder.image">
+      </div>
+    </div>
 <!-- new thread color submit button -->
-  <button type="button" name="button" ng-click="ic.addThreads(ic.newThreadOrder)" onsubmit=" alert('New Thread Color Submitted!');"> SUBMIT New Blank Stat's </button>
-
-</body
+    <div class="animated slideInRight" id="threadButton">
+      <button class="c-button c-button--rounded c-button--ghost-success" type="button" name="button" ng-click="ic.addThreads(ic.newThreadOrder)" onsubmit=" alert('New Thread Color Submitted!');"> SUBMIT New Thread Color </button>
+    </div>
+</div>
