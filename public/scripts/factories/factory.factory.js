@@ -7,10 +7,12 @@ myApp.factory('FactoryFactory',['$http',function($http) {
   var updateDeAuth = { list: [] };
   var getSpecificBlankObject = { list: [] };
   var colorFactoryObject = { list: [] };
+  var blankColorFactoryObject = { list: [] };
 
   //gets blanks on startup
   getBlanks();
   updateColor();
+  updateColorBlank()
   //gets blanks for drop down options on spacing view
   function getBlanks() {
     $http({
@@ -25,10 +27,20 @@ myApp.factory('FactoryFactory',['$http',function($http) {
   function updateColor() {
     $http({
       method: 'GET',
-      url: '/color'
+      url: '/color/thread'
     }).then(function(response) {
       console.log("update colors Request: ", response.data);
       colorFactoryObject.list = response.data;
+    });//end of .then
+  }//end of updatecolor()
+
+  function updateColorBlank() {
+    $http({
+      method: 'GET',
+      url: '/color/blank'
+    }).then(function(response) {
+      console.log("update blank colors Request: ", response.data);
+      blankColorFactoryObject.list = response.data;
     });//end of .then
   }//end of updatecolor()
 
@@ -84,6 +96,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     }).then(function(response){
       console.log("addThread Request: ", response);
       self.newThreadOrder = {};
+      updateColor();
     });//end of .then
   }
 
@@ -136,6 +149,8 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     //calling function from button click on warp view - function
     updateColor : updateColor,
     //return of all thread colors from DB - object
-    colorFactoryObject : colorFactoryObject
+    colorFactoryObject : colorFactoryObject,
+    //return of all blank colors from DB - object
+    blankColorFactoryObject: blankColorFactoryObject
   }
 }]);

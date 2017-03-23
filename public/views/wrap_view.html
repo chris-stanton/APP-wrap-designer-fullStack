@@ -1,10 +1,10 @@
-
+{{wc.newColorBlank.blankColor}}
 
 <!-- blank color selector -->
   <div>
     <label for="blankColor"> Blank Color: </label>
-    <select name="blankColor" ng-model="wc.newColor.blankColor">
-      <option ng-repeat="onLoad in sc.onLoad.list" value=''> {{}} </option>
+    <select name="blankColor" ng-model="wc.newColorBlank.blankColor">
+      <option ng-repeat="colorBlank in wc.blankColorFactoryObject.list" value='{{colorBlank.image}}'> {{colorBlank.color}} </option>
     </select>
   </div>
 
@@ -12,13 +12,13 @@
   <table id="wrapTable">
     <tbody>
       <tr>
-        <td> Blank Color: <img src="./assets/images/threads/0001.jpg"> </td>
-        <td> Color One: <img src="{{wc.newColor.colorOne}}"> </td>
-        <td> Color Two: <img src="{{wc.newColor.colorTwo}}"> </td>
-        <td> Color Three: <img src="{{wc.newColor.colorThree}}"> </td>
-        <td> Color Four: <img src="{{wc.newColor.colorFour}}"> </td>
-        <td> Color Five: <img src="{{wc.newColor.colorFive}}"> </td>
-        <td> Blank Color: <img src="./assets/images/threads/0001.jpg"> </td>
+        <td> Blank Color <img ng-src="{{wc.newColorBlank.blankColor}}"> </td>
+        <td> Color One <img ng-src="{{wc.newColor.colorOne}}"> </td>
+        <td> Color Two <img ng-src="{{wc.newColor.colorTwo}}"> </td>
+        <td> Color Three <img ng-src="{{wc.newColor.colorThree}}"> </td>
+        <td> Color Four <img ng-src="{{wc.newColor.colorFour}}"> </td>
+        <td> Color Five <img ng-src="{{wc.newColor.colorFive}}"> </td>
+        <td> Blank Color <img ng-src="{{wc.newColorBlank.blankColor}}"> </td>
       </tr>
     </tbody>
   </table>
@@ -63,5 +63,3 @@
       <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.color}} </option>
     </select>
   </div>
-
-  <button type="button" name="button" ng-click="wc.updateColors()"> UPDATE </button>

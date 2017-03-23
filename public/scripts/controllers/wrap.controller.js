@@ -9,7 +9,12 @@ self.testMessage = 'WC WORKING STATUS';
 self.updateColors = FactoryFactory.updateColor;
 //return color object from factory
 self.colorObject = FactoryFactory.colorFactoryObject;
-//selecter value container
+
+self.blankColorFactoryObject = FactoryFactory.blankColorFactoryObject;
+
+//thread color selecter value container
 self.newColor = {};
-console.log(self.newColor)
+//blank color selecter value container
+self.newColorBlank = {};
+
 }]);//end of myApp.controller

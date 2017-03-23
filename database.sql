@@ -7,18 +7,18 @@ all other blanks measure from tip to butt*/
 CREATE TABLE blanks (
   id SERIAL PRIMARY KEY,
   blankName VARCHAR(80) NOT NULL,
-mfgName VARCHAR(80) NOT NULL,
-blankLength INT NOT NULL,
-blankMaterial VARCHAR(80),
-handleLength INT NOT NULL,
-handleType VARCHAR(80)
+  mfgName VARCHAR(80) NOT NULL,
+  blankLength INT NOT NULL,
+  blankMaterial VARCHAR(80),
+  handleLength INT NOT NULL,
+  handleType VARCHAR(80)
 );
 
-INSERT INTO blanks (blankName, mfgName, blankLength, blankMaterial, guides, handleLength, handleType)
+INSERT INTO blanks (blankName, mfgName, blankLength, blankMaterial, handleLength, handleType)
 VALUES
 -- values have baan added to the database
-        ('Mini Bite', 'DH Custom Rods and Tackle', '21', 'Fiberglass', 'add array here', '3', 'Cork');
-        ('Seven Douce', 'DH Custom Rods and Tackle', '24', 'Fiberglass', 'add array here', '3', 'Cork');
+      ('Mini Bite', 'DH Custom Rods and Tackle', '21', 'Fiberglass', '3', 'Cork');
+      ('Seven Douce', 'DH Custom Rods and Tackle', '24', 'Fiberglass', '3', 'Cork');
 
 
 CREATE TABLE guides (
@@ -44,23 +44,35 @@ CREATE TABLE guideSpacing (
 );
 
 
-
 CREATE TABLE threads (
-id SERIAL PRIMARY KEY,
-mfgName VARCHAR(80),
-color VARCHAR(80),
-image VARCHAR(80)
+  id SERIAL PRIMARY KEY,
+  mfgName VARCHAR(80) NOT NULL,
+  color VARCHAR(80) NOT NULL,
+  image VARCHAR(80)
 );
-
 
 INSERT INTO threads (mfgName, color, image)
 VALUES
 -- values have baan added to the database
-        ('NCP', 'Black', "assets/images/threads/0001.jpg"),
-       ('NCP', 'White', "assets/images/threads/0002.jpg"),
-       ('NCP', 'Light Blue', "assets/images/threads/0037.jpg"),
-       ('NCP', 'Cobalt Blue', "assets/images/threads/0050.jpg"),
-       ('NCP', 'Peach', "assets/images/threads/0051.jpg");
+      ('NCP', 'Black', "assets/images/threads/0001.jpg"),
+      ('NCP', 'White', "assets/images/threads/0002.jpg"),
+      ('NCP', 'Light Blue', "assets/images/threads/0037.jpg"),
+      ('NCP', 'Cobalt Blue', "assets/images/threads/0050.jpg"),
+      ('NCP', 'Peach', "assets/images/threads/0051.jpg");
+
+
+CREATE TABLE blankColors (
+  id SERIAL PRIMARY KEY,
+  color VARCHAR(80) NOT NULL,
+  image VARCHAR(80)
+);
+
+INSERT INTO blankColors (color, image)
+VALUES
+      ('Black', './assets/images/threads/0001.jpg'),
+      ('Red', './assets/images/threads/0335.jpg'),
+      ('White', './assets/images/threads/0002.jpg');
+
 
 
 

@@ -16,11 +16,11 @@
   text-align: right;
   font-size: 10px;
 }
-/*<------- GUIDE SPACING VIEW(home) ------->*/
+/*<------- GUIDE SPACING VIEW ------->*/
 
 
 
-/*<------- WRAP DESIGNER VIEW(view1) ------->*/
+/*<------- WRAP DESIGNER VIEW ------->*/
 #comingSoon {
   text-align: center;
   color: red;
@@ -34,14 +34,8 @@
   height: 5px;
 }
 
-/*<------- DB INPUT VIEW(view2) ------->*/
-#comingSoon {
-  text-align: center;
-  color: red;
-  font-size: 100px;
-  margin-top: 125px;
-  font-family: fantasy;
-}
+/*<------- DB INPUT VIEW ------->*/
+
 
 /*<------- tables on stats and DB views ------->*/
 td {

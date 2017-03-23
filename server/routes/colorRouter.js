@@ -12,8 +12,8 @@ var config = {
 
 var pool = new pg.Pool(config);
 
-//gets all blanks
-router.get('/', function (req, res) {
+//gets all thread colors
+router.get('/thread', function (req, res) {
   pool.connect()
     .then(function (client) {
       client.query('SELECT * FROM threads')
@@ -28,5 +28,20 @@ router.get('/', function (req, res) {
     });//end of .then
 });//end of router.get
 
+//gets all blank colors
+router.get('/blank', function (req, res) {
+  pool.connect()
+    .then(function (client) {
+      client.query('SELECT * FROM blankColors')
+        .then(function (result) {
+          client.release();
+          res.send(result.rows);
+        })
+        .catch(function (err) {
+          console.log('error on SELECT', err);
+          res.sendStatus(500);
+        });
+    });//end of .then
+});//end of router.get
 
 module.exports = router;
