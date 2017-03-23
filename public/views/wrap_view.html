@@ -1,5 +1,68 @@
-<body ng-controller="WrapController">
-  <h2>wrap_view.html</h2>
-  {{wc.testMessage}}
-  <h3 id="comingSoon">Coming Soon!!</h3>
-</body>
+
+
+
+<!-- blank color selector -->
+  <div>
+    <label for="blankColor"> Blank Color: </label>
+    <select name="blankColor" ng-model="sc.newBlank.blankLength">
+      <option ng-repeat="onLoad in sc.onLoad.list" value=''> {{}} </option>
+    </select>
+  </div>
+
+<!-- table picture view -->
+  <table id="wrapTable">
+    <tbody>
+      <tr>
+        <td> Blank Left: <img src="./assets/images/threads/0001.jpg"> </td>
+        <td> Color One: <img src="./assets/images/threads/0002.jpg"> </td>
+        <td> Color Two: <img src="./assets/images/threads/0209.jpg"> </td>
+        <td> Color Three: <img src="./assets/images/threads/0257.jpg"> </td>
+        <td> Color Four: <img src="./assets/images/threads/0209.jpg"> </td>
+        <td> Color Five: <img src="./assets/images/threads/0002.jpg"> </td>
+        <td> Blank Right: <img src="./assets/images/threads/0001.jpg"> </td>
+      </tr>
+    </tbody>
+  </table>
+
+<!-- colorOne selector -->
+  <div>
+    <label for="colorOne"> Color One: </label>
+    <input type="text" name="colorOne" value="">
+    <select name="colorOne" ng-model="sc.newBlank.blankLength">
+      <option ng-repeat="onLoad in sc.onLoad.list" value='{{}}'> {{onLoad.blanklength}} </option>
+    </select>
+  </div>
+  <!-- colorTwo selector -->
+  <div>
+    <label for="colorTwo"> Color Two: </label>
+    <input type="text" name="colorTwo" value="">
+    <select name="colorTwo" ng-model="sc.newBlank.blankLength">
+      <option ng-repeat="onLoad in sc.onLoad.list" value='{{}}'> {{onLoad.blanklength}} </option>
+    </select>
+  </div>
+<!-- colorThree selector -->
+  <div>
+    <label for="colorThree"> Color Three: </label>
+    <input type="text" name="colorThree" value="">
+    <select name="colorThree" ng-model="sc.newBlank.blankLength">
+      <option ng-repeat="onLoad in sc.onLoad.list" value='{{}}'> {{onLoad.blanklength}} </option>
+    </select>
+  </div>
+<!-- colorFour selector -->
+  <div>
+    <label for="colorFour"> Color Four: </label>
+    <input type="text" name="colorFour" value="">
+    <select name="colorFour" ng-model="sc.newBlank.blankLength">
+      <option ng-repeat="onLoad in sc.onLoad.list" value='{{}}'> {{onLoad.blanklength}} </option>
+    </select>
+  </div>
+<!-- colorFive selector -->
+  <div>
+    <label for="colorFive"> Color Five: </label>
+    <input type="text" name="colorFive" value="">
+    <select name="colorFive" ng-model="sc.newBlank.blankLength">
+      <option ng-repeat="onLoad in sc.onLoad.list" value='{{}}'> {{onLoad.blanklength}} </option>
+    </select>
+  </div>
+
+  <button type="button" name="button" ng-click=""> SUBMIT </button>
