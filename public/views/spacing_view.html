@@ -1,4 +1,5 @@
 
+  <h1> Spacing Calculator! </h1>
 <!-- blank model selectors -->
   <div class="animated slideInRight">
     <label for="blankName"> Blank Model: </label>
@@ -25,19 +26,19 @@
     <button ng-click="sc.getSpecificBlank(newBlank)" class="animated slideInRight" ng-hide=""> SUBMIT </button>
   </div>
 <!-- current blank data display -->
-  <h3>
+  <h3 class="animated slideInLeft">
     <div> Blank Name: {{sc.newBlank.blankName}} </div>
     <div> Blank Length: {{sc.newBlank.blankLength}} </div>
     <div> Handle Length: {{sc.newBlank.handleLength}} </div>
   </h3>
 <!-- Guide size table -->
   <table>
-    <thead>
+    <thead class="animated slideInRight">
       <tr>
         <th> Guide Sizes: </th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="animated slideInLeft">
       <tr ng-repeat="blank in sc.getSpecificBlankObject.list">
         <td> Tip-Top: {{blank.guides.guideSize}} </td>
         <td> 2nd: {{blank.guides.guideSize}} </td>
@@ -52,12 +53,12 @@
   <img src="assets/images/iceRod.png" class="animated rotateIn" alt="">
 <!-- guide spacing table -->
   <table>
-    <thead>
+    <thead class="animated slideInRight">
       <tr>
         <th> Guide Spacing: </th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="animated slideInLeft">
       <tr ng-repeat="blank in sc.getSpecificBlankObject.list">
         <td> TipTop - Second Guide: {{blank.guides.guideSpacing}} </td>
         <td> Second - Third Guide: {{blank.guides.guideSpacing}} </td>
