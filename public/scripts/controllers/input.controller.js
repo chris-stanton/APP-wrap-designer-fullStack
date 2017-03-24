@@ -1,4 +1,4 @@
-myApp.controller('InputController',['FactoryFactory',function( FactoryFactory) {
+myApp.controller('InputController',['FactoryFactory',function(FactoryFactory) {
 
   console.log('InputController running');
   var self = this;
@@ -15,9 +15,9 @@ myApp.controller('InputController',['FactoryFactory',function( FactoryFactory) {
   self.addThreads = function(){
     FactoryFactory.addThreads(self.newThreadOrder);
   };
-
+//finder window function
   self.finderWindow = function(){
-    window.open('https://www.google.com');
-  }
+    window.open();
+  };
 
 }]);//end of myApp.controller

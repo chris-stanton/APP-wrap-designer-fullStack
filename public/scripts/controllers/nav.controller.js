@@ -2,7 +2,7 @@ myApp.controller('NavController',['FactoryFactory',function(FactoryFactory) {
 
   console.log('NavController running');
   var self = this;
-  this.testMessage = 'IC WORKING STATUS';
+  this.testMessage = 'NC WORKING STATUS';
 
 
 //google authenticate
@@ -10,10 +10,10 @@ myApp.controller('NavController',['FactoryFactory',function(FactoryFactory) {
 //google de-authedicate
   self.deAuthUser = FactoryFactory.DeAuthUser;
 //google register
-  self.registerUser = function(){
-    console.log('button click');
-    window.open('https://www.google.com');
-  }
+self.registerUser = function(){
+  console.log('button click');
+  window.open('https://www.google.com');
+}
 
 
 

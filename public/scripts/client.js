@@ -2,7 +2,7 @@ var myApp = angular.module('myApp', ['ngRoute']);
 
 myApp.config(['$routeProvider', function($routeProvider) {
 
-  //routes
+//routes
     $routeProvider
         .when ('/spacing_view', {
           templateUrl: '/views/spacing_view.html',
@@ -19,7 +19,8 @@ myApp.config(['$routeProvider', function($routeProvider) {
             controller: 'InputController',
             controllerAs: 'ic'
         })
-        .otherwise ( {
-            redirectTo: '/spacing_view'
+        .otherwise ({
+            redirectTo: '/wrap_view'
         });
+
 }]);//end of myApp.config
