@@ -15,9 +15,6 @@ myApp.controller('InputController',['FactoryFactory',function(FactoryFactory) {
   self.addThreads = function(){
     FactoryFactory.addThreads(self.newThreadOrder);
   };
-//finder window function
-  self.finderWindow = function(){
-    window.open();
-  };
+
 
 }]);//end of myApp.controller
