@@ -21,58 +21,57 @@
 
 
 /*<------- WRAP DESIGNER VIEW ------->*/
-.center {
-  text-align: center;
-}
-
 #wrapTable {
   margin-top: 30px;
   width: 100%;
   height: 5px;
 }
 
-.thCenter {
-  text-align: center;
-}
-
 td {
   text-align: center;
+  margin: none;
 }
-
+/*table column*/
 .tdThread {
   height: 40px;
+  margin: none;
 }
-
+/*table column*/
 .tdBlank {
   height: 20px;
+  margin: none;
 }
-
+/*selector outer div*/
 .selectorDiv {
   /*display: inline-block;*/
 }
-
+/*input in selector div*/
 .selectorInput {
   width: 20px;
 }
+
 /*<------- DB INPUT VIEW ------->*/
+/*input div container*/
 #inputInputs {
   display: inline-block;
   text-align: center;
 }
-
+/*outer container for all input divs*/
 #inputDiv {
   margin: 40px 0px 40px 0px;
 }
-
+/*input divs*/
 #threadInputDiv {
   display: inline-block;
   text-align: center;
 }
 
+/*add thread heading*/
 #threadHeading{
   margin: 75px 0px 40px 0px;
 }
 
+/*threat submit button*/
 #threadButton {
   margin-top: 20px;
 }
@@ -80,6 +79,16 @@ td {
 #viewSelecterCenter{
   text-align: center;
   margin: 100px 0px 10px 0px;
+}
+
+/*centers 'measurements (guide to guide)'*/
+.thCenter {
+  text-align: center;
+}
+
+/*centers all threat elemnts*/
+.center {
+  text-align: center;
 }
 
 /*<------- tables on stats and DB views ------->*/

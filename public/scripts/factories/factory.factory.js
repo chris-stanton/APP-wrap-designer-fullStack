@@ -1,7 +1,7 @@
 myApp.factory('FactoryFactory',['$http',function($http) {
 
   console.log('FactoryFactory running');
-  
+
 //object containers
   var blankFactoryObject = { list: [] };
   var updateAuth = { list: [] };
@@ -89,6 +89,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     }).then(function(response){
       console.log("addGuideMeasurement Request: ", response);
       self.newblankOrder = {};
+      getBlanks()
     });//end of .then
   }
 
@@ -105,7 +106,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     });//end of .then
   }
 
-  //google authenticate login
+//google authenticate login
   function authUser() {
     $http({
       method: 'GET',

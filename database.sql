@@ -52,13 +52,11 @@ CREATE TABLE threads (
 );
 
 INSERT INTO threads (mfgName, color, image)
-VALUES
--- values have baan added to the database
-      ('NCP', 'Black', "assets/images/threads/0001.jpg"),
-      ('NCP', 'White', "assets/images/threads/0002.jpg"),
-      ('NCP', 'Light Blue', "assets/images/threads/0037.jpg"),
-      ('NCP', 'Cobalt Blue', "assets/images/threads/0050.jpg"),
-      ('NCP', 'Peach', "assets/images/threads/0051.jpg");
+VALUES ('Trimar', 'Classic Twist Black/Orange', 'assets/images/threads/0221t.jpg'),
+      ('Trimar', 'Classic Twist Black/Green', 'assets/images/threads/5896t.jpg'),
+      ('Trimar', 'Gold Electra Hologram Braid', 'assets/images/threads/5031.jpg'),
+      ('Trimar', 'Royal Blue Electra Hologram Braid', 'assets/images/threads/5032.jpg'),
+      ('Trimar', 'Lilac Electra Hologram Braid', 'assets/images/threads/5040.jpg');
 
 
 CREATE TABLE blankColors (
@@ -68,10 +66,9 @@ CREATE TABLE blankColors (
 );
 
 INSERT INTO blankColors (color, image)
-VALUES
-      ('Black', './assets/images/threads/0001.jpg'),
-      ('Red', './assets/images/threads/0335.jpg'),
-      ('White', './assets/images/threads/0002.jpg');
+VALUES ('Royal Blue', './assets/images/threads/0245.jpg'),
+      ('Marron', './assets/images/threads/0337.jpg'),
+      ('Hot Pink', 'assets/images/threads/0411.jpg');
 
 
 
