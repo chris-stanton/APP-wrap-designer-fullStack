@@ -27,23 +27,23 @@
   height: 5px;
 }
 
-td {
-  text-align: center;
-  margin: none;
+table {
+column-rule-width: medium;
+
 }
 /*table column*/
 .tdThread {
   height: 40px;
-  margin: none;
+  margin: 0;
 }
 /*table column*/
 .tdBlank {
   height: 20px;
-  margin: none;
+  margin: 0;
 }
 /*selector outer div*/
 .selectorDiv {
-  /*display: inline-block;*/
+
 }
 /*input in selector div*/
 .selectorInput {
@@ -56,10 +56,12 @@ td {
   display: inline-block;
   text-align: center;
 }
+
 /*outer container for all input divs*/
 #inputDiv {
   margin: 40px 0px 40px 0px;
 }
+
 /*input divs*/
 #threadInputDiv {
   display: inline-block;
@@ -73,7 +75,7 @@ td {
 
 /*threat submit button*/
 #threadButton {
-  margin-top: 20px;
+  margin: 20px 0px 60px 0px;
 }
 
 #viewSelecterCenter{
@@ -91,12 +93,25 @@ td {
   text-align: center;
 }
 
-/*<------- tables on stats and DB views ------->*/
+/*<------- image on stats and DB views ------->*/
 img {
   width: 85%;
   height: 100px;
 }
 
-button {
+
+#printButton {
+  margin-left: 800px;
+}
+
+.footer-center {
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  height:20px;
+  color: #24ee08;
+  background-color: #000000;
+  box-shadow: 0px 1px 2px 1px rgba(135, 182, 245, 0.1) inset, 0px -2px 20px #24ee08, 0px 1px 5px rgba(135, 182, 245, 0.1), 0px 2px 10px rgba(135, 182, 245, 0.1);
   text-align: right;
 }

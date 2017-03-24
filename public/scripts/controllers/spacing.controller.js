@@ -12,6 +12,11 @@ self.getBlanks = FactoryFactory.getBlanks;
 self.getSpecificBlank = FactoryFactory.getSpecificBlank;
 //returned object from factory
 self.getSpecificBlankObject = FactoryFactory.getSpecificBlankObject;
+//print function
+self.print = function(){
+  window.print();
+}
+
 //object from drop down menu
 self.newBlank = {};
 

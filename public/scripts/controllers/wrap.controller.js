@@ -11,10 +11,17 @@ self.updateColors = FactoryFactory.updateColor;
 self.colorObject = FactoryFactory.colorFactoryObject;
 //return blank color object from factory
 self.blankColorFactoryObject = FactoryFactory.blankColorFactoryObject;
+//print function
+self.print = function(){
+  window.print();
+}
 
 //thread color selecter value container
 self.newColor = {};
 //blank color selecter value container
 self.newColorBlank = {};
+
+
+
 
 }]);//end of myApp.controller

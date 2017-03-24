@@ -66,9 +66,8 @@ CREATE TABLE blankColors (
 );
 
 INSERT INTO blankColors (color, image)
-VALUES ('Royal Blue', './assets/images/threads/0245.jpg'),
-      ('Marron', './assets/images/threads/0337.jpg'),
-      ('Hot Pink', 'assets/images/threads/0411.jpg');
+VALUES ('Lavendar Metallic', './assets/images/blankColors/lavenderMetallic.png'),
+      ('Light Green Metallic', './assets/images/blankColors/lightGreenMetallic.png');
 
 
 

@@ -5,26 +5,29 @@
 
     <title>Solo-Project</title>
 
-    <script type="text/javascript" src="assets/vendor/angular.min.js"></script>
-    <script type="text/javascript" src="assets/vendor/angular-route.min.js"></script>
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/factories/factory.factory.js"></script>
-    <script type="text/javascript" src="/scripts/controllers/nav.controller.js"></script>
-    <script type="text/javascript" src="/scripts/controllers/spacing.controller.js"></script>
-    <script type="text/javascript" src="/scripts/controllers/wrap.controller.js"></script>
-    <script type="text/javascript" src="/scripts/controllers/input.controller.js"></script>
+    <script type="text/javascript" src="./assets/vendor/angular.min.js"></script>
+    <script type="text/javascript" src="./assets/vendor/angular-route.min.js"></script>
+    <script type="text/javascript" src="./scripts/client.js"></script>
+    <script type="text/javascript" src="./scripts/factories/factory.factory.js"></script>
+    <script type="text/javascript" src="./scripts/controllers/nav.controller.js"></script>
+    <script type="text/javascript" src="./scripts/controllers/spacing.controller.js"></script>
+    <script type="text/javascript" src="./scripts/controllers/wrap.controller.js"></script>
+    <script type="text/javascript" src="./scripts/controllers/input.controller.js"></script>
 
-    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css"/>
-    <link rel="stylesheet" href="../styles/styles.css"/>
+    <link rel="stylesheet" href="./assets/vendor/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./styles/styles.css"/>
       <!-- BLAZE CSS -->
     <link rel="stylesheet" href="assets/vendor/blaze.min.css">
       <!-- ANIMATE CSS -->
     <link rel="stylesheet" href="assets/vendor/animate.css">
 
   </head>
-  <body >
+  <body>
     <nav ng-include="'views/templates/nav.html'"></nav>
     <main ng-view></main>
 
+
+
   </body>
+  <footer ng-include="'views/templates/footer.html'"></footer>
 </html>
