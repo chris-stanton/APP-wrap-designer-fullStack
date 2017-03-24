@@ -67,7 +67,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       url: '/add/blank',
       data: newBlankOrder
     }).then(function(response){
-      alert('Successfully Added Rod To Database!');
+      swal("Blank Database Updated!", "Good job!", "success");
       console.log("addBlank Request: ", response);
       self.newblankOrder = {};
     });//end of .then
@@ -102,7 +102,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       data: newThreadOrder
     }).then(function(response){
       console.log("addThread Request: ", response);
-      alert('Successfully Added Thread Color To Database!');
+      swal("Thread Database Updated!", "Good job!", "success");
       self.newThreadOrder = {};
       updateColor();
     });//end of .then

@@ -1,4 +1,4 @@
-myApp.controller('InputController',['FactoryFactory',function(FactoryFactory) {
+myApp.controller('NavController',['FactoryFactory',function(FactoryFactory) {
 
   console.log('NavController running');
   var self = this;
@@ -7,15 +7,14 @@ myApp.controller('InputController',['FactoryFactory',function(FactoryFactory) {
 
 //google authenticate
   self.authUser = FactoryFactory.authUser;
-
-
 //google de-authedicate
   self.deAuthUser = FactoryFactory.DeAuthUser;
+//google register
+  self.registerUser = function(){
+    console.log('button click');
+    window.open('https://www.google.com');
+  }
 
-
-
-
-deAuthUser()
 
 
 }]);//end of myApp.controller

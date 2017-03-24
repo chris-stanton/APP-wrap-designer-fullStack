@@ -16,5 +16,8 @@ myApp.controller('InputController',['FactoryFactory',function( FactoryFactory) {
     FactoryFactory.addThreads(self.newThreadOrder);
   };
 
+  self.finderWindow = function(){
+    window.open('https://www.google.com');
+  }
 
 }]);//end of myApp.controller

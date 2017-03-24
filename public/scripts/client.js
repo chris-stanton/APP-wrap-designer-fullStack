@@ -22,4 +22,4 @@ myApp.config(['$routeProvider', function($routeProvider) {
         .otherwise ( {
             redirectTo: '/spacing_view'
         });
-}]);
+}]);//end of myApp.config
