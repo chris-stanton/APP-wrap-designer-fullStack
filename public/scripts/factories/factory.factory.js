@@ -10,7 +10,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
   var colorFactoryObject = { list: [] };
   var blankColorFactoryObject = { list: [] };
 
-//gets blanks on startup
+//gets blanks, blank/color and thread colors on startup
   getBlanks();
   updateColor();
   updateColorBlank()
@@ -67,6 +67,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       url: '/add/blank',
       data: newBlankOrder
     }).then(function(response){
+      alert('Successfully Added Rod To Database!');
       console.log("addBlank Request: ", response);
       self.newblankOrder = {};
     });//end of .then
@@ -101,6 +102,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       data: newThreadOrder
     }).then(function(response){
       console.log("addThread Request: ", response);
+      alert('Successfully Added Thread Color To Database!');
       self.newThreadOrder = {};
       updateColor();
     });//end of .then

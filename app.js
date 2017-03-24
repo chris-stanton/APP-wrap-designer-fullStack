@@ -5,6 +5,7 @@ var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
 
+// file paths
 var spacingRouter = require('./server/routes/spacingRouter.js');
 var addRouter = require('./server/routes/addRouter.js');
 var authRouter = require('./server/routes/authRouter.js');
