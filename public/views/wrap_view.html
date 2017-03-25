@@ -1,19 +1,31 @@
 
 <h1 class="animated slideInRight"> Wrap Designer! </h1>
-<!-- table picture view -->
+<!-- table wrap view -->
 <table id="wrapTable" class="animated slideInLeft">
-  <tbody class="container">
-    <tr class="row">
-      <td class="col-md-3"> Blank Color <img ng-src="{{wc.newColorBlank.blankColor}}" class="tdBlank"> </td>
-      <td class="col-md-1"> Color One <img ng-src="{{wc.newColor.colorOne}}" class="tdThread"> </td>
-      <td class="col-md-1"> Color Two <img ng-src="{{wc.newColor.colorTwo}}" class="tdThread"> </td>
-      <td class="col-md-1"> Color Three <img ng-src="{{wc.newColor.colorThree}}" class="tdThread"> </td>
-      <td class="col-md-1"> Color Four <img ng-src="{{wc.newColor.colorFour}}" class="tdThread"> </td>
-      <td class="col-md-1"> Color Five <img ng-src="{{wc.newColor.colorFive}}" class="tdThread"> </td>
-      <td class="col-md-3"> Blank Color <img ng-src="{{wc.newColorBlank.blankColor}}" class="tdBlank"> </td>
+  <thead>
+    <tr>
+      <td> Blank Color </td>
+      <td> Color One </td>
+      <td> Color Two </td>
+      <td> Color Three </td>
+      <td> Color Four </td>
+      <td> Color Five </td>
+      <td> Blank Color </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width=250> <img ng-src="{{wc.newColorBlank.blankColor}}" class="tdBlank"> </td>
+      <td width={{wc.turns.colorOne}}> <img ng-src="{{wc.newColor.colorOne}}" class="tdThread"> </td>
+      <td width={{wc.turns.colorTwo}}> <img ng-src="{{wc.newColor.colorTwo}}" class="tdThread"> </td>
+      <td width={{wc.turns.colorThree}}> <img ng-src="{{wc.newColor.colorThree}}" class="tdThread"> </td>
+      <td width={{wc.turns.colorFour}}> <img ng-src="{{wc.newColor.colorFour}}" class="tdThread"> </td>
+      <td width={{wc.turns.colorFive}}> <img ng-src="{{wc.newColor.colorFive}}" class="tdThread"> </td>
+      <td width=250> <img ng-src="{{wc.newColorBlank.blankColor}}" class="tdBlank"> </td>
     </tr>
   </tbody>
 </table>
+
 <!-- selecters -->
 <div id="viewSelecterCenter">
 <!-- blank color selector -->
@@ -26,7 +38,7 @@
 <!-- colorOne selector -->
   <div class="animated slideInRight" class="selectorDiv">
     <label for="colorOne"> Color One: </label>
-    <input type="text" name="colorOne" value="" class="selectorInput">
+    <input type="text" name="colorOne" value="10" class="selectorInput" ng-model="wc.turns.colorOne">
     <select name="colorOne" ng-model="wc.newColor.colorOne">
       <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.color}} </option>
     </select>
@@ -34,7 +46,7 @@
 <!-- colorTwo selector -->
   <div class="animated slideInRight" class="selectorDiv">
     <label for="colorTwo"> Color Two: </label>
-    <input type="text" name="colorTwo" value="" class="selectorInput">
+    <input type="text" name="colorTwo" value="10" class="selectorInput" ng-model="wc.turns.colorTwo">
     <select name="colorTwo" ng-model="wc.newColor.colorTwo">
       <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.color}} </option>
     </select>
@@ -42,7 +54,7 @@
 <!-- colorThree selector -->
   <div class="animated slideInRight" class="selectorDiv">
     <label for="colorThree"> Color Three: </label>
-    <input type="text" name="colorThree" value="" class="selectorInput">
+    <input type="text" name="colorThree" value="10" class="selectorInput" ng-model="wc.turns.colorThree">
     <select name="colorThree" ng-model="wc.newColor.colorThree">
       <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.color}} </option>
     </select>
@@ -50,7 +62,7 @@
 <!-- colorFour selector -->
   <div class="animated slideInRight" class="selectorDiv">
     <label for="colorFour"> Color Four: </label>
-    <input type="text" name="colorFour" value="" class="selectorInput">
+    <input type="text" name="colorFour" value="10" class="selectorInput" ng-model="wc.turns.colorFour">
     <select name="colorFour" ng-model="wc.newColor.colorFour">
       <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.color}} </option>
     </select>
@@ -58,7 +70,7 @@
 <!-- colorFive selector -->
   <div class="animated slideInRight" class="selectorDiv">
     <label for="colorFive"> Color Five: </label>
-    <input type="text" name="colorFive" value="" class="selectorInput">
+    <input type="text" name="colorFive" value="10" class="selectorInput" ng-model="wc.turns.colorFive">
     <select name="colorFive" ng-model="wc.newColor.colorFive">
       <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.color}} </option>
     </select>
