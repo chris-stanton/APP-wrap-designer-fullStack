@@ -21,7 +21,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       method: 'GET',
       url: '/spacing/allBlanks'
     }).then(function(response) {
-      console.log("getBlanks Request: ", response.data);
+      //console.log("getBlanks Request: ", response.data);
       blankFactoryObject.list = response.data;
     });//end of .then
   }//end of getblanks()
@@ -32,7 +32,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       method: 'GET',
       url: '/color/thread'
     }).then(function(response) {
-      console.log("update colors Request: ", response.data);
+      //console.log("update colors Request: ", response.data);
       colorFactoryObject.list = response.data;
     });//end of .then
   }//end of updatecolor()
@@ -43,7 +43,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       method: 'GET',
       url: '/color/blank'
     }).then(function(response) {
-      console.log("update blank colors Request: ", response.data);
+      //console.log("update blank colors Request: ", response.data);
       blankColorFactoryObject.list = response.data;
     });//end of .then
   }//end of updatecolor()
@@ -68,31 +68,32 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       data: newBlankOrder
     }).then(function(response){
       swal("Blank Database Updated!", "Good job!", "success");
-      console.log("addBlank Request: ", response);
+      //console.log("addBlank Request: ", response);
+      getBlanks();
       self.newblankOrder = {};
-    });//end of .then
-
-//adds guides to database from input view
-    $http({
-      method: 'POST',
-      url: '/add/guide',
-      data: newBlankOrder
-    }).then(function(response){
-      console.log("addGuide Request: ", response);
-      self.newblankOrder = {};
-    });//end of .then
-
-//adds guide measurments to database from input view
-    $http({
-      method: 'POST',
-      url: '/add/guideMeasurement',
-      data: newBlankOrder
-    }).then(function(response){
-      console.log("addGuideMeasurement Request: ", response);
-      self.newblankOrder = {};
-      getBlanks()
     });//end of .then
   }
+//adds guides to database from input view
+    // $http({
+    //   method: 'POST',
+    //   url: '/add/guide',
+    //   data: newBlankOrder
+    // }).then(function(response){
+    //   console.log("addGuide Request: ", response);
+    //   self.newblankOrder = {};
+    // });//end of .then
+
+//adds guide measurments to database from input view
+  //   $http({
+  //     method: 'POST',
+  //     url: '/add/guideMeasurement',
+  //     data: newBlankOrder
+  //   }).then(function(response){
+  //     console.log("addGuideMeasurement Request: ", response);
+  //     self.newblankOrder = {};
+  //     getBlanks()
+  //   });//end of .then
+  // }
 
 //adds thread color to database from input view inputs
   function addThreads(newThreadOrder) {
@@ -101,7 +102,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       url: '/add/addThread',
       data: newThreadOrder
     }).then(function(response){
-      console.log("addThread Request: ", response);
+      //console.log("addThread Request: ", response);
       swal("Thread Database Updated!", "Good job!", "success");
       self.newThreadOrder = {};
       updateColor();
@@ -114,7 +115,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       method: 'GET',
       url: '/auth'
     }).then(function(response) {
-      console.log("authUser Request: ", response);
+      //console.log("authUser Request: ", response);
       updateAuth.list = response.data;
     });//end of .then
   }//end of authUser()
@@ -125,7 +126,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       method: 'GET',
       url: '/auth'
     }).then(function(response) {
-      console.log("deAuthUser Request: ", response);
+      //console.log("deAuthUser Request: ", response);
       updateDeAuth.list = response.data;
     });//end of .then
   }//end of deAuthUser()

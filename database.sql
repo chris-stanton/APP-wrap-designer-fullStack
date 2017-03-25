@@ -72,6 +72,32 @@ VALUES ('Lavendar Metallic', './assets/images/blankColors/lavenderMetallic.png')
 
 
 
+CREATE TABLE newBlanks (
+  id SERIAL PRIMARY KEY,
+  blankName VARCHAR(80) NOT NULL,
+  mfgName VARCHAR(80) NOT NULL,
+  blankLength INT NOT NULL,
+  blankMaterial VARCHAR(80),
+  handleLength INT NOT NULL,
+  guideSizeTipTop INT NOT NULL,
+  guideSizeTwo INT NOT NULL,
+  guideSizeThree INT NOT NULL,
+  guideSizeFour INT NOT NULL,
+  guideSizeFive INT,
+  guideSizeSix INT,
+  oneTwo INT NOT NULL,
+  twoThree INT NOT NULL,
+  threeFour INT,
+  fourFive INT,
+  fiveSix INT
+);
+
+
+
+
+
+
+
 /////////////////////////////////////////////////////////////////////////////////
 // <------ DATABASE SETUP CODE FOR MONGODB ------>
 //specifies which database to use
@@ -115,6 +141,15 @@ db.dhBlanks.insert(
       handleLength: 3,
       handleType: 'Cork'
     },
+
+    INSERT INTO newBlanks (blankName, mfgName, blankLength, blankMaterial, handleLength,
+                guideSizeTipTop, guideSizeTwo, guideSizeThree, guideSizeFour, guideSizeFive,
+                oneTwo, twoThree, threeFour, fourFive)
+    VALUES ('El Dente Douce', 'DH Custom Rods and Tackle', '28', 'Fiberglass', '5',
+           2, 3, 4, 5, 10,
+           3.25, 4.50, 5.00, 6.75);
+
+('Mini Bite', 'DH Custom Rods and Tackle', '21', 'Fiberglass', '3', 'Cork');
 
     {
       blankName: 'Seven Douce',

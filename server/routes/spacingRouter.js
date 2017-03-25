@@ -16,7 +16,7 @@ var pool = new pg.Pool(config);
 router.get('/allBlanks', function (req, res) {
   pool.connect()
     .then(function (client) {
-      client.query('SELECT * FROM blanks')
+      client.query('SELECT * FROM newBlanks')
         .then(function (result) {
           client.release();
           res.send(result.rows);
@@ -29,36 +29,36 @@ router.get('/allBlanks', function (req, res) {
 });//end of router.get
 
 //gets specificBlank
-router.get('/specificBlanks', function (req, res) {
-  pool.connect()
-    .then(function (client) {
-      client.query('SELECT blankName, blanklength FROM blanks')
-        .then(function (result) {
-          client.release();
-          res.send(result.rows);
-        })
-        .catch(function (err) {
-          console.log('error on SELECT', err);
-          res.sendStatus(500);
-        });
-    });//end of .then
-});//end of router.get
-
-//gets all guide measurements
-router.get('/', function (req, res) {
-  pool.connect()
-    .then(function (client) {
-      client.query('SELECT * FROM guideMeasurements')
-        .then(function (result) {
-          client.release();
-          res.send(result.rows);
-        })
-        .catch(function (err) {
-          console.log('error on SELECT', err);
-          res.sendStatus(500);
-        });
-    });//end of .then
-});//end of router.get
+// router.get('/specificBlanks', function (req, res) {
+//   pool.connect()
+//     .then(function (client) {
+//       client.query('SELECT blankName, blanklength FROM blanks')
+//         .then(function (result) {
+//           client.release();
+//           res.send(result.rows);
+//         })
+//         .catch(function (err) {
+//           console.log('error on SELECT', err);
+//           res.sendStatus(500);
+//         });
+//     });//end of .then
+// });//end of router.get
+//
+// //gets all guide measurements
+// router.get('/', function (req, res) {
+//   pool.connect()
+//     .then(function (client) {
+//       client.query('SELECT * FROM guideMeasurements')
+//         .then(function (result) {
+//           client.release();
+//           res.send(result.rows);
+//         })
+//         .catch(function (err) {
+//           console.log('error on SELECT', err);
+//           res.sendStatus(500);
+//         });
+//     });//end of .then
+//});//end of router.get
 
 
 

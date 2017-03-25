@@ -20,9 +20,9 @@ router.post('/blank', function (req, res) {
   console.log('add blank: ', newBlankOrder);
   pool.connect()
     .then(function (client) {
-//adds newBlankOrder data to table
-      client.query('INSERT INTO blanks (blankName, mfgName, blankLength, blankMaterial, handleLength, handleType) VALUES ($1, $2, $3, $4, $5, $6)',
-        [newBlankOrder.blankName, newBlankOrder.mfgName, newBlankOrder.blankLength, newBlankOrder.blankMaterial, newBlankOrder.handleLength, newBlankOrder.handleType])
+//adds newBlankOrder data to table (original version was inserting into blanks table)
+      client.query('INSERT INTO newBlanks (blankName, mfgName, blankLength, blankMaterial, handleLength, guideSizeTipTop, guideSizeTwo, guideSizeThree, guideSizeFour, guideSizeFive, guideSizeSix, oneTwo, twoThree, threeFour, fourFive, fiveSix) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)',
+        [newBlankOrder.blankName, newBlankOrder.mfgName, newBlankOrder.blankLength, newBlankOrder.blankMaterial, newBlankOrder.handleLength, newBlankOrder.guideSizeTipTop, newBlankOrder.guideSizeTwo, newBlankOrder.guideSizeThree, newBlankOrder.guideSizeFour, newBlankOrder.guideSizeFive, newBlankOrder.guideSizeSix, newBlankOrder.oneTwo, newBlankOrder.twoThree, newBlankOrder.threeFour, newBlankOrder.fourFive, newBlankOrder.fiveSix])
         .then(function (result) {
           client.release();
           res.sendStatus(201);
