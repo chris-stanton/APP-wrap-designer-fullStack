@@ -3,25 +3,25 @@
 <!-- blank model selectors -->
   <div class="animated slideInRight">
     <label for="blankName"> Blank Model: </label>
-    <select name="blankName" ng-model="sc.newBlank.blankName">
-      <option ng-repeat="onLoad in sc.onLoad.list" value="{{onLoad.blankname}}"> {{onLoad.blankname}} </option>
-    </select>
+      <select name="blankName" ng-model="sc.newBlank.blankName">
+        <option ng-repeat="onLoad in sc.onLoad.list" value="{{onLoad.blankname}}"> {{onLoad.blankname}} </option>
+      </select>
   </div>
 <!-- blank length selectors -->
   <div ng-hide="" class="animated slideInRight">
     <label for="blankLength"> Blank Length: </label>
-    <select name="blankLength" ng-model="sc.newBlank.blankLength">
-      <option ng-repeat="onLoad in sc.onLoad.list" value='{{onLoad.blanklength}}"'> {{onLoad.blanklength}} </option>
-    </select>
+      <select name="blankLength" ng-model="sc.newBlank.blankLength">
+        <option ng-repeat="onLoad in sc.onLoad.list" value='{{onLoad.blanklength}}"'> {{onLoad.blanklength}} </option>
+      </select>
   </div>
 <!-- handle length selectors -->
   <div ng-hide="" class="animated slideInRight">
     <label for="handleLength"> Handle Length: </label>
-    <select name="handleLength" ng-model="sc.newBlank.handleLength">
-      <option value='3"'> 3" </option>
-      <option value='5"'> 5" </option>
-      <option value='8"'> 8" </option>
-    </select>
+      <select name="handleLength" ng-model="sc.newBlank.handleLength">
+        <option value='3"'> 3" </option>
+        <option value='5"'> 5" </option>
+        <option value='8"'> 8" </option>
+      </select>
 <!-- submit button -->
     <button ng-click="sc.getSpecificBlank(newBlank)" class="animated slideInRight" ng-hide=""> SUBMIT </button>
   </div>
@@ -68,7 +68,7 @@
       </tr>
     </tbody>
   </table>
-
+<!-- print button   -->
   <div class="animated slideInLeft">
     <button type="button" name="print" ng-click="sc.print()" id="printButton" class="c-button c-button--rounded c-button--ghost-brand"> Print </button>
   </div>

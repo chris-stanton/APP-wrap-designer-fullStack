@@ -5,7 +5,7 @@ myApp.controller('InputController',['FactoryFactory',function(FactoryFactory) {
   self.testMessage = 'IC WORKING STATUS';
   self.newBlankOrder = {};
   self.newThreadOrder = {};
-
+  console.log("Input controller: " + self.newBlankOrder);
 
 //new blank pass-through to factory
   self.addBlanks = function(){
