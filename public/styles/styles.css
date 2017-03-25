@@ -21,27 +21,36 @@
 
 
 /*<------- WRAP DESIGNER VIEW ------->*/
+/*container holding wrap table view*/
 #wrapTable {
-  text-align: center;
+  padding-top: 30px;
 }
+
 /*table column*/
 .tdThread {
-  height: 40px;
-  margin: 0px;
-  cellspacing: none;
+  height: 30px;
 }
+
 /*table column*/
 .tdBlank {
   height: 20px;
-  margin: 0px;
 }
+
 /*selector outer div*/
 tr {
   margin: 0px;
 }
+
 /*input in selector div*/
 .selectorInput {
   width: 20px;
+}
+
+/*container holding all selects and inputs*/
+#viewSelecterCenter{
+  text-align: center;
+  margin: 80px 0px 10px 0px;
+  display: block;
 }
 
 /*<------- DB INPUT VIEW ------->*/
@@ -71,11 +80,6 @@ tr {
 /*threat submit button*/
 #threadButton {
   margin: 20px 0px 60px 0px;
-}
-
-#viewSelecterCenter{
-  text-align: center;
-  margin: 100px 0px 10px 0px;
 }
 
 /*centers 'measurements (guide to guide)'*/
