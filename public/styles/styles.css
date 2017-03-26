@@ -21,27 +21,40 @@
 
 
 /*<------- WRAP DESIGNER VIEW ------->*/
-/*container holding wrap table view*/
-#wrapTable {
+/*label table*/
+.wrapTable {
   padding-top: 30px;
 }
 
-/*table column*/
+/*label table row*/
+/*#trWrapLabels {
+  position: fixed;
+  text-align: center;
+  padding: 30px;
+}*/
+
+/*table column thread image*/
 .tdThread {
   height: 30px;
+  margin: 0px;
+  padding: 0px;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  line-height: 0px;
 }
 
-/*table column*/
+/*table column blank image*/
 .tdBlank {
   height: 20px;
-}
-
-/*selector outer div*/
-tr {
+  width: 300px;
   margin: 0px;
+  padding: 0px;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  line-height: 0px;
 }
 
-/*input in selector div*/
+/*# of turns input*/
 .selectorInput {
   width: 40px;
 }
@@ -93,18 +106,13 @@ tr {
 }
 
 /*<------- image on stats and DB views ------->*/
+/*rod image between tables*/
 img {
   width: 85%;
   height: 100px;
 }
 
-
-
-
-#printButton {
-  margin-left: 800px;
-}
-
+/*<------- footer ------->*/
 .footer-center {
   position: fixed;
   bottom: 0;
@@ -117,12 +125,17 @@ img {
   text-align: center;
 }
 
+/*<------- applies to elemnts on all views ------->*/
 /*allheadings*/
 h1 {
   font-family: fantasy;
   text-align: center;
   font-size: 50px;
+}
 
+/*print buttons on spacing and wrap views*/
+#printButton {
+  margin-left: 850px;
 }
 
 /*body {
