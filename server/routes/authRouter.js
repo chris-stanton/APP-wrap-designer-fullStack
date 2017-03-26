@@ -1,3 +1,6 @@
+console.log("authRouter works!!");
+
+//database connection
 var express = require('express');
 var router = express.Router();
 var pg = require('pg');
@@ -9,11 +12,8 @@ var config = {
   idleTimeoutMillis: 30000
 };
 
+//pool / pg constructor function
 var pool = new pg.Pool(config);
-
-console.log("authRouter.js works!")
-
-
 
 
 

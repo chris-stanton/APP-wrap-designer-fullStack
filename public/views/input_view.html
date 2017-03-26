@@ -26,6 +26,7 @@
       <input type="text" name="handleLength" value="" ng-model="ic.newBlankOrder.handleLength">
     </div>
   </div>
+
 <!-- guide size input table -->
   <table class="animated rotateInDownRight">
     <thead>
@@ -64,6 +65,7 @@
       </tr>
     </tbody>
   </table>
+
 <!-- referance image -->
   <img src="assets/images/iceRod.png" class="animated rotateIn" alt="">
 
@@ -101,13 +103,16 @@
       </tr>
     </tbody>
   </table>
+
 <!-- new blank stats submit button -->
   <div class="animated slideInRight">
     <button ng-click="ic.addBlanks(ic.newBlankOrder)"  class="c-button c-button--rounded c-button--ghost-success"> SUBMIT New Blank </button>
   </div>
 </div>
 
+
 <!-- end of blank inputs start of threat input -->
+
 
 <div class="center">
 <!-- thread color sumbit start -->
@@ -127,6 +132,7 @@
         <!-- <input type="file" name="image" value="newBlankOrder.image" ng-model="ic.newThreadOrder.image" accept="image/*"> -->
       </div>
     </div>
+    
 <!-- new thread color submit button -->
     <div class="animated slideInRight" id="threadButton">
       <button class="c-button c-button--rounded c-button--ghost-success" type="button" name="button" ng-click="ic.addThreads(ic.newThreadOrder)"> SUBMIT New Thread Color </button>

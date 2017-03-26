@@ -10,10 +10,15 @@ myApp.factory('FactoryFactory',['$http',function($http) {
   var colorFactoryObject = { list: [] };
   var blankColorFactoryObject = { list: [] };
 
+//--- gets all data on starup ---//
+  init();
+
+  function init(){
 //--- gets blanks, blank/color and thread colors on startup ---//
-  getBlanks();
-  updateColor();
-  updateColorBlank()
+    getBlanks();
+    updateColor();
+    updateColorBlank()
+  }//end of init()
 
 //--- gets blanks for drop down options on spacing view ---//
   function getBlanks() {
@@ -23,7 +28,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     }).then(function(response) {
       //console.log("getBlanks Request: ", response.data);
       blankFactoryObject.list = response.data;
-    });//end of .then
+    });
   }//end of getblanks()
 
 //--- gets all thread colors for wrap view selecters ---//
@@ -34,7 +39,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     }).then(function(response) {
       //console.log("update colors Request: ", response.data);
       colorFactoryObject.list = response.data;
-    });//end of .then
+    });
   }//end of updatecolor()
 
 //--- gets all blank colors for wrap view selecters ---//
@@ -45,7 +50,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     }).then(function(response) {
       //console.log("update blank colors Request: ", response.data);
       blankColorFactoryObject.list = response.data;
-    });//end of .then
+    });
   }//end of updatecolor()
 
 //--- gets results from spacing view drop down menu ---//
@@ -53,11 +58,11 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     $http({
       method: 'GET',
       url: '/spacing/allBlanks'
-      // url: '/spacing/specificBlanks'
+      // url: '/spacing/specificBlanks' //uncomment to go back to original request
     }).then(function(response) {
       console.log("getSpecificBlank: ", response.data);
       getSpecificBlankObject.list = response.data;
-    });//end of .then
+    });
   }//end of getblanks()
 
 //--- add blank stats to Database ---//
@@ -84,9 +89,9 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     // }).then(function(response){
     //   console.log("addGuide Request: ", response);
     //   self.newblankOrder = {};
-    // });//end of .then
+    // });
   //  }
-  
+
 //--- adds guide measurments to database from input view ---//
   //   $http({
   //     method: 'POST',
@@ -96,7 +101,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
   //     console.log("addGuideMeasurement Request: ", response);
   //     self.newblankOrder = {};
   //     getBlanks()
-  //   });//end of .then
+  //   });
   // }//end of guides post
 
 //--- adds thread color to database from input view inputs ---//
@@ -110,7 +115,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       swal("Thread Database Updated!", "Good job!", "success");
       self.newThreadOrder = {};
       updateColor();
-    });//end of .then
+    });
   }//end of addThreads()
 
 //--- google authenticate login ---//
@@ -121,7 +126,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     }).then(function(response) {
       //console.log("authUser Request: ", response);
       updateAuth.list = response.data;
-    });//end of .then
+    });
   }//end of authUser()
 
 //--- google authenticate logout ---//
@@ -132,38 +137,39 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     }).then(function(response) {
       //console.log("deAuthUser Request: ", response);
       updateDeAuth.list = response.data;
-    });//end of .then
+    });
   }//end of deAuthUser()
 
 
 
 
   return {
-    //gets blank stats for spacing view
+//gets blank stats for spacing view
     getBlanks : getBlanks,
-    //gets specific blank info from select menu dropdowns for spacing view - object
+//gets specific blank info from select menu dropdowns for spacing view - object
     getSpecificBlank : getSpecificBlank,
-    //adds stats to DOM on spacing view - object
+//adds stats to DOM on spacing view - object
     getSpecificBlankObject : getSpecificBlankObject,
-    //blank list for spacing view select options - object
+//blank list for spacing view select options - object
     blankFactoryObject : blankFactoryObject,
-    //database blank submission - function
+//database blank submission - function
     addBlanks : addBlanks,
-    //database blank submission - function
+//database blank submission - function
     addThreads : addThreads,
-    //authenticated function - function
+//authenticated function - function
     authUser : authUser,
-    //deauthenticate function - function
+//deauthenticate function - function
     deAuthUser : deAuthUser,
-    //return after google authentication login - object
+//return after google authentication login - object
     updateAuth : updateAuth,
-    //return after google authentication logout - object
+//return after google authentication logout - object
     updateDeAuth : updateDeAuth,
-    //calling function from button click on warp view - function
+//calling function from button click on warp view - function
     updateColor : updateColor,
-    //return of all thread colors from DB - object
+//return of all thread colors from DB - object
     colorFactoryObject : colorFactoryObject,
-    //return of all blank colors from DB - object
-    blankColorFactoryObject: blankColorFactoryObject
-  }
-}]);
+//return of all blank colors from DB - object
+    blankColorFactoryObject : blankColorFactoryObject
+  }//end of return
+
+}]);//end of myApp.factory

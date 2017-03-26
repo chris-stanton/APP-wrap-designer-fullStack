@@ -43,7 +43,7 @@ tr {
 
 /*input in selector div*/
 .selectorInput {
-  width: 20px;
+  width: 40px;
 }
 
 /*container holding all selects and inputs*/
@@ -100,6 +100,7 @@ img {
 
 
 
+
 #printButton {
   margin-left: 800px;
 }
@@ -121,6 +122,7 @@ h1 {
   font-family: fantasy;
   text-align: center;
   font-size: 50px;
+
 }
 
 /*body {

@@ -1,6 +1,7 @@
 
 console.log("addRouter.js works!")
 
+//connection to database
 var express = require('express');
 var router = express.Router();
 var pg = require('pg');
@@ -10,8 +11,9 @@ var config = {
   port: 5432,
   max: 10,
   idleTimeoutMillis: 30000
-};
+};//end of config
 
+//pool / pg constructor function
 var pool = new pg.Pool(config);
 
 //add blanks to database
@@ -90,6 +92,5 @@ router.post('/addThread', function (req, res) {
         });//end of .catch
     });//end of .then
 });//end of router.post
-
 
 module.exports = router;

@@ -16,26 +16,33 @@ self.getBlanks = FactoryFactory.getBlanks;
 self.getSpecificBlank = FactoryFactory.getSpecificBlank;
 //returned object from factory
 self.getSpecificBlankObject = FactoryFactory.getSpecificBlankObject;
+
 //print function
 self.print = function(){
   window.print();
 }
 
 
-}]); //end controller code block
 
-
-
-
-//matching selects with database - gives a true or false return
+// console.log("factory side: ", onLoad);
 // self.getSpecificBlank = function(){
-//   var onLoad = self.onLoad.list;
-//   var newBlank = self.newBlank
-//   console.log("view side: ", newBlank)
-//   console.log("factory side: ", onLoad);
+//   console.log("view side: ", self.newBlank)
+// //array of objects from DB
+//   var onload = self.onLoad.list;
+// //object from view
+//   var submit = self.newBlank;
 //
-//     var batKicks = onLoad.filter(function (el) {
-//       var newTwo =  (el.blankname === newBlank.blankName);
-//       console.log(newTwo)
-//     });
+//   for (var i = 0; i < onload.length-1; i++) {
+//     var batKicks = onload.filter(function (el) {
+//       var newTwo =  (el.blankname === submit.blankName);
+//       console.log('newTwo: ', newTwo)
+//   })
+//   if (true) {
+//     var newOne = true;
+//   }
+// //console.log(newOne)
 // }
+// }
+
+
+}]);//end of myApp.controller

@@ -9,5 +9,4 @@ myApp.controller('NavController',['FactoryFactory',function(FactoryFactory) {
 //google de-authedicate
   self.deAuthUser = FactoryFactory.DeAuthUser;
 
-
 }]);//end of myApp.controller

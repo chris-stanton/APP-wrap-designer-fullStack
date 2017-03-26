@@ -1,4 +1,6 @@
 console.log("spacingRouter works!!");
+
+//database connection
 var express = require('express');
 var router = express.Router();
 var pg = require('pg');
@@ -10,6 +12,7 @@ var config = {
   idleTimeoutMillis: 30000
 };
 
+//pool / pg constructor function
 var pool = new pg.Pool(config);
 
 //gets all blanks
@@ -59,7 +62,5 @@ router.get('/', function (req, res) {
         });
     });//end of .then
 });//end of router.get
-
-
 
 module.exports = router;

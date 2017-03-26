@@ -2,7 +2,7 @@ var myApp = angular.module('myApp', ['ngRoute']);
 
 myApp.config(['$routeProvider', function($routeProvider) {
 
-//routes
+
     $routeProvider
         .when ('/spacing_view', {
           templateUrl: '/views/spacing_view.html',
