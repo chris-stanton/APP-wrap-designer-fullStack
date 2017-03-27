@@ -32,11 +32,12 @@ router.get('/allBlanks', function (req, res) {
 });//end of router.get
 
 //gets specificBlank
-router.get('/specificBlanks', function (req, res) {
-  console.log(req)
+router.get('/specificBlanks/:blankName', function (req, res) {
+  var newBlank = req.params;
+  console.log("router: ", newBlank)
   pool.connect()
     .then(function (client) {
-      client.query('SELECT * FROM newBlanks WHERE blankName=$1', [blankName])
+      client.query('SELECT * FROM newBlanks WHERE blankName=$1', [newBlank.blankName])
         .then(function (result) {
           client.release();
           res.send(result.rows);

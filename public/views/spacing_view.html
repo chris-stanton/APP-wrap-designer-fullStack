@@ -12,20 +12,20 @@
   </div>
 
 <!-- blank length selectors -->
-  <!-- <div class="animated slideInRight">
+  <div class="animated slideInRight">
     <label for="blankLength"> Blank Length: </label>
       <select name="blankLength" ng-model="sc.newBlank.blankLength">
-        <option ng-repeat="onLoad in sc.onLoad.list" value='{{onLoad.blanklength}}' + ' " '> {{onLoad.blanklength}}" </option>
+        <option ng-repeat="onLoad in sc.onLoad.list" value='{{onLoad.blanklength}}"' + ' " '> {{onLoad.blanklength}}" </option>
       </select>
-  </div> -->
+  </div>
 
 <!-- handle length selectors -->
-  <!-- <div class="animated slideInRight">
+  <div class="animated slideInRight">
     <label for="handleLength"> Handle Length: </label>
       <select name="handleLength" ng-model="sc.newBlank.handleLength">
-        <option ng-repeat="onLoad in sc.onLoad.list" value='{{onLoad.handlelength}}' + ' " '> {{onLoad.handlelength}}" </option>
+        <option ng-repeat="onLoad in sc.onLoad.list" value='{{onLoad.handlelength}}"' + ' " '> {{onLoad.handlelength}}" </option>
       </select>
-  </div> -->
+  </div>
 
 <!-- submit button -->
   <button ng-click="sc.getSpecificBlank(sc.newBlank)" class="animated slideInRight"> SUBMIT </button>
@@ -38,20 +38,20 @@
   </h4>
 
 <!-- Guide size table -->
-  <table>
+  <table id="guideSizeTable">
     <thead class="animated slideInRight">
       <tr>
         <th> Guide Sizes: </th>
       </tr>
     </thead>
     <tbody class="animated slideInLeft">
-      <tr ng-repeat="blank in sc.specificBlankObject">
-        <td> Tip-Top: {{}} </td>
-        <td> 2nd: {{}} </td>
-        <td> 3rd: {{}} </td>
-        <td> 4th: {{}} </td>
-        <td> 5th: {{}} </td>
-        <td> 6th: {{}} </td>
+      <tr ng-repeat="blank in sc.specificBlankObject.list">
+        <td> Tip-Top: {{blank.guidesizetiptop}} </td>
+        <td> 2nd: {{blank.guidesizetwo}} </td>
+        <td> 3rd: {{blank.guidesizethree}} </td>
+        <td> 4th: {{blank.guidesizefour}} </td>
+        <td> 5th: {{blank.guidesizefive}} </td>
+        <td> 6th: {{blank.guidesizesix}} </td>
       </tr>
     </tbody>
   </table>
@@ -60,19 +60,19 @@
   <img src="assets/images/iceRod.png" class="animated rotateIn">
 
 <!-- guide spacing table -->
-  <table>
+  <table id="guideSpacingTable">
     <thead class="animated slideInRight">
       <tr>
         <th> Guide Spacing: </th>
       </tr>
     </thead>
     <tbody class="animated slideInLeft">
-      <tr ng-repeat="blank in sc.specificBlankObject">
-        <td> TipTop - Second Guide: {{}} </td>
-        <td> Second - Third Guide: {{}} </td>
-        <td> Third - Fourth Guide: {{}} </td>
-        <td> Fourth - Fifth Guide: {{}} </td>
-        <td> Fifth - Sixth Guide: {{}} </td>
+      <tr ng-repeat="blank in sc.specificBlankObject.list">
+        <td> TipTop - Second Guide: {{blank.onetwo}} </td>
+        <td> Second - Third Guide: {{blank.twothree}} </td>
+        <td> Third - Fourth Guide: {{blank.twothree}} </td>
+        <td> Fourth - Fifth Guide: {{blank.twothree}} </td>
+        <td> Fifth - Sixth Guide: {{blank.twothree}} </td>
       </tr>
     </tbody>
   </table>

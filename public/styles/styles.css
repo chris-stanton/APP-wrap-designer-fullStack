@@ -17,8 +17,13 @@
   font-size: 10px;
 }
 /*<------- GUIDE SPACING VIEW ------->*/
+#guideSizeTable {
+  width: 100%;
+}
 
-
+#guideSpacingTable {
+  width: 100%;
+}
 
 /*<------- WRAP DESIGNER VIEW ------->*/
 /*label table*/
