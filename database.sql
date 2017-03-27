@@ -94,8 +94,8 @@ CREATE TABLE newBlanks (
 );
 
 INSERT INTO newBlanks (blankName, mfgName, blankLength, blankMaterial, handleLength,
-            guideSizeTipTop, guideSizeTwo, guideSizeThree, guideSizeFour, guideSizeFive,
-            oneTwo, twoThree, threeFour, fourFive)
-VALUES ('El Dente Douce', 'DH Custom Rods and Tackle', '28', 'Fiberglass', '5',
-       2, 3, 4, 5, 10,
-       3.25, 4.50, 5.00, 6.75);
+            guideSizeTipTop, guideSizeTwo, guideSizeThree, guideSizeFour, guideSizeFive, guideSizeSix
+            oneTwo, twoThree, threeFour, fourFive, fiveSix)
+VALUES ('LongBoard', 'DH Custom Rods and Tackle', '32', 'Fiberglass', '5',
+       2, 2, 3, 4, 5, 10,
+       3.25, 2.69, 3.19, 3.69, 4.25);

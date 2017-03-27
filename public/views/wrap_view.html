@@ -5,14 +5,15 @@
 <!-- wrap image table -->
   <table align="center" class="animated slideInLeft">
     <tr>
+      <!-- *3 is the multiplier to realistic turns 1 turn equals 3px -->
       <td> <img ng-src="{{wc.newColorBlank.blankColor}}" class="tdBlank"> </td>
-      <td width={{wc.turns.colorOne}}> <img ng-src="{{wc.newColor.colorOne}}" class="tdThread"> </td>
-      <td width={{wc.turns.colorTwo}}> <img ng-src="{{wc.newColor.colorTwo}}" class="tdThread"> </td>
-      <td width={{wc.turns.colorThree}}> <img ng-src="{{wc.newColor.colorThree}}" class="tdThread"> </td>
-      <td width={{wc.turns.colorFour}}> <img ng-src="{{wc.newColor.colorFour}}" class="tdThread"> </td>
-      <td width={{wc.turns.colorFive}}> <img ng-src="{{wc.newColor.colorFive}}" class="tdThread"> </td>
-      <td width={{wc.turns.colorSix}}> <img ng-src="{{wc.newColor.colorSix}}" class="tdThread"> </td>
-      <td width={{wc.turns.colorSeven}}> <img ng-src="{{wc.newColor.colorSeven}}" class="tdThread"> </td>
+      <td width={{wc.turns.colorOne*3}}> <img ng-src="{{wc.newColor.colorOne}}" class="tdThread"> </td>
+      <td width={{wc.turns.colorTwo*3}}> <img ng-src="{{wc.newColor.colorTwo}}" class="tdThread"> </td>
+      <td width={{wc.turns.colorThree*3}}> <img ng-src="{{wc.newColor.colorThree}}" class="tdThread"> </td>
+      <td width={{wc.turns.colorFour*3}}> <img ng-src="{{wc.newColor.colorFour}}" class="tdThread"> </td>
+      <td width={{wc.turns.colorFive*3}}> <img ng-src="{{wc.newColor.colorFive}}" class="tdThread"> </td>
+      <td width={{wc.turns.colorSix*3}}> <img ng-src="{{wc.newColor.colorSix}}" class="tdThread"> </td>
+      <td width={{wc.turns.colorSeven*3}}> <img ng-src="{{wc.newColor.colorSeven}}" class="tdThread"> </td>
       <td> <img ng-src="{{wc.newColorBlank.blankColor}}" class="tdBlank"> </td>
     </tr>
   </table>
