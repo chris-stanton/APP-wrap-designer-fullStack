@@ -1,4 +1,7 @@
 
+//authentication is required below this line
+//var decoder = require('./modules/decoder');
+
 var express = require('express');
 var app = express();
 var path = require('path');
@@ -16,14 +19,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/inboundURLbase',spacingRouter);
 
-//authentication is required below this line
-// var decoder = require('./modules/decoder');
+
 
 //routers
 app.use('/spacing', spacingRouter);
-app.use('/add', addRouter);
-app.use('/auth', authRouter);
 app.use('/color', colorRouter);
+
+//app.use(decoder.token);
+app.use('/add', addRouter);
 
 //listening port
 app.set('port', process.env.PORT || 5000);

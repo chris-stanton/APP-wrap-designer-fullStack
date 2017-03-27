@@ -13,7 +13,7 @@ self.getBlanks = FactoryFactory.getBlanks;
 //returned object from the factory
 self.onLoad = FactoryFactory.blankFactoryObject;
 //button click to call all blanks factory function
-//self.getSpecificBlank = FactoryFactory.getSpecificBlank;
+self.getSpecificBlank = FactoryFactory.getSpecificBlank;
 //returned object from factory
 self.specificBlankObject = FactoryFactory.specificBlankObject;
 
@@ -22,12 +22,12 @@ self.print = function(){
   window.print();
 }
 
-// broken
-self.getSpecificBlank = function(){
-  var newBlank = self.newBlank;
-  console.log(newBlank)
-  FactoryFactory.getSpecificBlank(newBlank);
-}
+//broken
+// self.getSpecificBlank = function(){
+//   var newBlank = self.newBlank;
+//   console.log("newBlank", newBlank);
+//   FactoryFactory.getSpecificBlank(newBlank);
+// }
 
 
 }]);//end of myApp.controller

@@ -1,6 +1,6 @@
 <!-- onload = averything from database -->
 <!-- newBlank = info selected from select options -->
-
+{{sc.specificBlankObject}}
   <h1> Spacing Calculator! </h1>
 
 <!-- blank model selectors -->
@@ -12,20 +12,20 @@
   </div>
 
 <!-- blank length selectors -->
-  <div class="animated slideInRight">
+  <!-- <div class="animated slideInRight">
     <label for="blankLength"> Blank Length: </label>
       <select name="blankLength" ng-model="sc.newBlank.blankLength">
         <option ng-repeat="onLoad in sc.onLoad.list" value='{{onLoad.blanklength}}' + ' " '> {{onLoad.blanklength}}" </option>
       </select>
-  </div>
+  </div> -->
 
 <!-- handle length selectors -->
-  <div class="animated slideInRight">
+  <!-- <div class="animated slideInRight">
     <label for="handleLength"> Handle Length: </label>
       <select name="handleLength" ng-model="sc.newBlank.handleLength">
         <option ng-repeat="onLoad in sc.onLoad.list" value='{{onLoad.handlelength}}' + ' " '> {{onLoad.handlelength}}" </option>
       </select>
-  </div>
+  </div> -->
 
 <!-- submit button -->
   <button ng-click="sc.getSpecificBlank(sc.newBlank)" class="animated slideInRight"> SUBMIT </button>
@@ -55,7 +55,7 @@
       </tr>
     </tbody>
   </table>
-{{sc.specificBlankObject}}
+
 <!-- reference image -->
   <img src="assets/images/iceRod.png" class="animated rotateIn">
 

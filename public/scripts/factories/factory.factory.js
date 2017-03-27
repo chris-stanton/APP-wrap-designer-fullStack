@@ -1,7 +1,7 @@
 myApp.factory('FactoryFactory',['$http',function($http) {
 
   console.log('FactoryFactory running');
- 
+
 //--- object containers ---//
   var blankFactoryObject = { list: [] };
   var updateAuth = { list: [] };
@@ -55,10 +55,10 @@ myApp.factory('FactoryFactory',['$http',function($http) {
 
 //--- gets results from spacing view drop down menu ---//
   function getSpecificBlank(newBlank) {
-    console.log()
+    console.log(newBlank)
     $http({
       method: 'GET',
-      url: '/spacing/specificBlanks'
+      url: '/spacing/specificBlanks/' + newBlank.blankName
     }).then(function(response) {
       specificBlankObject.list = response.data;
     });

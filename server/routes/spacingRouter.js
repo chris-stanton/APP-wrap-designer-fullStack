@@ -33,8 +33,6 @@ router.get('/allBlanks', function (req, res) {
 
 //gets specificBlank
 router.get('/specificBlanks', function (req, res) {
-//not sure  
-  var blankName = req.query.blankName;
   console.log(req)
   pool.connect()
     .then(function (client) {
