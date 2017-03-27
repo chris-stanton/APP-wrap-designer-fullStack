@@ -28,7 +28,7 @@
   </div>
 
 <!-- submit button -->
-  <button ng-click="sc.getSpecificBlank(newBlank)" class="animated slideInRight" ng-hide=""> SUBMIT </button>
+  <button ng-click="sc.getSpecificBlank(sc.newBlank)" class="animated slideInRight"> SUBMIT </button>
 
 <!-- current blank data display -->
   <h4 class="animated slideInLeft">
@@ -45,19 +45,19 @@
       </tr>
     </thead>
     <tbody class="animated slideInLeft">
-      <tr ng-repeat="blank in sc.getSpecificBlankObject">
-        <td> Tip-Top: {{blank.guides.guideSize}} </td>
-        <td> 2nd: {{blank.guides.guideSize}} </td>
-        <td> 3rd: {{blank.guides.guideSize}} </td>
-        <td> 4th: {{blank.guides.guideSize}} </td>
-        <td> 5th: {{blank.guides.guideSize}} </td>
-        <td> 6th: {{blank.guides.guideSize}} </td>
+      <tr ng-repeat="blank in sc.specificBlankObject">
+        <td> Tip-Top: {{}} </td>
+        <td> 2nd: {{}} </td>
+        <td> 3rd: {{}} </td>
+        <td> 4th: {{}} </td>
+        <td> 5th: {{}} </td>
+        <td> 6th: {{}} </td>
       </tr>
     </tbody>
   </table>
-
+{{sc.specificBlankObject}}
 <!-- reference image -->
-  <img src="assets/images/iceRod.png" class="animated rotateIn" alt="">
+  <img src="assets/images/iceRod.png" class="animated rotateIn">
 
 <!-- guide spacing table -->
   <table>
@@ -67,12 +67,12 @@
       </tr>
     </thead>
     <tbody class="animated slideInLeft">
-      <tr ng-repeat="blank in sc.getSpecificBlankObject">
-        <td> TipTop - Second Guide: {{blank.guides.guideSpacing}} </td>
-        <td> Second - Third Guide: {{blank.guides.guideSpacing}} </td>
-        <td> Third - Fourth Guide: {{blank.guides.guideSpacing}} </td>
-        <td> Fourth - Fifth Guide: {{blank.guides.guideSpacing}} </td>
-        <td> Fifth - Sixth Guide: {{blank.guides.guideSpacing}} </td>
+      <tr ng-repeat="blank in sc.specificBlankObject">
+        <td> TipTop - Second Guide: {{}} </td>
+        <td> Second - Third Guide: {{}} </td>
+        <td> Third - Fourth Guide: {{}} </td>
+        <td> Fourth - Fifth Guide: {{}} </td>
+        <td> Fifth - Sixth Guide: {{}} </td>
       </tr>
     </tbody>
   </table>

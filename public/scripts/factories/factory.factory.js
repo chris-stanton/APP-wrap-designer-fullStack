@@ -1,12 +1,12 @@
 myApp.factory('FactoryFactory',['$http',function($http) {
 
   console.log('FactoryFactory running');
-
+ 
 //--- object containers ---//
   var blankFactoryObject = { list: [] };
   var updateAuth = { list: [] };
   var updateDeAuth = { list: [] };
-  var getSpecificBlankObject = { list: [] };
+  var specificBlankObject = { list: [] };
   var colorFactoryObject = { list: [] };
   var blankColorFactoryObject = { list: [] };
 
@@ -54,14 +54,13 @@ myApp.factory('FactoryFactory',['$http',function($http) {
   }//end of updatecolor()
 
 //--- gets results from spacing view drop down menu ---//
-  function getSpecificBlank() {
+  function getSpecificBlank(newBlank) {
+    console.log()
     $http({
       method: 'GET',
-      url: '/spacing/allBlanks'
-      // url: '/spacing/specificBlanks' //uncomment to go back to original request
+      url: '/spacing/specificBlanks'
     }).then(function(response) {
-      console.log("getSpecificBlank: ", response.data);
-      getSpecificBlankObject.list = response.data;
+      specificBlankObject.list = response.data;
     });
   }//end of getblanks()
 
@@ -149,7 +148,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
 //gets specific blank info from select menu dropdowns for spacing view - object
     getSpecificBlank : getSpecificBlank,
 //adds stats to DOM on spacing view - object
-    getSpecificBlankObject : getSpecificBlankObject,
+    specificBlankObject : specificBlankObject,
 //blank list for spacing view select options - object
     blankFactoryObject : blankFactoryObject,
 //database blank submission - function

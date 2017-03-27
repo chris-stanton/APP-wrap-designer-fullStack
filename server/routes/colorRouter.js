@@ -19,7 +19,7 @@ var pool = new pg.Pool(config);
 router.get('/thread', function (req, res) {
   pool.connect()
     .then(function (client) {
-      client.query('SELECT * FROM threads')
+      client.query('SELECT * FROM threads ORDER BY mfgName ASC')
         .then(function (result) {
           client.release();
           res.send(result.rows);
