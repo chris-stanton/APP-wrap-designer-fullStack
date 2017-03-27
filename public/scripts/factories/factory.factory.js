@@ -55,7 +55,6 @@ myApp.factory('FactoryFactory',['$http',function($http) {
 
 //--- gets results from spacing view drop down menu ---//
   function getSpecificBlank(newBlank) {
-    console.log("ff: ", newBlank)
     $http({
       method: 'GET',
       url: '/spacing/specificBlanks/' + newBlank.blankName

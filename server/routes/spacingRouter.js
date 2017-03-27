@@ -34,7 +34,7 @@ router.get('/allBlanks', function (req, res) {
 //gets specificBlank
 router.get('/specificBlanks/:blankName', function (req, res) {
   var newBlank = req.params;
-  console.log("router: ", newBlank)
+  console.log("spacing router: ", newBlank)
   pool.connect()
     .then(function (client) {
       client.query('SELECT * FROM newBlanks WHERE blankName=$1', [newBlank.blankName])

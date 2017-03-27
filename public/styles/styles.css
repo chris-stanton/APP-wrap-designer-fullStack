@@ -16,13 +16,23 @@
   text-align: right;
   font-size: 10px;
 }
+
 /*<------- GUIDE SPACING VIEW ------->*/
-#guideSizeTable {
+/*guide size table*/
+.guideSizeTable {
   width: 100%;
+  text-align: center;
 }
 
-#guideSpacingTable {
+/*guide spacing table*/
+.guideSpacingTable {
   width: 100%;
+  text-align: center;
+}
+
+/*bName, bLength, hLength container*/
+#dataDisplay {
+  text-align: center;
 }
 
 /*<------- WRAP DESIGNER VIEW ------->*/
