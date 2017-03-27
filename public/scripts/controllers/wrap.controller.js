@@ -22,6 +22,4 @@ self.newColor = {};
 self.newColorBlank = {};
 
 
-
-
 }]);//end of myApp.controller

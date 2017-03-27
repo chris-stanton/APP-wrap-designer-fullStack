@@ -10,6 +10,7 @@ myApp.controller('InputController',['FactoryFactory',function(FactoryFactory) {
   self.addBlanks = function(){
     FactoryFactory.addBlanks(self.newBlankOrder);
   };
+
 //new thread pass-through to factory
   self.addThreads = function(){
     FactoryFactory.addThreads(self.newThreadOrder);

@@ -28,7 +28,7 @@
   </div>
 
 <!-- guide size input table -->
-  <table class="animated rotateInDownRight">
+  <table class="animated slideInRight">
     <thead>
       <tr>
         <th> Guide Sizes </th>
@@ -38,27 +38,27 @@
       <tr>
         <!-- original ng-model was like this for all guide sizes (ng-model="ic.newBlankOrder.guideSize.guideFive)
         I removed the "guideSize" and add size (guide+ Size +#) -->
-        <td>
+        <td class="animated slideInRight">
           <label for="tipTip"> Tip-Top </label>
           <input type="text" name="tipTop" value="" ng-model="ic.newBlankOrder.guideSizeTipTop">
         </td>
-        <td>
+        <td class="animated slideInRight" >
           <label for="guideTwo"> Second Guide </label>
           <input type="text" name="guidetwo" value="" ng-model="ic.newBlankOrder.guideSizeTwo">
         </td>
-        <td>
+        <td class="animated slideInRight" >
           <label for="guideThree"> Third Guide </label>
           <input type="text" name="guideThree" value="" ng-model="ic.newBlankOrder.guideSizeThree">
         </td>
-        <td>
+        <td class="animated slideInRight" >
           <label for="guideFour"> Fourth Guide </label>
           <input type="text" name="guideFour" value="" ng-model="ic.newBlankOrder.guideSizeFour">
         </td>
-        <td>
+        <td class="animated slideInRight" >
           <label for="guideFive"> Fifth Guide </label>
           <input type="text" name="guideFive" value="" ng-model="ic.newBlankOrder.guideSizeFive">
         </td>
-        <td>
+        <td class="animated slideInRight" >
           <label for="guideSix"> Sixth Guide </label>
           <input type="text" name="guideSix" value="" ng-model="ic.newBlankOrder.guideSizeSix">
         </td>
@@ -67,45 +67,45 @@
   </table>
 
 <!-- referance image -->
-  <img src="assets/images/iceRod.png" class="animated rotateIn" alt="">
+  <img src="assets/images/iceRod.png" class="animated slideInLeft" alt="">
 
 <!-- guide spacing input table -->
-  <table class="animated rotateInDownLeft">
+  <table>
     <thead>
       <tr>
-        <td>
+        <td class="animated slideInRight">
           <!-- original ng-model was like this for all guide sizes (ng-model="ic.newBlankOrder.guideSpacing.twoThree")
           I removed the "guideSpacing" -->
           <label for="oneTwo"> TipTop - Second Guide </label>
           <input type="text" name="oneTwo" value="" ng-model="ic.newBlankOrder.oneTwo">
         </td>
-        <td>
+        <td class="animated slideInRight">
           <label for="twoThree"> Second Guide - Third Guide </label>
           <input type="text" name="twoThree" value="" ng-model="ic.newBlankOrder.twoThree">
         </td>
-        <td>
+        <td class="animated slideInRight">
           <label for="threeFour"> Third Guide - Fourth Guide </label>
           <input type="text" name="threeFour" value="" ng-model="ic.newBlankOrder.threeFour">
         </td>
-        <td>
+        <td class="animated slideInRight">
           <label for="fourFive"> Fourth Guide - Fifth Guide </label>
           <input type="text" name="fourFive" value="" ng-model="ic.newBlankOrder.fourFive">
         </td>
-        <td>
+        <td class="animated slideInRight">
           <label for="fiveSix"> Fifth Guide - Sixth Guide </label>
           <input type="text" name="fiveSix" value="" ng-model="ic.newBlankOrder.fiveSix">
         </td>
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr class="animated slideInRight">
         <th class="thCenter"> Measurements (guide to guide) </th>
       </tr>
     </tbody>
   </table>
 
 <!-- new blank stats submit button -->
-  <div class="animated slideInRight">
+  <div class="animated slideInLeft">
     <button ng-click="ic.addBlanks(ic.newBlankOrder)"  class="c-button c-button--rounded c-button--ghost-success"> SUBMIT New Blank </button>
   </div>
 </div>
@@ -117,6 +117,7 @@
 <div class="center">
 <!-- thread color sumbit start -->
   <h1 class="animated slideInRight" id="threadHeading"> Add New Thread! </h1>
+
     <div id="threadInputDiv">
       <div class="animated slideInLeft" id="threadInputDiv">
         <label for="mfgName"> MFG Name </label>
@@ -132,7 +133,7 @@
         <!-- <input type="file" name="image" value="newBlankOrder.image" ng-model="ic.newThreadOrder.image" accept="image/*"> -->
       </div>
     </div>
-    
+
 <!-- new thread color submit button -->
     <div class="animated slideInRight" id="threadButton">
       <button class="c-button c-button--rounded c-button--ghost-success" type="button" name="button" ng-click="ic.addThreads(ic.newThreadOrder)"> SUBMIT New Thread Color </button>
