@@ -80,8 +80,8 @@ router.post('/addThread', function (req, res) {
   console.log('add thread: ', newThreadOrder);
   pool.connect()
     .then(function (client) {
-      client.query('INSERT INTO threads (mfgName, color, image) VALUES ($1, $2, $3)',
-        [newThreadOrder.mfgName, newThreadOrder.color, newThreadOrder.image])
+      client.query('INSERT INTO threads (mfgName, color, threadNumber, image) VALUES ($1, $2, $3, $4)',
+        [newThreadOrder.mfgName, newThreadOrder.color, newThreadOrder.threadNumber, newThreadOrder.image])
         .then(function (result) {
           client.release();
           res.sendStatus(201);
