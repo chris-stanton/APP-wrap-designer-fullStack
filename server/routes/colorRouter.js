@@ -35,7 +35,7 @@ router.get('/thread', function (req, res) {
 router.get('/blank', function (req, res) {
   pool.connect()
     .then(function (client) {
-      client.query('SELECT * FROM blankColors')
+      client.query('SELECT * FROM blankColors ORDER BY mfgname ASC')
         .then(function (result) {
           client.release();
           res.send(result.rows);

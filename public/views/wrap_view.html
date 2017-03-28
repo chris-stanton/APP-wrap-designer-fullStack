@@ -19,99 +19,99 @@
   </table>
 
 <!-- all selecter container -->
-<div id="viewSelecterCenter">
+  <div id="viewSelecterCenter">
 
 <!-- blank color selector -->
-  <div class="animated slideInRight" class="selectorDiv">
-    <label for="blankColor"> Blank Color: </label>
-    <select name="blankColor" ng-model="wc.newColorBlank.blankColor">
-      <option ng-repeat="colorBlank in wc.blankColorFactoryObject.list" value='{{colorBlank.image}}'> {{colorBlank.color}} </option>
-    </select>
-  </div>
+    <div class="animated slideInRight" class="selectorDiv">
+      <label for="blankColor"> Blank Color: </label>
+      <select name="blankColor" ng-model="wc.newColorBlank.blankColor">
+        <option ng-repeat="colorBlank in wc.blankColorFactoryObject.list" value='{{colorBlank.image}}'> {{colorBlank.mfgname}} - {{colorBlank.color}} </option>
+      </select>
+    </div>
 
 <!-- colorOne selector -->
-  <div class="animated slideInLeft" class="selectorDiv">
-    <label for="colorOneTurn"> # of Turns: </label>
-    <input type="text" name="colorOneTurn" class="selectorInput" ng-model="wc.turns.colorOne">
+    <div class="animated slideInLeft" class="selectorDiv">
+      <label for="colorOneTurn"> # of Turns: </label>
+      <input type="text" name="colorOneTurn" class="selectorInput" ng-model="wc.turns.colorOne">
 
     <!-- <label for="colorOne"> Color One: </label> -->
-    <select name="colorOne" ng-model="wc.newColor.colorOne">
-      <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.color}} </option>
-    </select>
-  </div>
+      <select name="colorOne" ng-model="wc.newColor.colorOne">
+        <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.mfgname}} - {{color.color}} </option>
+      </select>
+    </div>
 
 <!-- colorTwo selector -->
-  <div class="animated slideInRight" class="selectorDiv">
-    <label for="colorTwoTurn"> # of Turns: </label>
-    <input type="text" name="colorTwoTurn" class="selectorInput" ng-model="wc.turns.colorTwo">
+    <div class="animated slideInRight" class="selectorDiv">
+      <label for="colorTwoTurn"> # of Turns: </label>
+      <input type="text" name="colorTwoTurn" class="selectorInput" ng-model="wc.turns.colorTwo">
 
     <!-- <label for="colorTwo"> Color Two: </label> -->
-    <select name="colorTwo" ng-model="wc.newColor.colorTwo">
-      <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.color}} </option>
-    </select>
-  </div>
+      <select name="colorTwo" ng-model="wc.newColor.colorTwo">
+        <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.mfgname}} - {{color.color}} </option>
+      </select>
+    </div>
 
 <!-- colorThree selector -->
-  <div class="animated slideInLeft" class="selectorDiv">
-    <label for="colorThreeTurn"> # of Turns: </label>
-    <input type="text" name="colorThreeTurn" class="selectorInput" ng-model="wc.turns.colorThree">
+    <div class="animated slideInLeft" class="selectorDiv">
+      <label for="colorThreeTurn"> # of Turns: </label>
+      <input type="text" name="colorThreeTurn" class="selectorInput" ng-model="wc.turns.colorThree">
 
     <!-- <label for="colorThree"> Color Three: </label> -->
-    <select name="colorThree" ng-model="wc.newColor.colorThree">
-      <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.color}} </option>
-    </select>
-  </div>
+      <select name="colorThree" ng-model="wc.newColor.colorThree">
+        <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.mfgname}} - {{color.color}} </option>
+      </select>
+    </div>
 
 <!-- colorFour selector -->
-  <div class="animated slideInRight" class="selectorDiv">
-    <label for="colorFourTurn"> # of Turns: </label>
-    <input type="text" name="colorFourTurn" class="selectorInput" ng-model="wc.turns.colorFour">
+    <div class="animated slideInRight" class="selectorDiv">
+      <label for="colorFourTurn"> # of Turns: </label>
+      <input type="text" name="colorFourTurn" class="selectorInput" ng-model="wc.turns.colorFour">
 
     <!-- <label for="colorFour"> Color Four: </label> -->
-    <select name="colorFour" ng-model="wc.newColor.colorFour">
-      <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.color}} </option>
-    </select>
-  </div>
+      <select name="colorFour" ng-model="wc.newColor.colorFour">
+        <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.mfgname}} - {{color.color}} </option>
+      </select>
+    </div>
 
 <!-- colorFive selector -->
-  <div class="animated slideInLeft" class="selectorDiv">
-    <label for="colorFiveTurn"> # of Turns: </label>
-    <input type="text" name="colorFiveTurn" class="selectorInput" ng-model="wc.turns.colorFive">
+    <div class="animated slideInLeft" class="selectorDiv">
+      <label for="colorFiveTurn"> # of Turns: </label>
+      <input type="text" name="colorFiveTurn" class="selectorInput" ng-model="wc.turns.colorFive">
 
     <!-- <label for="colorFive"> Color Five: </label> -->
-    <select name="colorFive" ng-model="wc.newColor.colorFive">
-      <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.color}} </option>
-    </select>
-  </div>
+      <select name="colorFive" ng-model="wc.newColor.colorFive">
+        <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.mfgname}} - {{color.color}} </option>
+      </select>
+    </div>
 
 <!-- colorSix selector -->
-  <div class="animated slideInRight" class="selectorDiv">
-    <label for="colorSixTurn"> # of Turns: </label>
-    <input type="text" name="colorSixTurn" class="selectorInput" ng-model="wc.turns.colorSix">
+    <div class="animated slideInRight" class="selectorDiv">
+      <label for="colorSixTurn"> # of Turns: </label>
+      <input type="text" name="colorSixTurn" class="selectorInput" ng-model="wc.turns.colorSix">
 
     <!-- <label for="colorSix"> Color Six: </label> -->
-    <select name="colorSix" ng-model="wc.newColor.colorSix">
-      <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.color}} </option>
-    </select>
-  </div>
+      <select name="colorSix" ng-model="wc.newColor.colorSix">
+        <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.mfgname}} - {{color.color}} </option>
+      </select>
+    </div>
 
 <!-- colorSeven selector -->
-  <div class="animated slideInLeft" class="selectorDiv">
-    <label for="colorSevenTurn"> # of Turns: </label>
-    <input type="text" name="colorSevenTurn" class="selectorInput" ng-model="wc.turns.colorSeven">
+    <div class="animated slideInLeft" class="selectorDiv">
+      <label for="colorSevenTurn"> # of Turns: </label>
+      <input type="text" name="colorSevenTurn" class="selectorInput" ng-model="wc.turns.colorSeven">
 
     <!-- <label for="colorSeven"> Color Seven: </label> -->
-    <select name="colorSeven" ng-model="wc.newColor.colorSeven">
-      <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.color}} </option>
-    </select>
+      <select name="colorSeven" ng-model="wc.newColor.colorSeven">
+        <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.mfgname}} - {{color.color}} </option>
+      </select>
+    </div>
+
   </div>
 
-</div>
-
 <!-- print button -->
-<div class="animated slideInLeft">
-  <button type="button" name="print" ng-click="wc.print()" id="printButton" class="c-button c-button--rounded c-button--ghost-brand"> Print </button>
-</div>
+  <div class="animated slideInLeft">
+    <button type="button" name="print" ng-click="wc.print()" id="printButton" class="c-button c-button--rounded c-button--ghost-brand"> Print </button>
+  </div>
 
 
 

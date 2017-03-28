@@ -52,12 +52,9 @@ CREATE TABLE threads (
 );
 
 INSERT INTO threads (mfgName, color, image)
-VALUES ('Trimar', 'Green Electra Hologram Braid', 'assets/images/threads/5033.jpg'),
-      ('Trimar', 'Black Electra Hologram Braid', 'assets/images/threads/5034.jpg'),
-      ('Trimar', 'Fushsia Electra Hologram Braid', '"assets/images/threads/5035.jpg'),
-      ('Trimar', 'Red Electra Hologram Braid', 'assets/images/threads/5036.jpg'),
-      ('Trimar', 'Purple Electra Hologram Braid', 'assets/images/threads/5038.jpg'),
-      ('Trimar', 'Turquoise Electra Hologram Braid', 'assets/images/threads/5039.jpg');
+VALUES ('ProWrap', 'Neon Orange', 'assets/images/threads/neonOrange.png'),
+        ('ProWrap', 'Neon Pink', 'assets/images/threads/neonPink.png'),
+        ('ProWrap', 'Neon Green', 'assets/images/threads/neonGreen.png');
 
 
 -- <--- blankColors database --->
@@ -67,9 +64,20 @@ CREATE TABLE blankColors (
   image VARCHAR(80)
 );
 
-INSERT INTO blankColors (color, image)
-VALUES ('Lavendar Metallic', './assets/images/blankColors/lavenderMetallic.png'),
-      ('Light Green Metallic', './assets/images/blankColors/lightGreenMetallic.png');
+INSERT INTO blankColors (color, image, mfgName)
+VALUES ('Red', './assets/images/blankColors/red.png', 'RodGeeks'),
+        ('Brick Red', './assets/images/blankColors/brickRed.png', 'RodGeeks'),
+        ('Maroon', './assets/images/blankColors/maroon.png', 'RodGeeks'),
+        ('Orange', './assets/images/blankColors/orange.png', 'RodGeeks'),
+        ('Yellow', './assets/images/blankColors/yellow.png', 'RodGeeks'),
+        ('Ivory', './assets/images/blankColors/ivory.png', 'RodGeeks'),
+        ('White', './assets/images/blankColors/white.png', 'RodGeeks'),
+        ('Green', './assets/images/blankColors/green.png', 'RodGeeks'),
+        ('Purple', './assets/images/blankColors/purple.png', 'RodGeeks'),
+        ('Light Blue', './assets/images/blankColors/lightBlue.png', 'RodGeeks'),
+        ('Blue', './assets/images/blankColors/blue.png', 'RodGeeks'),
+        ('Dark Blue', './assets/images/blankColors/darkBlue.png', 'RodGeeks');
+
 
 
 -- <--- database being currentlly used --->
