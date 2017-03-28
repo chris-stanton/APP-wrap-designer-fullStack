@@ -7,13 +7,13 @@
     <tr>
       <!-- *3 is the multiplier to realistic turns 1 turn equals 3px -->
       <td> <img ng-src="{{wc.newColorBlank.blankColor}}" class="tdBlank"> </td>
-      <td width={{wc.turns.colorOne*3}}> <img ng-src="{{wc.newColor.colorOne}}" class="tdThread"> </td>
-      <td width={{wc.turns.colorTwo*3}}> <img ng-src="{{wc.newColor.colorTwo}}" class="tdThread"> </td>
-      <td width={{wc.turns.colorThree*3}}> <img ng-src="{{wc.newColor.colorThree}}" class="tdThread"> </td>
-      <td width={{wc.turns.colorFour*3}}> <img ng-src="{{wc.newColor.colorFour}}" class="tdThread"> </td>
-      <td width={{wc.turns.colorFive*3}}> <img ng-src="{{wc.newColor.colorFive}}" class="tdThread"> </td>
-      <td width={{wc.turns.colorSix*3}}> <img ng-src="{{wc.newColor.colorSix}}" class="tdThread"> </td>
-      <td width={{wc.turns.colorSeven*3}}> <img ng-src="{{wc.newColor.colorSeven}}" class="tdThread"> </td>
+      <td> <img ng-src="{{wc.newColor.colorOne}}" width={{wc.turns.colorOne*3}} class="tdThread"> </td>
+      <td> <img ng-src="{{wc.newColor.colorTwo}}" width={{wc.turns.colorTwo*3}} class="tdThread"> </td>
+      <td> <img ng-src="{{wc.newColor.colorThree}}" width={{wc.turns.colorThree*3}} class="tdThread"> </td>
+      <td> <img ng-src="{{wc.newColor.colorFour}}" width={{wc.turns.colorFour*3}} class="tdThread"> </td>
+      <td> <img ng-src="{{wc.newColor.colorFive}}" width={{wc.turns.colorFive*3}} class="tdThread"> </td>
+      <td> <img ng-src="{{wc.newColor.colorSix}}" width={{wc.turns.colorSix*3}} class="tdThread"> </td>
+      <td> <img ng-src="{{wc.newColor.colorSeven}}" width={{wc.turns.colorSeven*3}} class="tdThread"> </td>
       <td> <img ng-src="{{wc.newColorBlank.blankColor}}" class="tdBlank"> </td>
     </tr>
   </table>
@@ -31,8 +31,8 @@
 
 <!-- colorOne selector -->
   <div class="animated slideInLeft" class="selectorDiv">
-    <label for="colorOneTurn"> Width: </label>
-    <input type="text" name="colorOneTurn" value="2" class="selectorInput" ng-model="wc.turns.colorOne">
+    <label for="colorOneTurn"> # of Turns: </label>
+    <input type="text" name="colorOneTurn" class="selectorInput" ng-model="wc.turns.colorOne">
 
     <!-- <label for="colorOne"> Color One: </label> -->
     <select name="colorOne" ng-model="wc.newColor.colorOne">
@@ -42,8 +42,8 @@
 
 <!-- colorTwo selector -->
   <div class="animated slideInRight" class="selectorDiv">
-    <label for="colorTwoTurn"> Width: </label>
-    <input type="text" name="colorTwoTurn" value="" class="selectorInput" ng-model="wc.turns.colorTwo">
+    <label for="colorTwoTurn"> # of Turns: </label>
+    <input type="text" name="colorTwoTurn" class="selectorInput" ng-model="wc.turns.colorTwo">
 
     <!-- <label for="colorTwo"> Color Two: </label> -->
     <select name="colorTwo" ng-model="wc.newColor.colorTwo">
@@ -53,8 +53,8 @@
 
 <!-- colorThree selector -->
   <div class="animated slideInLeft" class="selectorDiv">
-    <label for="colorThreeTurn"> Width: </label>
-    <input type="text" name="colorThreeTurn" value="" class="selectorInput" ng-model="wc.turns.colorThree">
+    <label for="colorThreeTurn"> # of Turns: </label>
+    <input type="text" name="colorThreeTurn" class="selectorInput" ng-model="wc.turns.colorThree">
 
     <!-- <label for="colorThree"> Color Three: </label> -->
     <select name="colorThree" ng-model="wc.newColor.colorThree">
@@ -64,8 +64,8 @@
 
 <!-- colorFour selector -->
   <div class="animated slideInRight" class="selectorDiv">
-    <label for="colorFourTurn"> Width: </label>
-    <input type="text" name="colorFourTurn" value="" class="selectorInput" ng-model="wc.turns.colorFour">
+    <label for="colorFourTurn"> # of Turns: </label>
+    <input type="text" name="colorFourTurn" class="selectorInput" ng-model="wc.turns.colorFour">
 
     <!-- <label for="colorFour"> Color Four: </label> -->
     <select name="colorFour" ng-model="wc.newColor.colorFour">
@@ -75,8 +75,8 @@
 
 <!-- colorFive selector -->
   <div class="animated slideInLeft" class="selectorDiv">
-    <label for="colorFiveTurn"> Width: </label>
-    <input type="text" name="colorFiveTurn" value="" class="selectorInput" ng-model="wc.turns.colorFive">
+    <label for="colorFiveTurn"> # of Turns: </label>
+    <input type="text" name="colorFiveTurn" class="selectorInput" ng-model="wc.turns.colorFive">
 
     <!-- <label for="colorFive"> Color Five: </label> -->
     <select name="colorFive" ng-model="wc.newColor.colorFive">
@@ -86,8 +86,8 @@
 
 <!-- colorSix selector -->
   <div class="animated slideInRight" class="selectorDiv">
-    <label for="colorSixTurn"> Width: </label>
-    <input type="text" name="colorSixTurn" value="" class="selectorInput" ng-model="wc.turns.colorSix">
+    <label for="colorSixTurn"> # of Turns: </label>
+    <input type="text" name="colorSixTurn" class="selectorInput" ng-model="wc.turns.colorSix">
 
     <!-- <label for="colorSix"> Color Six: </label> -->
     <select name="colorSix" ng-model="wc.newColor.colorSix">
@@ -97,8 +97,8 @@
 
 <!-- colorSeven selector -->
   <div class="animated slideInLeft" class="selectorDiv">
-    <label for="colorSevenTurn"> Width: </label>
-    <input type="text" name="colorSevenTurn" value="" class="selectorInput" ng-model="wc.turns.colorSeven">
+    <label for="colorSevenTurn"> # of Turns: </label>
+    <input type="text" name="colorSevenTurn" class="selectorInput" ng-model="wc.turns.colorSeven">
 
     <!-- <label for="colorSeven"> Color Seven: </label> -->
     <select name="colorSeven" ng-model="wc.newColor.colorSeven">

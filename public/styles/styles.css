@@ -48,22 +48,12 @@
 /*table column thread image*/
 .tdThread {
   height: 30px;
-  margin: 0px;
-  padding: 0px;
-  border-collapse: collapse;
-  border-spacing: 0px;
-  line-height: 0px;
 }
 
 /*table column blank image*/
 .tdBlank {
-  height: 22px;
+  height: 25px;
   width: 300px;
-  margin: 0px;
-  padding: 0px;
-  border-collapse: collapse;
-  border-spacing: 0px;
-  line-height: 0px;
 }
 
 /*# of turns input*/
@@ -119,7 +109,7 @@
 
 /*<------- image on stats and DB views ------->*/
 /*rod image between tables*/
-img {
+#iceRod {
   width: 80%;
   margin-left: 200px;
 
