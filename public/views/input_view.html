@@ -135,13 +135,13 @@
           <input type="text" name="color" value="" ng-model="ic.newThreadOrder.color">
         </div>
         <div class="animated slideInLeft" id="threadInputDiv">
-          <label for="threadNumber"> Color </label>
+          <label for="threadNumber"> Thread Number </label>
           <input type="text" name="threadNumber" value="" ng-model="ic.newThreadOrder.threadNumber">
         </div>
         <div class="animated slideInLeft" id="threadInputDiv">
           <label for="image"> Image </label>
-          <!-- <input type="text" name="image" value="" ng-model="ic.newThreadOrder.image"> -->
-          <input type="file" name="image" value="newBlankOrder.image" ng-model="ic.newThreadOrder.image" accept="image/*">
+          <input type="text" name="image" ng-model="ic.newThreadOrder.image">
+          <!-- <input type="file" name="image" ng-model="ic.newThreadOrder.image"> -->
         </div>
       </div>
 
@@ -149,5 +149,5 @@
       <div class="animated slideInRight" id="threadButton">
         <button class="c-button c-button--rounded c-button--ghost-success" type="button" name="button" ng-click="ic.addThreads(ic.newThreadOrder)"> SUBMIT New Thread Color </button>
       </div>
-
+      
   </div>

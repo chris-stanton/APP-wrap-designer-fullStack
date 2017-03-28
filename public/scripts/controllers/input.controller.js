@@ -13,6 +13,7 @@ myApp.controller('InputController',['FactoryFactory',function(FactoryFactory) {
 
 //new thread pass-through to factory
   self.addThreads = function(){
+    console.log(self.newThreadOrder)
     FactoryFactory.addThreads(self.newThreadOrder);
   };
 
