@@ -5,14 +5,21 @@
 
     <title>Solo-Project</title>
 
+      <!-- Angular -->
     <script type="text/javascript" src="./assets/vendor/angular.min.js"></script>
+      <!-- Angular -->
     <script type="text/javascript" src="./assets/vendor/angular-route.min.js"></script>
     <script type="text/javascript" src="./scripts/client.js"></script>
     <script type="text/javascript" src="./scripts/factories/factory.factory.js"></script>
-    <script type="text/javascript" src="./scripts/controllers/nav.controller.js"></script>
     <script type="text/javascript" src="./scripts/controllers/spacing.controller.js"></script>
     <script type="text/javascript" src="./scripts/controllers/wrap.controller.js"></script>
     <script type="text/javascript" src="./scripts/controllers/input.controller.js"></script>
+      <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+      <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+      <!-- Firebase Config -->
+    <script src="scripts/config.js"></script>
       <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="./assets/vendor/bootstrap.min.css"/>
     <link rel="stylesheet" href="./styles/styles.css"/>
@@ -23,7 +30,7 @@
       <!-- SWEETALERT -->
     <script src="./assets/vendor/sweetalert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./assets/vendor/sweetalert.css">
-      
+
   </head>
   <body>
     <nav ng-include="'views/templates/nav.html'"></nav>

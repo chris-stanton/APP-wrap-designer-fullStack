@@ -11,12 +11,6 @@
   background-color: #000000;
 }
 
-.authButtons {
-  background-color: #000000;
-  text-align: right;
-  font-size: 10px;
-}
-
 /*<------- GUIDE SPACING VIEW ------->*/
 /*guide size table*/
 .guideSizeTable {
@@ -40,6 +34,12 @@
 }
 
 /*<------- WRAP DESIGNER VIEW ------->*/
+/*authentication buttons*/
+.authButtons {
+  text-align: right;
+  font-size: 10px;
+}
+
 /*label table*/
 .wrapTable {
   padding-top: 30px;

@@ -16,4 +16,17 @@ myApp.controller('InputController',['FactoryFactory',function(FactoryFactory) {
     FactoryFactory.addThreads(self.newThreadOrder);
   };
 
+//google authenticate
+  self.authUser = function(){
+    console.log("auth clicked");
+   //FactoryFactory.authUser;
+  };
+
+//google de-authedicate
+  self.deAuthUser = function(){
+    console.log("de-auth clicked");
+    //FactoryFactory.deAuthUser;
+  };
+
+
 }]);//end of myApp.controller
