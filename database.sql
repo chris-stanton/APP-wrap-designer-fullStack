@@ -65,18 +65,21 @@ CREATE TABLE blankColors (
 );
 
 INSERT INTO blankColors (color, image, mfgName)
-VALUES ('Red', './assets/images/blankColors/red.png', 'RodGeeks'),
-        ('Brick Red', './assets/images/blankColors/brickRed.png', 'RodGeeks'),
-        ('Maroon', './assets/images/blankColors/maroon.png', 'RodGeeks'),
-        ('Orange', './assets/images/blankColors/orange.png', 'RodGeeks'),
-        ('Yellow', './assets/images/blankColors/yellow.png', 'RodGeeks'),
-        ('Ivory', './assets/images/blankColors/ivory.png', 'RodGeeks'),
-        ('White', './assets/images/blankColors/white.png', 'RodGeeks'),
-        ('Green', './assets/images/blankColors/green.png', 'RodGeeks'),
-        ('Purple', './assets/images/blankColors/purple.png', 'RodGeeks'),
-        ('Light Blue', './assets/images/blankColors/lightBlue.png', 'RodGeeks'),
-        ('Blue', './assets/images/blankColors/blue.png', 'RodGeeks'),
-        ('Dark Blue', './assets/images/blankColors/darkBlue.png', 'RodGeeks');
+VALUES ('Belize Blue', './assets/images/blankColors/belizeBlue.png', 'St. Croix'),
+        ('Carbon Pearl', './assets/images/blankColors/carbonPearl.png', 'St. Croix'),
+        ('Lava Red Metallic', './assets/images/blankColors/lavaRedMetallic.png', 'St. Croix'),
+        ('Canteen Green Pearl', './assets/images/blankColors/canteenGreenPearl.png', 'St. Croix'),
+        ('Forest Green Pearl', './assets/images/blankColors/forestGreenPearl.png', 'St. Croix'),
+        ('Blue Green Flip', './assets/images/blankColors/blueGreenFlip.png', 'St. Croix'),
+        ('Cobalt Blue Pearl', './assets/images/blankColors/cobaltBluePearl.png', 'St. Croix'),
+        ('Galatin Green', './assets/images/blankColors/galatinGreen.png', 'St. Croix'),
+        ('Black Pearl', './assets/images/blankColors/blackPearl.png', 'St. Croix'),
+        ('Tidemaster Green', './assets/images/blankColors/tidemasterGreen.png', 'St. Croix'),
+        ('Fushsia Metallic', './assets/images/blankColors/fuchsiaMetallic.png', 'St. Croix'),
+        ('Burgundy', './assets/images/blankColors/burgundy.png', 'St. Croix'),
+        ('Sea Foam Green', './assets/images/blankColors/seaFoamGreen.png', 'St. Croix'),
+        ('Honey Pearl', './assets/images/blankColors/honeyPearl.png', 'St. Croix'),
+        ('White Pearl', './assets/images/blankColors/whitePearl.png', 'St. Croix');
 
 
 

@@ -1,7 +1,7 @@
 var admin = require("firebase-admin");
 
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
+  credential: admin.credential.cert('./server/firebase-service-account.json'),
   databaseURL: "https://solo-priject.firebaseio.com"
 });
 

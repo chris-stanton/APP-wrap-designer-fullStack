@@ -1,5 +1,5 @@
-myApp.controller('InputController',['FactoryFactory',function(FactoryFactory) {
-
+myApp.controller('InputController',['FactoryFactory', '$firebaseAuth', '$location', function(FactoryFactory, $firebaseAuth, $location) {
+// $firebaseAuth, $location
   console.log('InputController running');
   var self = this;
   self.testMessage = 'IC WORKING STATUS';
@@ -17,17 +17,32 @@ myApp.controller('InputController',['FactoryFactory',function(FactoryFactory) {
     FactoryFactory.addThreads(self.newThreadOrder);
   };
 
-//google authenticate
+
+  function wrapView() {
+             $location.path('/input_view');
+  }//wrapView()
+
+//google authenticate bellow
+  var auth = $firebaseAuth();
+
   self.authUser = function(){
-    console.log("auth clicked");
-   //FactoryFactory.authUser;
-  };
+    // console.log("auth clicked");
+    auth.$signInWithPopup("google").then(function(firebaseUser) {
+              wrapView();
+              console.log("Firebase Authenticated as: ", firebaseUser.user.displayName);
+          }).catch(function(error) {
+              console.log("Authentication failed: ", error);
+          });
+  };//end of self.authUser()
 
 //google de-authedicate
   self.deAuthUser = function(){
-    console.log("de-auth clicked");
-    //FactoryFactory.deAuthUser;
-  };
+    // console.log("de-auth clicked");
+    auth.$signOut().then(function() {
+             console.log('Logging the user out!');
+     });
+  };//end of self.deAuthUser()
+
 
 
 }]);//end of myApp.controller
