@@ -80,6 +80,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
           getBlanks();
           self.newblankOrder = {};
         }).catch(function(error) {
+          swal("Values Are Incorrect", "Try Again!", "error");
           console.log('error authenticating', error);
         });//end of catch
     });//end of firebase.auth()
@@ -101,6 +102,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
           self.newThreadOrder = {};
           updateColor();
         }).catch(function(error) {
+          swal("Values Are Incorrect", "Try Again!", "error");
           console.log('error authenticating', error);
         });//end of catch
     });//end of firebase.auth()
@@ -132,16 +134,6 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     // }//end of guides post
 
 
-//--- local functions ---//
-  // function login() {
-  //     $location.path('/spacing_view');
-  //   }
-  //
-  //   function wrapView() {
-  //     $location.path('/wrap_view');
-  //   }
-
-
 
 //--- API ---//
   return {
@@ -157,15 +149,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     addBlanks : addBlanks,
 //database blank submission - function
     addThreads : addThreads,
-//authenticated function - function  DELETE
-//     authUser : authUser,
-// //deauthenticate function - function  DELETE
-//     deAuthUser : deAuthUser,
-// //return after google authentication login - object  DELETE
-//     updateAuth : updateAuth,
-// //return after google authentication logout - object  DELETE
-//     updateDeAuth : updateDeAuth,
-// //calling function from button click on warp view - function
+//calling function from button click on warp view - function
     updateColor : updateColor,
 //return of all thread colors from DB - object
     colorFactoryObject : colorFactoryObject,
