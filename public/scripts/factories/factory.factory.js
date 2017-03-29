@@ -185,6 +185,8 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     adminBlankFactoryObject : adminBlankFactoryObject,
 //gets all blanks on button click adds to admin view
     getAdminBlanks : getAdminBlanks,
+//gets all threads on button click adds to admin view - object
+  //  adminThreadFactoryObject : adminThreadFactoryObject,
 //update button click from admin view
     updateAdmin : updateAdmin,
 //delete button click from admin view

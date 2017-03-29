@@ -7,6 +7,8 @@ myApp.controller('AdminController', ['FactoryFactory', '$firebaseAuth', '$locati
   self.message = "Admin View Works";
 //all blanks object from factory
   self.adminBlankFactoryObject = FactoryFactory.adminBlankFactoryObject;
+//all threads object from factory
+  self.adminThreadFactoryObjec = FactoryFactory.adminThreadFactoryObjec;
 //button cick function to get all blanks
   self.buttonClick = FactoryFactory.getAdminBlanks;
 
@@ -44,15 +46,26 @@ myApp.controller('AdminController', ['FactoryFactory', '$firebaseAuth', '$locati
 
 // update button click function
   self.updateAdmin = function(blankId){
-    console.log("updating ID number: ", blankId);
+    console.log("updating blank ID number: ", blankId);
     FactoryFactory.update;
   }
 
 // delete button click function
   self.deleteAdmin = function(blankId){
-    console.log("deleting ID number: ", blankId);
+    console.log("deleting blank ID number: ", blankId);
     FactoryFactory.delete;
   }
+
+  self.updateThread = function(threadId){
+    console.log("updating thread ID number: ", threadId);
+    //FactoryFactory.delete;
+  }
+
+  self.deleteThread = function(threadId){
+    console.log("deleting thread ID number: ", threadId);
+    //FactoryFactory.delete;
+  }
+
 
 
 }]);//end of myApp.controller()

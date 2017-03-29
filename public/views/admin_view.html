@@ -1,4 +1,4 @@
-<main>
+
 
   <h1>Admin View Works</h1>
 
@@ -9,27 +9,43 @@
     <img class="photoId" src="{{ac.photo}}">
   </div>
 
-  <table id="adminTable" ng-repeat="blank in ac.adminBlankFactoryObject.list">
-      <tr>
-        <td class="adminTh"> <input type="text" name="" value="{{blank.mfgname}}"> MFG Name </td>
-        <td class="adminTh"> <input type="text" name="" value="{{blank.blankname}}"> Blank Name </td>
-        <td class="adminTh"> <input type="text" name="" value="{{blank.blanklength}}"> Blank Length </td>
-        <td class="adminTh"> <input type="text" name="" value="{{blank.blankmaterial}}"> Blank Material </td>
-        <td class="adminTh"> <input type="text" name="" value="{{blank.handlelength}}"> Handle Length </td>
-        <td class="adminTh"> <input type="text" name="" value="{{blank.guidesizetiptop}}"> Guide Size TipTop </td>
-        <td class="adminTh"> <input type="text" name="" value="{{blank.guidesizetwo}}"> Guide Size Two </td>
-        <td class="adminTh"> <input type="text" name="" value="{{blank.guidesizethree}}"> Guide Size Three </td>
-        <td class="adminTh"> <input type="text" name="" value="{{blank.guidesizefour}}"> Guide Size Four </td>
-        <td class="adminTh"> <input type="text" name="" value="{{blank.guidesizefive}}"> Guide Size Five </td>
-        <td class="adminTh"> <input type="text" name="" value="{{blank.guidesizesix}}"> Guide Size Six </td>
-        <td class="adminTh"> <input type="text" name="" value="{{blank.onetwo}}"> Guide Size Tip Top - Second </td>
-        <td class="adminTh"> <input type="text" name="" value="{{blank.twothree}}"> Guide Size Second - Third </td>
-        <td class="adminTh"> <input type="text" name="" value="{{blank.threefour}}"> Guide Size Third - Fourth </td>
-        <td class="adminTh"> <input type="text" name="" value="{{blank.fourfive}}"> Guide Size Fourth - Fifth </td>
-        <td class="adminTh"> <input type="text" name="" value="{{blank.fivesix}}"> Guide Size Fifth - Sixth </td>
+  <!-- blank dims -->
+  <div id="tableDiv">
+    <table id="adminTable" ng-repeat="blank in ac.adminBlankFactoryObject.list">
+      <tr id="adminTable">
+        <td class="adminTd"> <input type="text" placeholder="mfg name" value="{{blank.mfgname}}"> MFG Name </td>
+        <td class="adminTd"> <input type="text" placeholder="blank name" value="{{blank.blankname}}"> Blank Name </td>
+        <td class="adminTd"> <input type="text" placeholder="blank length" value="{{blank.blanklength}}"> Blank Length </td>
+        <td class="adminTd"> <input type="text" placeholder="blank material" value="{{blank.blankmaterial}}"> Blank Material </td>
+        <td class="adminTd"> <input type="text" placeholder="handle length" value="{{blank.handlelength}}"> Handle Length </td>
+        <td class="adminTd"> <input type="text" placeholder="guide tiptop" value="{{blank.guidesizetiptop}}"> Guide Size TipTop </td>
+        <td class="adminTd"> <input type="text" placeholder="guide second" value="{{blank.guidesizetwo}}"> Guide Size Two </td>
+        <td class="adminTd"> <input type="text" placeholder="guide third" value="{{blank.guidesizethree}}"> Guide Size Three </td>
+        <td class="adminTd"> <input type="text" placeholder="guide fourth" value="{{blank.guidesizefour}}"> Guide Size Four </td>
+        <td class="adminTd"> <input type="text" placeholder="guide fifth" value="{{blank.guidesizefive}}"> Guide Size Five </td>
+        <td class="adminTd"> <input type="text" placeholder="guide sixth" value="{{blank.guidesizesix}}"> Guide Size Six </td>
+        <td class="adminTd"> <input type="text" placeholder="measurement 1st-2nd" value="{{blank.onetwo}}"> Guide Size Tip Top - Second </td>
+        <td class="adminTd"> <input type="text" placeholder="measurement 2nd-3rd" value="{{blank.twothree}}"> Guide Size Second - Third </td>
+        <td class="adminTd"> <input type="text" placeholder="measurement 3rd-4th" value="{{blank.threefour}}"> Guide Size Third - Fourth </td>
+        <td class="adminTd"> <input type="text" placeholder="measurement 4th-5th" value="{{blank.fourfive}}"> Guide Size Fourth - Fifth </td>
+        <td class="adminTd"> <input type="text" placeholder="measurement 5th-6th" value="{{blank.fivesix}}"> Guide Size Fifth - Sixth </td>
         <td> <button class="upDelete" type="button" name="button" ng-click="ac.updateAdmin(blank.id)" > UPDATE </button> </td>
         <td> <button class="upDelete" type="button" name="button" ng-click="ac.deleteAdmin(blank.id)"> DELETE </button> </td>
       </tr>
-  </table>
+    </table>
+  </div>
 
-</main>
+<!-- thread dims -->
+  <div id="tableDiv">
+    <!-- need to create path -->
+    <table ng-repeat="Thread in ac.adminThreadFactoryObject.list">
+      <tr>
+        <td> <input type="text" placeholder="mfg name" value="{{thread.mfgname}}"> MFG Name </td>
+        <td> <input type="text" placeholder="blank name" value="{{thread.color}}"> Color </td>
+        <td> <input type="text" placeholder="blank length" value="{{thread.threadnumber}}"> Thread Number </td>
+        <td> <input type="text" placeholder="blank material" value="{{thread.image}}"> Image </td>
+        <td> <button type="button" name="button" ng-click="ac.updateThread(thread.id)" > UPDATE </button> </td>
+        <td> <button type="button" name="button" ng-click="ac.deleteThread(thread.id)"> DELETE </button> </td>
+      </tr>
+    </table>
+  </div>
