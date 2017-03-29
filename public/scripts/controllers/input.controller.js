@@ -17,10 +17,11 @@ myApp.controller('InputController',['FactoryFactory', '$firebaseAuth', '$locatio
     FactoryFactory.addThreads(self.newThreadOrder);
   };
 
-
+//redirect after authentication
   function wrapView() {
-             $location.path('/input_view');
+    $location.path('/input_view');
   }//wrapView()
+
 
 //google authenticate bellow
   var auth = $firebaseAuth();
@@ -28,21 +29,25 @@ myApp.controller('InputController',['FactoryFactory', '$firebaseAuth', '$locatio
   self.authUser = function(){
     // console.log("auth clicked");
     auth.$signInWithPopup("google").then(function(firebaseUser) {
-              wrapView();
-              console.log("Firebase Authenticated as: ", firebaseUser.user.displayName);
-          }).catch(function(error) {
-              console.log("Authentication failed: ", error);
-          });
+      wrapView();
+        swal("You Are Logged In!", "", "success");
+        console.log("Firebase Authenticated as: ", firebaseUser.user.displayName);
+        self.photo = firebaseUser.user.photoURL;
+        //console.log("Firebase Authenticated as: ", firebaseUser.user.email);
+    }).catch(function(error) {
+        console.log("Authentication failed: ", error);
+    });
   };//end of self.authUser()
 
 //google de-authedicate
   self.deAuthUser = function(){
     // console.log("de-auth clicked");
     auth.$signOut().then(function() {
-             console.log('Logging the user out!');
+        swal("You've Logged Out!", "", "success");
+        console.log('Logging the user out!');
      });
   };//end of self.deAuthUser()
 
 
 
-}]);//end of myApp.controller
+}]);//end of myApp.controller()

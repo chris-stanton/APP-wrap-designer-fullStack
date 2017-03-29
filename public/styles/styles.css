@@ -48,6 +48,7 @@
   text-align: center;
 }
 
+
 /*<------- WRAP DESIGNER VIEW ------->*/
 /*authentication buttons*/
 .authButtons {
@@ -125,9 +126,23 @@
 
 
 /*<------- ADMIN VIEW ------->*/
+#adminTable {
+  width: 700px;
+  margin: 4px;
+  border: 3px solid black;
+  padding: 5px;
+}
 
+.adminTh {
+  margin: 4px;
+  border: 1px solid black;
+  text-align: center;
+  padding: 3px;
+}
 
-
+.upDelete {
+  width: 20px;
+}
 
 /*<------- image on stats and DB views ------->*/
 /*rod image between tables*/
@@ -165,6 +180,14 @@ h1 {
 #printButton {
   margin-top: 50px;
   margin-left: 900px;
+}
+
+.photoId {
+  height: 25px;
+  width: 25px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
 }
 
 /*body {

@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 var spacingRouter = require('./server/routes/spacingRouter.js');
 var colorRouter = require('./server/routes/colorRouter.js');
 var addRouter = require('./server/routes/addRouter.js');
-var authRouter = require('./server/routes/authRouter.js');
+var adminRouter = require('./server/routes/adminRouter.js');
 
 //listening port
 app.set('port', process.env.PORT || 5000);
@@ -28,7 +28,7 @@ app.use('/inboundURLbase',spacingRouter);
 //routers
 app.use('/spacing', spacingRouter);
 app.use('/color', colorRouter);
-app.use('/auth', authRouter);
+app.use('/admin', adminRouter);
 
 //authentication is required below this line
 //these two lines are required

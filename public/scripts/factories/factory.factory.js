@@ -9,6 +9,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
   var specificBlankObject = { list: [] };
   var colorFactoryObject = { list: [] };
   var blankColorFactoryObject = { list: [] };
+  var adminBlankFactoryObject = { list : [] };
 
 //--- gets all data on starup ---//
   init();
@@ -17,7 +18,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
 //--- gets blanks, blank/color and thread colors on startup ---//
     getBlanks();
     updateColor();
-    updateColorBlank()
+    updateColorBlank();
   }//end of init()
 
 //--- gets blanks for drop down options on spacing view ---//
@@ -86,7 +87,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     });//end of firebase.auth()
   }//end of addBlank()
 
-//--- adds thread color to database from input view inputs ---//
+//--- adds thread color to database from (input view) ---//
   function addThreads(newThreadOrder) {
     firebase.auth().currentUser.getToken().then(function(idToken) {
       $http({
@@ -98,7 +99,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
           }
         }).then(function(response){
           //console.log("addThread Request: ", response);
-          swal("Thread Database Updated!", "Good job!", "success");
+          swal("Thread Database Updated!", "", "success");
           self.newThreadOrder = {};
           updateColor();
         }).catch(function(error) {
@@ -107,6 +108,106 @@ myApp.factory('FactoryFactory',['$http',function($http) {
         });//end of catch
     });//end of firebase.auth()
   }//end of addThreads()
+
+//--- gets all blanks from DB (admin view) ---//
+  function getAdminBlanks() {
+    firebase.auth().currentUser.getToken().then(function(idToken) {
+    $http({
+      method: 'GET',
+      url: '/admin/allBlanks'
+    }).then(function(response) {
+      //console.log("getBlanks Request: ", response.data);
+      adminBlankFactoryObject.list = response.data;
+      //console.log("factory admin: ", adminBlankFactoryObject.list)
+    }).catch(function(error) {
+      swal("Values Are Incorrect", "Try Again!", "error");
+      console.log('error authenticating', error);
+    });//end of catch
+    });//end of firebase.auth()
+  }//end of getblanks()
+
+//--- updates done to newly entered adding to DB (admin view) ---//
+  function updateAdmin(blankId){
+    $http({
+      method: 'PUT',
+      url: '/admin/update/' + blankId,
+      data: blankId
+      }).then(function(response){
+        swal("Blank Database Updated!", "Good job!", "success");
+        //console.log("addBlank Request: ", response);
+        getBlanks();
+        self.newblankOrder = {};
+      }).catch(function(error) {
+        swal("Values Are Incorrect", "Try Again!", "error");
+        console.log('error authenticating', error);
+      });//end of catch
+  }//end of updateAdmin()
+
+//--- deletes done to newly entered deleting from DB (admin view) ---//
+  function deleteAdmin(blankId){
+    $http({
+      method: 'DELETE',
+      url: '/admin/delete' + blankId,
+      data: blankId
+      }).then(function(response){
+        swal("Blank Database Updated!", "Good job!", "success");
+        //console.log("addBlank Request: ", response);
+        getBlanks();
+        self.newblankOrder = {};
+      }).catch(function(error) {
+        swal("Values Are Incorrect", "Try Again!", "error");
+        console.log('error authenticating', error);
+      });//end of catch
+  }//end of deleteAdmin()
+
+
+//--- API ---//
+  return {
+//gets blank stats for spacing view
+    getBlanks : getBlanks,
+//gets specific blank info from select menu dropdowns for spacing view - object
+    getSpecificBlank : getSpecificBlank,
+//adds stats to DOM on spacing view - object
+    specificBlankObject : specificBlankObject,
+//blank list for spacing view select options - object
+    blankFactoryObject : blankFactoryObject,
+//database blank submission - function
+    addBlanks : addBlanks,
+//database blank submission - function
+    addThreads : addThreads,
+//calling function from button click on warp view - function
+    updateColor : updateColor,
+//return of all thread colors from DB - object
+    colorFactoryObject : colorFactoryObject,
+//return of all blank colors from DB - object
+    blankColorFactoryObject : blankColorFactoryObject,
+//gets all newly added blanks for review - object
+    adminBlankFactoryObject : adminBlankFactoryObject,
+//gets all blanks on button click adds to admin view
+    getAdminBlanks : getAdminBlanks,
+//update button click from admin view
+    updateAdmin : updateAdmin,
+//delete button click from admin view
+    deleteAdmin : deleteAdmin
+
+  }//end of return
+
+}]);//end of myApp.factory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   //these are original button click POSTs - commented out because of ussing one DB now
@@ -132,29 +233,3 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     //     getBlanks()
     //   });
     // }//end of guides post
-
-
-
-//--- API ---//
-  return {
-//gets blank stats for spacing view
-    getBlanks : getBlanks,
-//gets specific blank info from select menu dropdowns for spacing view - object
-    getSpecificBlank : getSpecificBlank,
-//adds stats to DOM on spacing view - object
-    specificBlankObject : specificBlankObject,
-//blank list for spacing view select options - object
-    blankFactoryObject : blankFactoryObject,
-//database blank submission - function
-    addBlanks : addBlanks,
-//database blank submission - function
-    addThreads : addThreads,
-//calling function from button click on warp view - function
-    updateColor : updateColor,
-//return of all thread colors from DB - object
-    colorFactoryObject : colorFactoryObject,
-//return of all blank colors from DB - object
-    blankColorFactoryObject : blankColorFactoryObject
-  }//end of return
-
-}]);//end of myApp.factory

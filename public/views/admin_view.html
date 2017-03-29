@@ -1,2 +1,35 @@
-<h1>this works</h1>
-{{ac.message}}
+<main>
+
+  <h1>Admin View Works</h1>
+
+  <div>
+    <button type="button" name="button" ng-click="ac.authUser()"> login </button>
+    <button type="button" name="button" ng-click="ac.deAuthUser()"> logout </button>
+    <button type="button" name="button" ng-click="ac.buttonClick()"> Get </button>
+    <img class="photoId" src="{{ac.photo}}">
+  </div>
+
+  <table id="adminTable" ng-repeat="blank in ac.adminBlankFactoryObject.list">
+      <tr>
+        <td class="adminTh"> <input type="text" name="" value="{{blank.mfgname}}"> MFG Name </td>
+        <td class="adminTh"> <input type="text" name="" value="{{blank.blankname}}"> Blank Name </td>
+        <td class="adminTh"> <input type="text" name="" value="{{blank.blanklength}}"> Blank Length </td>
+        <td class="adminTh"> <input type="text" name="" value="{{blank.blankmaterial}}"> Blank Material </td>
+        <td class="adminTh"> <input type="text" name="" value="{{blank.handlelength}}"> Handle Length </td>
+        <td class="adminTh"> <input type="text" name="" value="{{blank.guidesizetiptop}}"> Guide Size TipTop </td>
+        <td class="adminTh"> <input type="text" name="" value="{{blank.guidesizetwo}}"> Guide Size Two </td>
+        <td class="adminTh"> <input type="text" name="" value="{{blank.guidesizethree}}"> Guide Size Three </td>
+        <td class="adminTh"> <input type="text" name="" value="{{blank.guidesizefour}}"> Guide Size Four </td>
+        <td class="adminTh"> <input type="text" name="" value="{{blank.guidesizefive}}"> Guide Size Five </td>
+        <td class="adminTh"> <input type="text" name="" value="{{blank.guidesizesix}}"> Guide Size Six </td>
+        <td class="adminTh"> <input type="text" name="" value="{{blank.onetwo}}"> Guide Size Tip Top - Second </td>
+        <td class="adminTh"> <input type="text" name="" value="{{blank.twothree}}"> Guide Size Second - Third </td>
+        <td class="adminTh"> <input type="text" name="" value="{{blank.threefour}}"> Guide Size Third - Fourth </td>
+        <td class="adminTh"> <input type="text" name="" value="{{blank.fourfive}}"> Guide Size Fourth - Fifth </td>
+        <td class="adminTh"> <input type="text" name="" value="{{blank.fivesix}}"> Guide Size Fifth - Sixth </td>
+        <td> <button class="upDelete" type="button" name="button" ng-click="ac.updateAdmin(blank.id)" > UPDATE </button> </td>
+        <td> <button class="upDelete" type="button" name="button" ng-click="ac.deleteAdmin(blank.id)"> DELETE </button> </td>
+      </tr>
+  </table>
+
+</main>
