@@ -28,7 +28,6 @@ myApp.controller('AdminController', ['FactoryFactory', '$firebaseAuth', '$locati
         console.log("Firebase Authenticated as: ", firebaseUser.user.displayName);
         self.email = firebaseUser.user.email;
         self.photo = firebaseUser.user.photoURL;
-        console.log(firebaseUser.user)
               //console.log("Firebase Authenticated as: ", firebaseUser.user.email);
     }).catch(function(error) {
         console.log("Authentication failed: ", error);

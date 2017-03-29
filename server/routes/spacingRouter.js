@@ -19,7 +19,7 @@ var pool = new pg.Pool(config);
 router.get('/allBlanks', function (req, res) {
   pool.connect()
     .then(function (client) {
-      client.query('SELECT * FROM newBlanks ORDER BY blankName ASC')
+      client.query("SELECT * FROM newBlanks WHERE certified='true' ORDER BY blankName ASC")
         .then(function (result) {
           client.release();
           res.send(result.rows);
