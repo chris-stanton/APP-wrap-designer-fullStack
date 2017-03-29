@@ -1,5 +1,5 @@
 myApp.controller('InputController',['FactoryFactory', '$firebaseAuth', '$location', function(FactoryFactory, $firebaseAuth, $location) {
-// $firebaseAuth, $location
+
   console.log('InputController running');
   var self = this;
   self.testMessage = 'IC WORKING STATUS';

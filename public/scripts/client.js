@@ -19,6 +19,11 @@ myApp.config(['$routeProvider', function($routeProvider) {
             controller: 'InputController',
             controllerAs: 'ic'
         })
+        .when ('/admin_view', {
+            templateUrl: '/views/admin_view.html',
+            controller: 'AdminController',
+            controllerAs: 'ac'
+        })
         .otherwise ({
             redirectTo: '/wrap_view'
         });
