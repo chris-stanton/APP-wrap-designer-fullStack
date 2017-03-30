@@ -8,9 +8,7 @@ myApp.controller('AdminController', ['FactoryFactory', function(FactoryFactory) 
 //all blanks object from factory
   self.adminBlankFactoryObject = FactoryFactory.adminBlankFactoryObject;
 //all threads object from factory
-  self.adminThreadFactoryObjec = FactoryFactory.adminThreadFactoryObjec;
-//button cick function to get all blanks
-  self.buttonClick = FactoryFactory.getAdminBlanks;
+  self.adminThreadFactoryObject = FactoryFactory.adminThreadFactoryObject;
 
 //redirect after authentication
   // function adminView() {
@@ -43,10 +41,12 @@ myApp.controller('AdminController', ['FactoryFactory', function(FactoryFactory) 
   //    });
   // };//end of self.deAuthUser()
 
+  //button cick function to get all blanks
+    self.buttonClick = function(){
+      FactoryFactory.getAdminBlanks();
+      FactoryFactory.getAdminThreads();
+    }
 
-
-// update button click function
-// self.updateAdmin = FactoryFactory.updateAdmin;
 
   self.updateAdmin = function(blank){
     console.log("updating blank ID number: ", blank);
@@ -59,14 +59,14 @@ myApp.controller('AdminController', ['FactoryFactory', function(FactoryFactory) 
     FactoryFactory.deleteAdmin(blank);
   }
 
-  self.updateThread = function(threadId){
-    console.log("updating thread ID number: ", threadId);
-    //FactoryFactory.updateThread;
+  self.updateThread = function(thread){
+    console.log("updating thread ID number: ", thread);
+    FactoryFactory.updateThread(thread);
   }
 
-  self.deleteThread = function(threadId){
-    console.log("deleting thread ID number: ", threadId);
-    //FactoryFactory.delete;
+  self.deleteThread = function(thread){
+    console.log("deleting thread ID number: ", thread);
+    FactoryFactory.deleteThread(thread);
   }
 
 

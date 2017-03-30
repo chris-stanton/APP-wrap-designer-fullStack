@@ -10,6 +10,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
   var colorFactoryObject = { list: [] };
   var blankColorFactoryObject = { list: [] };
   var adminBlankFactoryObject = { list : [] };
+  var adminThreadFactoryObject = { list : [] };
 
 //--- gets all data on starup ---//
   init();
@@ -111,24 +112,39 @@ myApp.factory('FactoryFactory',['$http',function($http) {
 
 //--- gets all blanks from DB (admin view) ---//
   function getAdminBlanks() {
-    firebase.auth().currentUser.getToken().then(function(idToken) {
+    //firebase.auth().currentUser.getToken().then(function(idToken) {
     $http({
       method: 'GET',
       url: '/admin/allBlanks'
     }).then(function(response) {
       //console.log("getBlanks Request: ", response.data);
       adminBlankFactoryObject.list = response.data;
-      //console.log("factory admin: ", adminBlankFactoryObject.list)
     }).catch(function(error) {
       swal("Values Are Incorrect", "Try Again!", "error");
-      console.log('error authenticating', error);
+      console.log('error getting uncert. blanks', error);
     });//end of catch
-    });//end of firebase.auth()
+    //});//end of firebase.auth()
+   }//end of getblanks()
+
+
+  function getAdminThreads() {
+    //firebase.auth().currentUser.getToken().then(function(idToken) {
+    $http({
+      method: 'GET',
+      url: '/admin/allThreads'
+    }).then(function(response) {
+      //console.log("getBlanks Request: ", response.data);
+      adminThreadFactoryObject.list = response.data;
+      updateColor();
+    }).catch(function(error) {
+      swal("Values Are Incorrect", "Try Again!", "error");
+      console.log('error getting uncert. threads', error);
+    });//end of catch
+    //});//end of firebase.auth()
   }//end of getblanks()
 
 //--- updates done to newly entered adding to DB (admin view) ---//
   function updateAdmin(blank){
-    console.log('update ', blank.id)
     $http({
       method: 'PUT',
       url: '/admin/update/' + blank.id,
@@ -159,6 +175,39 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       });//end of catch
   }//end of deleteAdmin()
 
+//--- updates done to newly entered adding to DB (admin view) ---//
+  function updateThread(thread){
+    console.log('update ', thread.id)
+    $http({
+      method: 'PUT',
+      url: '/admin/threadUpdate/' + thread.id,
+      data: thread
+      }).then(function(response){
+        swal("Thread Database Updated!", "", "success");
+        getAdminThreads();
+        updateColor();
+      }).catch(function(error) {
+        swal("Values Are Incorrect", "Try Again!", "error");
+        console.log('error updating', error);
+      });//end of catch
+  }//end of updateAdmin()
+
+  function deleteThread(thread){
+    console.log('delete ', thread.id)
+    $http({
+      method: 'DELETE',
+      url: '/admin/deleteThread/' + thread.id,
+      data: thread
+      }).then(function(response){
+        swal("Deleted Entry!", "", "success");
+        getAdminThreads();
+      }).catch(function(error) {
+        swal("Values Are Incorrect", "Try Again!", "error");
+        console.log('error deleting', error);
+      });//end of catch
+  }//end of deleteAdmin()
+
+
 
 //--- API ---//
   return {
@@ -184,12 +233,18 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     adminBlankFactoryObject : adminBlankFactoryObject,
 //gets all blanks on button click adds to admin view
     getAdminBlanks : getAdminBlanks,
+//gets all blanks on button click adds to admin view
+     getAdminThreads : getAdminThreads,
 //gets all threads on button click adds to admin view - object
-  //  adminThreadFactoryObject : adminThreadFactoryObject,
-//update button click from admin view
+    adminThreadFactoryObject : adminThreadFactoryObject,
+//update blank button click from admin view
     updateAdmin : updateAdmin,
-//delete button click from admin view
-    deleteAdmin : deleteAdmin
+//delete blank button click from admin view
+    deleteAdmin : deleteAdmin,
+//update thread button click from admin view
+    updateThread : updateThread,
+//delete thread button click from admin view
+    deleteThread : deleteThread
 
   }//end of return
 

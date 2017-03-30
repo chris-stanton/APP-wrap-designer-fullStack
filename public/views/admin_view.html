@@ -38,14 +38,14 @@
 <!-- thread dims -->
   <div id="tableDiv">
     <!-- need to create path -->
-    <table ng-repeat="Thread in ac.adminThreadFactoryObject.list">
+    <table ng-repeat="thread in ac.adminThreadFactoryObject.list">
       <tr>
         <td> <input type="text" placeholder="mfg name" value="{{thread.mfgname}}"> MFG Name </td>
         <td> <input type="text" placeholder="blank name" value="{{thread.color}}"> Color </td>
         <td> <input type="text" placeholder="blank length" value="{{thread.threadnumber}}"> Thread Number </td>
         <td> <input type="text" placeholder="blank material" value="{{thread.image}}"> Image </td>
-        <td> <button type="button" name="button" ng-click="ac.updateThread(thread.id)" > UPDATE </button> </td>
-        <td> <button type="button" name="button" ng-click="ac.deleteThread(thread.id)"> DELETE </button> </td>
+        <td> <button type="button" name="button" ng-click="ac.updateThread(thread)" > UPDATE </button> </td>
+        <td> <button type="button" name="button" ng-click="ac.deleteThread(thread)"> DELETE </button> </td>
       </tr>
     </table>
   </div>
