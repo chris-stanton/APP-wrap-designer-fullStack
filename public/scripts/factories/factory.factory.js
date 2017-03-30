@@ -150,7 +150,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       url: '/admin/update/' + blank.id,
       data: blank
     }).then(function(response){
-      swal("Blank Database Updated!", "", "success");
+      swal("Added To Blank Database!", "", "success");
       getAdminBlanks();
       getBlanks();
     }).catch(function(error) {
@@ -183,7 +183,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       url: '/admin/updateThread/' + thread.id,
       data: thread
     }).then(function(response){
-      swal("Thread Database Updated!", "", "success");
+      swal("Added To Thread Database!", "", "success");
       getAdminThreads();
       updateColor();
     }).catch(function(error) {

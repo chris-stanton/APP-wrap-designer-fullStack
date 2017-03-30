@@ -1,16 +1,16 @@
 
 
-  <h1>Admin View Works</h1>
+  <h1> Admin View </h1>
 
   <div>
     <button type="button" name="button" ng-click="ac.authUser()"> login </button>
     <button type="button" name="button" ng-click="ac.deAuthUser()"> logout </button>
     <button type="button" name="button" ng-click="ac.buttonClick()"> Get </button>
-    <img class="photoId" src="{{ac.photo}}">
   </div>
 
   <!-- blank dims -->
   <div id="tableDiv">
+      <h4> Blanks For Review </h4>
     <table id="adminTable" ng-repeat="blank in ac.adminBlankFactoryObject.list">
       <tr id="adminTable">
         <td class="adminTd"> <input type="text" placeholder="mfg name" ng-model="blank.mfgname"> MFG Name </td>
@@ -29,12 +29,7 @@
         <td class="adminTd"> <input type="text" placeholder="measurement 3rd-4th" ng-model="blank.threefour"> Guide Spacing Third - Fourth </td>
         <td class="adminTd"> <input type="text" placeholder="measurement 4th-5th" ng-model="blank.fourfive"> Guide Spacing Fourth - Fifth </td>
         <td class="adminTd"> <input type="text" placeholder="measurement 5th-6th" ng-model="blank.fivesix"> Guide Spacing Fifth - Sixth </td>
-        <td>
-          <select ng-model="blank.certified" name=""> Certify Entry
-            <option value="">  </option>
-            <option value="true"> Yes </option>
-          </select>
-        </td>
+        <td><label for="certifyEntry"> Certify Entry <input type="checkbox" ng-model="blank.certified" name="certifyEntry" value="true"></label></td>
         <td> <button class="upDelete" type="button" name="button" ng-click="ac.updateAdmin(blank)" > UPDATE </button> </td>
         <td> <button class="upDelete" type="button" name="button" ng-click="ac.deleteAdmin(blank)"> DELETE </button> </td>
       </tr>
@@ -43,19 +38,15 @@
 
 <!-- thread dims -->
   <div id="tableDiv">
+    <h4> Threads For Review </h4>
     <!-- need to create path -->
-    <table ng-repeat="thread in ac.adminThreadFactoryObject.list">
-      <tr>
-        <td> <input type="text" placeholder="mfg name" ng-model="thread.mfgname"> MFG Name </input></td>
-        <td> <input type="text" placeholder="blank name" ng-model="thread.color"> Color </td>
-        <td> <input type="text" placeholder="blank length" ng-model="thread.threadnumber"> Thread Number </td>
-        <td> <input type="text" placeholder="blank material" ng-model="thread.image"> Image </td>
-        <td>
-            <select ng-model="thread.certified" name=""> Certify Entry
-              <option value="">  </option>
-              <option value="true"> Yes </option>
-            </select>
-        </td>
+    <table id="adminTable" ng-repeat="thread in ac.adminThreadFactoryObject.list">
+      <tr id="adminTable">
+        <td class="adminTd"> <input type="text" placeholder="mfg name" ng-model="thread.mfgname"> MFG Name </input></td>
+        <td class="adminTd"> <input type="text" placeholder="blank name" ng-model="thread.color"> Color </td>
+        <td class="adminTd"> <input type="text" placeholder="blank length" ng-model="thread.threadnumber"> Thread Number </td>
+        <td class="adminTd"> <input type="text" placeholder="blank material" ng-model="thread.image"> Image </td>
+        <td class="adminTd"> <label for="certifyEntry"> Certify Entry <input type="checkbox" ng-model="thread.certified" name="certifyEntry" value="true"></label></td>
         <td> <button type="button" name="button" ng-click="ac.updateThread(thread)"> UPDATE </button> </td>
         <td> <button type="button" name="button" ng-click="ac.deleteThread(thread)"> DELETE </button> </td>
       </tr>

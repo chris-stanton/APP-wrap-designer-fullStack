@@ -2,46 +2,6 @@
 /*DH blank mesurements, measure from guide to guide
 all other blanks measure from tip to butt*/
 
--- <--- blanks table --->
-CREATE TABLE blanks (
-  id SERIAL PRIMARY KEY,
-  blankName VARCHAR(80) NOT NULL,
-  mfgName VARCHAR(80) NOT NULL,
-  blankLength INT NOT NULL,
-  blankMaterial VARCHAR(80),
-  handleLength INT NOT NULL,
-  handleType VARCHAR(80)
-);
-
-INSERT INTO blanks (blankName, mfgName, blankLength, blankMaterial, handleLength, handleType)
-VALUES('Mini Bite', 'DH Custom Rods and Tackle', '21', 'Fiberglass', '3', 'Cork'),
-      ('Seven Douce', 'DH Custom Rods and Tackle', '24', 'Fiberglass', '3', 'Cork');
-
-
--- <--- guideSize table --->
-CREATE TABLE guides (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(80),
-  guideSizeTipTop INT NOT NULL,
-  guideSizeTwo INT NOT NULL,
-  guideSizeThree INT NOT NULL,
-  guideSizeFour INT NOT NULL,
-  guideSizeFive INT,
-  guideSizeSix INT
-);
-
-
--- <--- guideSpacing table --->
-CREATE TABLE guideSpacing (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(80),
-  oneTwo INT NOT NULL,
-  twoThree INT NOT NULL,
-  threeFour INT,
-  fourFive INT,
-  fiveSix INT
-);
-
 
 -- <--- threads table --->
 CREATE TABLE threads (
@@ -110,3 +70,13 @@ INSERT INTO newBlanks (blankName, mfgName, blankLength, blankMaterial, handleLen
 VALUES ('LongBoard', 'DH Custom Rods and Tackle', '32', 'Fiberglass', '5',
        2, 2, 3, 4, 5, 10,
        3.25, 2.69, 3.19, 3.69, 4.25);
+
+
+-- <--- admin rights --->
+CREATE TABLE adminEmail (
+  id SERIAL PRIMARY KEY,
+  userEmail VARCHAR(80) NOT NULL
+);
+
+INSERT INTO adminEmail (userEmail)
+VALUES ('cstanton0760@yahoo.com');
