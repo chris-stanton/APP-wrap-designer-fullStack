@@ -54,7 +54,7 @@ router.put('/update/:id', function(req, res) {
   console.log('Updating object: ', req.body);
   pool.connect()
     .then(function (client) {
-      client.query("UPDATE newBlanks SET certified = 'true' WHERE id=$1 RETURNING *",
+      client.query("UPDATE newBlanks SET certified='true' WHERE id=$1 RETURNING *",
         [updatedId])
         .then(function (result) {
           console.log(result.rows);
@@ -91,14 +91,13 @@ router.delete('/delete/:id', function(req, res) {
 //certifies thread entrys
 router.put('/threadUpdate/:id', function(req, res) {
   var threadId = req.params.id;
-  var threadObject = req.body;
-
+  var thread = req.body;
+  console.log('AR: ', threadId);
   pool.connect()
     .then(function (client) {
-      client.query("UPDATE threads SET certified = 'true' WHERE id=$1 RETURNING *",
-        [threadId])
+      client.query("UPDATE threads SET mfgName=$1, color=$2, threadNumber=$3, image=$4, certified=$5 WHERE id=$6",
+        [thread.mfgname, thread.color, thread.threadnumber, thread.image, thread.certified, threadId])
         .then(function (result) {
-          console.log(result.rows);
           client.release();
           res.sendStatus(200);
       }).catch(function (err) {
