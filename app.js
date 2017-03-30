@@ -21,7 +21,7 @@ app.listen(app.get('port'), function() {
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use('/inboundURLbase',spacingRouter);
+app.use('/inboundURLbase', spacingRouter);
 
 
 

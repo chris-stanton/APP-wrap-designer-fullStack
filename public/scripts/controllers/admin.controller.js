@@ -1,5 +1,5 @@
-myApp.controller('AdminController', ['FactoryFactory', '$firebaseAuth', '$location', function(FactoryFactory, $firebaseAuth, $location) {
-
+myApp.controller('AdminController', ['FactoryFactory', function(FactoryFactory) {
+// '$firebaseAuth', '$location',
   console.log('AdminController running');
 
   var self = this;
@@ -13,51 +13,55 @@ myApp.controller('AdminController', ['FactoryFactory', '$firebaseAuth', '$locati
   self.buttonClick = FactoryFactory.getAdminBlanks;
 
 //redirect after authentication
-  function adminView() {
-    $location.path('/admin_view');
-  }//adminpView()
+  // function adminView() {
+  //   $location.path('/admin_view');
+  // }//adminpView()
 
 //google authenticate bellow
-  var auth = $firebaseAuth();
+  // var auth = $firebaseAuth();
 
-  self.authUser = function(){
-    // console.log("auth clicked");
-    auth.$signInWithPopup("google").then(function(firebaseUser) {
-      adminView();
-        swal("You Are Logged In!", "", "success");
-        console.log("Firebase Authenticated as: ", firebaseUser.user.displayName);
-        self.email = firebaseUser.user.email;
-        self.photo = firebaseUser.user.photoURL;
-              //console.log("Firebase Authenticated as: ", firebaseUser.user.email);
-    }).catch(function(error) {
-        console.log("Authentication failed: ", error);
-    });
-  };//end of self.authUser()
+  // self.authUser = function(){
+  //   // console.log("auth clicked");
+  //   auth.$signInWithPopup("google").then(function(firebaseUser) {
+  //     adminView();
+  //       swal("You Are Logged In!", "", "success");
+  //       console.log("Firebase Authenticated as: ", firebaseUser.user.displayName);
+  //       self.email = firebaseUser.user.email;
+  //       self.photo = firebaseUser.user.photoURL;
+  //             //console.log("Firebase Authenticated as: ", firebaseUser.user.email);
+  //   }).catch(function(error) {
+  //       console.log("Authentication failed: ", error);
+  //   });
+  // };//end of self.authUser()
 
 //google de-authedicate
-  self.deAuthUser = function(){
-    // console.log("de-auth clicked");
-    auth.$signOut().then(function() {
-        swal("You've Logged Out!", "", "success");
-        console.log('Logging the user out!');
-     });
-  };//end of self.deAuthUser()
+  // self.deAuthUser = function(){
+  //   // console.log("de-auth clicked");
+  //   auth.$signOut().then(function() {
+  //       swal("You've Logged Out!", "", "success");
+  //       console.log('Logging the user out!');
+  //    });
+  // };//end of self.deAuthUser()
+
+
 
 // update button click function
-  self.updateAdmin = function(blankId){
-    console.log("updating blank ID number: ", blankId);
-    FactoryFactory.update;
+// self.updateAdmin = FactoryFactory.updateAdmin;
+
+  self.updateAdmin = function(blank){
+    console.log("updating blank ID number: ", blank);
+    FactoryFactory.updateAdmin(blank);
   }
 
 // delete button click function
-  self.deleteAdmin = function(blankId){
-    console.log("deleting blank ID number: ", blankId);
-    FactoryFactory.delete;
+  self.deleteAdmin = function(blank){
+    console.log("deleting blank ID number: ", blank);
+    FactoryFactory.deleteAdmin(blank);
   }
 
   self.updateThread = function(threadId){
     console.log("updating thread ID number: ", threadId);
-    //FactoryFactory.delete;
+    //FactoryFactory.updateThread;
   }
 
   self.deleteThread = function(threadId){

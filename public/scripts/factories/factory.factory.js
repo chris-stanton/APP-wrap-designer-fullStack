@@ -127,36 +127,35 @@ myApp.factory('FactoryFactory',['$http',function($http) {
   }//end of getblanks()
 
 //--- updates done to newly entered adding to DB (admin view) ---//
-  function updateAdmin(blankId){
+  function updateAdmin(blank){
+    console.log('update ', blank.id)
     $http({
       method: 'PUT',
-      url: '/admin/update/' + blankId,
-      data: blankId
+      url: '/admin/update/' + blank.id,
+      data: blank
       }).then(function(response){
-        swal("Blank Database Updated!", "Good job!", "success");
-        //console.log("addBlank Request: ", response);
+        swal("Blank Database Updated!", "", "success");
+        getAdminBlanks();
         getBlanks();
-        self.newblankOrder = {};
       }).catch(function(error) {
         swal("Values Are Incorrect", "Try Again!", "error");
-        console.log('error authenticating', error);
+        console.log('error updating', error);
       });//end of catch
   }//end of updateAdmin()
 
 //--- deletes done to newly entered deleting from DB (admin view) ---//
-  function deleteAdmin(blankId){
+  function deleteAdmin(blank){
+    console.log('delete ', blank.id)
     $http({
       method: 'DELETE',
-      url: '/admin/delete' + blankId,
-      data: blankId
+      url: '/admin/delete/' + blank.id,
+      data: blank
       }).then(function(response){
-        swal("Blank Database Updated!", "Good job!", "success");
-        //console.log("addBlank Request: ", response);
-        getBlanks();
-        self.newblankOrder = {};
+        swal("Deleted Entry!", "", "success");
+        getAdminBlanks();
       }).catch(function(error) {
         swal("Values Are Incorrect", "Try Again!", "error");
-        console.log('error authenticating', error);
+        console.log('error deleting', error);
       });//end of catch
   }//end of deleteAdmin()
 

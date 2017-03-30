@@ -1,4 +1,4 @@
-console.log("authRouter works!!");
+console.log("adminRouter works!!");
 
 //database connection
 var express = require('express');
@@ -30,5 +30,50 @@ router.get('/allBlanks', function (req, res) {
         });
     });//end of .then
 });//end of router.get
+
+//certifies blank entrys
+router.put('/update/:id', function(req, res) {
+  var updatedId = req.params.id;
+  var updatedObject = req.body;
+  console.log('Updating object: ', req.body);
+  pool.connect()
+    .then(function (client) {
+      client.query("UPDATE newBlanks SET certified = 'true' WHERE id=$1 RETURNING *",
+        [updatedId])
+        .then(function (result) {
+          console.log(result.rows);
+          client.release();
+          res.sendStatus(200);
+        })
+        .catch(function (err) {
+          console.log('error on UPDATE', err);
+          res.sendStatus(500);
+        });
+    }).catch(function(err) {
+      console.log('error connecting to database:', err);
+    });
+});
+
+//deleting unwanted garbage from admin view
+router.delete('/delete/:id', function(req, res) {
+var deleteId = req.params.id;
+console.log('Deleting Client ID:, ', deleteId);
+pool.connect()
+  .then(function (client) {
+    client.query('DELETE FROM newblanks WHERE id = $1',
+      [deleteId])
+      .then(function (result) {
+        client.release();
+        res.sendStatus(200);
+      })
+      .catch(function (err) {
+        console.log('error on Delete', err);
+        res.sendStatus(500);
+      });
+  });
+});
+
+
+
 
 module.exports = router;
