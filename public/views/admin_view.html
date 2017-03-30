@@ -24,11 +24,17 @@
         <td class="adminTd"> <input type="text" placeholder="guide fourth" ng-model="blank.guidesizefour"> Guide Size Four </td>
         <td class="adminTd"> <input type="text" placeholder="guide fifth" ng-model="blank.guidesizefive"> Guide Size Five </td>
         <td class="adminTd"> <input type="text" placeholder="guide sixth" ng-model="blank.guidesizesix"> Guide Size Six </td>
-        <td class="adminTd"> <input type="text" placeholder="measurement 1st-2nd" ng-model="blank.onetwo"> Guide Size Tip Top - Second </td>
-        <td class="adminTd"> <input type="text" placeholder="measurement 2nd-3rd" ng-model="blank.twothree"> Guide Size Second - Third </td>
-        <td class="adminTd"> <input type="text" placeholder="measurement 3rd-4th" ng-model="blank.threefour"> Guide Size Third - Fourth </td>
-        <td class="adminTd"> <input type="text" placeholder="measurement 4th-5th" ng-model="blank.fourfive"> Guide Size Fourth - Fifth </td>
-        <td class="adminTd"> <input type="text" placeholder="measurement 5th-6th" ng-model="blank.fivesix"> Guide Size Fifth - Sixth </td>
+        <td class="adminTd"> <input type="text" placeholder="measurement 1st-2nd" ng-model="blank.onetwo"> Guide Spacing Tip Top - Second </td>
+        <td class="adminTd"> <input type="text" placeholder="measurement 2nd-3rd" ng-model="blank.twothree"> Guide Spacing Second - Third </td>
+        <td class="adminTd"> <input type="text" placeholder="measurement 3rd-4th" ng-model="blank.threefour"> Guide Spacing Third - Fourth </td>
+        <td class="adminTd"> <input type="text" placeholder="measurement 4th-5th" ng-model="blank.fourfive"> Guide Spacing Fourth - Fifth </td>
+        <td class="adminTd"> <input type="text" placeholder="measurement 5th-6th" ng-model="blank.fivesix"> Guide Spacing Fifth - Sixth </td>
+        <td>
+          <select ng-model="blank.certified" name=""> Certify Entry
+            <option value="">  </option>
+            <option value="true"> Yes </option>
+          </select>
+        </td>
         <td> <button class="upDelete" type="button" name="button" ng-click="ac.updateAdmin(blank)" > UPDATE </button> </td>
         <td> <button class="upDelete" type="button" name="button" ng-click="ac.deleteAdmin(blank)"> DELETE </button> </td>
       </tr>
@@ -44,10 +50,11 @@
         <td> <input type="text" placeholder="blank name" ng-model="thread.color"> Color </td>
         <td> <input type="text" placeholder="blank length" ng-model="thread.threadnumber"> Thread Number </td>
         <td> <input type="text" placeholder="blank material" ng-model="thread.image"> Image </td>
-        <td> <select ng-model="thread.certified" name=""> Certify Entry
-               <option value="">  </option>
-               <option value="true"> Yes </option>
-             </select>
+        <td>
+            <select ng-model="thread.certified" name=""> Certify Entry
+              <option value="">  </option>
+              <option value="true"> Yes </option>
+            </select>
         </td>
         <td> <button type="button" name="button" ng-click="ac.updateThread(thread)"> UPDATE </button> </td>
         <td> <button type="button" name="button" ng-click="ac.deleteThread(thread)"> DELETE </button> </td>

@@ -54,8 +54,8 @@ router.put('/update/:id', function(req, res) {
   console.log('Updating object: ', req.body);
   pool.connect()
     .then(function (client) {
-      client.query("UPDATE newBlanks SET certified='true' WHERE id=$1 RETURNING *",
-        [updatedId])
+      client.query("UPDATE newBlanks SET blankName=$1, mfgName=$2, blankLength=$3, blankMaterial=$4, handleLength=$5, guideSizeTipTop=$6, guideSizeTwo=$7, guideSizeThree=$8, guideSizeFour=$9, guideSizeFive=$10, guideSizeSix=$11, oneTwo=$12, twoThree=$13, threeFour=$14, fourFive=$15, fiveSix=$16, certified=$17 WHERE id=$18",
+        [updatedObject.blankname, updatedObject.mfgname, updatedObject.blanklength, updatedObject.blankmaterial, updatedObject.handlelength, updatedObject.guidesizetiptop, updatedObject.guidesizetwo, updatedObject.guidesizethree, updatedObject.guidesizefour, updatedObject.guidesizefive, updatedObject.guidesizesix, updatedObject.onetwo, updatedObject.twothree, updatedObject.threefour, updatedObject.fourfive, updatedObject.fivesix, updatedObject.certified, updatedId])
         .then(function (result) {
           console.log(result.rows);
           client.release();
