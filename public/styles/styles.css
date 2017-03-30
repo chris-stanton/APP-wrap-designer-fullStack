@@ -140,7 +140,7 @@
 
 /*<------- ADMIN VIEW ------->*/
 #adminTable {
-  width: 100px;
+  /*width: 100px;*/
   margin: 4px;
   border: 3px solid black;
   padding: 5px;
@@ -148,7 +148,7 @@
 
 #tableDiv {
   margin-bottom: 50px;
-  width: 90%;
+  width: 50%;
 }
 
 .adminTd {
@@ -157,10 +157,11 @@
   text-align: center;
   padding: 3px;
 }
-
+/*delete/update buttons*/
 .upDelete {
   width: 60px;
 }
+
 
 /*<------- image on stats and DB views ------->*/
 /*rod image between tables*/

@@ -127,5 +127,20 @@ router.delete('/deleteThread/:id', function(req, res) {
   });
 });
 
+//gets all admin level email addresses on init()
+router.get('/userEmail', function (req, res) {
+  pool.connect()
+    .then(function (client) {
+      client.query("SELECT userEmail FROM adminEmail ORDER BY userEmail ASC")
+        .then(function (result) {
+          client.release();
+          res.send(result.rows);
+        })
+        .catch(function (err) {
+          console.log('error on SELECT', err);
+          res.sendStatus(500);
+        });
+    });//end of .then
+});//end of router.get
 
 module.exports = router;

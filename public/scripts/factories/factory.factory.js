@@ -11,6 +11,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
   var blankColorFactoryObject = { list: [] };
   var adminBlankFactoryObject = { list : [] };
   var adminThreadFactoryObject = { list : [] };
+  var adminEmailFactoryObject = { list : [] };
 
   //--- gets all data on starup ---//
   init();
@@ -20,6 +21,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     getBlanks();
     updateColor();
     updateColorBlank();
+    getAdminEmail();
   }//end of init()
 
   //--- gets blanks for drop down options on spacing view ---//
@@ -109,6 +111,17 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       });//end of catch
     });//end of firebase.auth()
   }//end of addThreads()
+
+//--- gets all admin Email addresses ---//
+  function getAdminEmail() {
+    $http({
+      method: 'GET',
+      url: '/admin/userEmail'
+    }).then(function(response) {
+      //console.log("getBlanks Request: ", response.data);
+      adminEmailFactoryObject.list = response.data;
+    });
+  }//end of getblanks()
 
   //--- gets all un-certified blanks from DB (admin view) ---//
   function getAdminBlanks() {
@@ -245,7 +258,9 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     //update thread button click from admin view
     updateThread : updateThread,
     //delete thread button click from admin view
-    deleteThread : deleteThread
+    deleteThread : deleteThread,
+    //gets all admin email adresses on init - object
+    adminEmailFactoryObject : adminEmailFactoryObject
 
   }//end of return
 
