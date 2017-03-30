@@ -177,10 +177,10 @@ myApp.factory('FactoryFactory',['$http',function($http) {
 
     //--- updates done to newly entered adding to DB (admin view) ---//
   function updateThread(thread){
-    console.log('update ', thread.id)
+    console.log('update ', thread)
     $http({
       method: 'PUT',
-      url: '/admin/threadUpdate/' + thread.id,
+      url: '/admin/updateThread/' + thread.id,
       data: thread
     }).then(function(response){
       swal("Thread Database Updated!", "", "success");

@@ -89,10 +89,10 @@ router.delete('/delete/:id', function(req, res) {
 
 
 //certifies thread entrys
-router.put('/threadUpdate/:id', function(req, res) {
+router.put('/updateThread/:id', function(req, res) {
   var threadId = req.params.id;
   var thread = req.body;
-  console.log('AR: ', threadId);
+  console.log('AR: ', thread);
   pool.connect()
     .then(function (client) {
       client.query("UPDATE threads SET mfgName=$1, color=$2, threadNumber=$3, image=$4, certified=$5 WHERE id=$6",
