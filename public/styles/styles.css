@@ -1,4 +1,7 @@
-/*<------- NAV VIEW ------->*/
+/*<---------------------------------->*/
+/*<------------ NAV VIEW ------------>*/
+/*<---------------------------------->*/
+
 .views {
   font-size: 20px;
   box-shadow: 0px 1px 2px 1px rgba(135, 182, 245, 0.1) inset, 0px -2px 20px #24ee08, 0px 1px 5px rgba(135, 182, 245, 0.1), 0px 2px 10px rgba(135, 182, 245, 0.1);
@@ -25,13 +28,9 @@
 }
 
 
-
+/*<---------------------------------->*/
 /*<------- GUIDE SPACING VIEW ------->*/
-/*guide size table*/
-/*.guideSizeTable {
-  width: 100%;
-  text-align: center;
-}*/
+/*<---------------------------------->*/
 
 /*guide size table*/
 .guideSizeTable{
@@ -48,7 +47,6 @@
   text-align: right;
   margin-left: 90px;
 }
-
 
 /*mfg length handle length display*/
 .spacingData {
@@ -68,7 +66,10 @@
 }
 
 
+/*<---------------------------------->*/
 /*<------- WRAP DESIGNER VIEW ------->*/
+/*<---------------------------------->*/
+
 /*authentication buttons*/
 .authButtons {
   text-align: right;
@@ -104,7 +105,10 @@
 }
 
 
-/*<------- DB INPUT VIEW ------->*/
+/*<---------------------------------->*/
+/*<---------- DB INPUT VIEW --------->*/
+/*<---------------------------------->*/
+
 /*input div container*/
 #inputInputs {
   display: inline-block;
@@ -144,7 +148,10 @@
 }
 
 
-/*<------- ADMIN VIEW ------->*/
+/*<---------------------------------->*/
+/*<----------- ADMIN VIEW ----------->*/
+/*<---------------------------------->*/
+
 #adminTable {
   margin: 4px;
   border: 3px solid black;
@@ -170,8 +177,10 @@
 
 
 
+/*<----------------------------------->*/
+/*<--- image on stats and DB views --->*/
+/*<---------------------------------->*/
 
-/*<------- image on stats and DB views ------->*/
 /*rod image between tables*/
 #iceRod {
   width: 100%;
@@ -179,8 +188,10 @@
 
 }
 
+/*<---------------------------------->*/
+/*<------------- footer ------------->*/
+/*<---------------------------------->*/
 
-/*<------- footer ------->*/
 .footer-center {
   position: fixed;
   bottom: 0;
@@ -194,7 +205,10 @@
 }
 
 
-/*<------- applies to elemnts on all views ------->*/
+/*<------------------------------------->*/
+/*<-- applies to elemnts on all views -->*/
+/*<------------------------------------->*/
+
 /*allheadings*/
 h1 {
   font-family: fantasy;
@@ -207,14 +221,6 @@ h1 {
 #printButton {
   margin-top: 50px;
   margin-left: 900px;
-}
-
-.photoId {
-  height: 25px;
-  width: 25px;
-  border-radius: 15px;
-  outline: none;
-  border: none;
 }
 
 /*body {
