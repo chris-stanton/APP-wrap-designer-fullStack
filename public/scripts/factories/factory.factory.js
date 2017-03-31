@@ -163,7 +163,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       url: '/admin/update/' + blank.id,
       data: blank
     }).then(function(response){
-      swal("Added To Blank Database!", "", "success");
+      swal("Updated Blank Database!", "", "success");
       getAdminBlanks();
       getBlanks();
     }).catch(function(error) {
@@ -180,7 +180,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       url: '/admin/delete/' + blank.id,
       data: blank
     }).then(function(response){
-      swal("Deleted Entry!", "", "success");
+      swal("Entry Deleted!", "", "success");
       getAdminBlanks();
     }).catch(function(error) {
       swal("Values Are Incorrect", "Try Again!", "error");
@@ -196,7 +196,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       url: '/admin/updateThread/' + thread.id,
       data: thread
     }).then(function(response){
-      swal("Added To Thread Database!", "", "success");
+      swal("Updated Thread Database!", "", "success");
       getAdminThreads();
       updateColor();
     }).catch(function(error) {
@@ -213,7 +213,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       url: '/admin/deleteThread/' + thread.id,
       data: thread
     }).then(function(response){
-      swal("Deleted Entry!", "", "success");
+      swal("Entry Deleted!", "", "success");
       getAdminThreads();
     }).catch(function(error) {
       swal("Values Are Incorrect", "Try Again!", "error");
