@@ -109,21 +109,36 @@
 /*<---------- DB INPUT VIEW --------->*/
 /*<---------------------------------->*/
 
-/*input div container*/
+/*info input div container*/
 #inputInputs {
   display: inline-block;
   text-align: center;
 }
 
+/*guide input div container*/
+#guideInputTable {
+  font-size: 14px;
+  width: 80%;
+}
+
+/*guide input div container*/
+#spacingInputTable {
+  font-size: 12px;
+  width: 80%;
+}
+
 /*outer container for all input divs*/
 #inputDiv {
   margin: 40px 0px 40px 0px;
+  font-size: 14px;
+  display: block;
 }
 
 /*input divs*/
 #threadInputDiv {
   display: inline-block;
   text-align: center;
+  font-size: 15px;
 }
 
 /*add thread heading*/
@@ -137,9 +152,15 @@
   margin: 20px 0px 60px 0px;
 }
 
+#statsButton {
+  margin-top: 20px;
+}
+
 /*centers 'measurements (guide to guide)'*/
-.thCenter {
+#thCenter {
   text-align: center;
+  font-size: 22px;
+  margin: 20px 0px 20px 0px;
 }
 
 /*centers all threat elemnts*/
