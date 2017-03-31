@@ -79,7 +79,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
           id_token: idToken
         }
       }).then(function(response){
-        swal("Blank Database Updated!", "Good job!", "success");
+        swal("Blank Submitted For Approval", "", "success");
         //console.log("addBlank Request: ", response);
         getBlanks();
         self.newblankOrder = {};
@@ -102,7 +102,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
         }
       }).then(function(response){
         //console.log("addThread Request: ", response);
-        swal("Thread Database Updated!", "", "success");
+        swal("Thread Submitted For Approval", "", "success");
         self.newThreadOrder = {};
         updateColor();
       }).catch(function(error) {
