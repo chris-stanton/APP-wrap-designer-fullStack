@@ -10,7 +10,7 @@ myApp.controller('AdminController', ['FactoryFactory', function(FactoryFactory) 
 //all threads object from factory
   self.adminThreadFactoryObject = FactoryFactory.adminThreadFactoryObject;
 //all admin level email addresses
-  self.adminEmailList = FactoryFactory.adminEmailFactoryObject;
+  //self.adminEmailList = FactoryFactory.adminEmailFactoryObject;
 
   getAdminStuff();
 
