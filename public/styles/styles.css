@@ -148,34 +148,6 @@
 }
 
 
-/*<---------------------------------->*/
-/*<----------- ADMIN VIEW ----------->*/
-/*<---------------------------------->*/
-
-#adminTable {
-  margin: 4px;
-  border: 3px solid black;
-  padding: 5px;
-}
-
-#tableDiv {
-  margin-bottom: 50px;
-  width: 50%;
-}
-
-.adminTd {
-  margin: 4px;
-  border: 1px solid black;
-  text-align: center;
-  padding: 3px;
-}
-
-/*delete/update buttons*/
-.upDelete {
-  width: 60px;
-}
-
-
 
 /*<----------------------------------->*/
 /*<--- image on stats and DB views --->*/
@@ -186,6 +158,55 @@
   width: 100%;
   margin-left: 150px;
 
+}
+
+
+/*<---------------------------------->*/
+/*<----------- ADMIN VIEW ----------->*/
+/*<---------------------------------->*/
+
+#adminTable {
+  margin: 4px;
+  border: 3px solid black;
+  padding: 5px;
+  width: 95%;
+}
+
+#tableDiv {
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.adminTd {
+  margin: 4px;
+  border: 1px solid black;
+  text-align: right;
+  padding: 3px;
+  font-size: 12px;
+}
+
+.threadTd {
+  text-align: center;
+  margin: 4px;
+  border: 1px solid black;
+  padding: 3px;
+  font-size: 12px;
+}
+
+/*delete/update buttons*/
+.upDelete {
+  width: 75px;
+}
+
+/*column headings*/
+.center {
+  text-align: center;
+  font-size: 20px;
+}
+
+.cert {
+  font-size: 10px;
+  text-align: center;
 }
 
 /*<---------------------------------->*/
