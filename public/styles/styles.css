@@ -28,21 +28,27 @@
 
 /*<------- GUIDE SPACING VIEW ------->*/
 /*guide size table*/
-.guideSizeTable {
+/*.guideSizeTable {
   width: 100%;
   text-align: center;
-}
+}*/
 
 /*guide size table*/
-#guideSizeTable{
-  margin-top: 50px;
+.guideSizeTable{
+  width: 41%;
+  text-align: right;
+  margin-left: 90px;
+  margin-top: 30px;
+  margin-bottom: -15px;
 }
 
 /*guide spacing table*/
 .guideSpacingTable {
-  width: 100%;
-  text-align: center;
+  width: 37%;
+  text-align: right;
+  margin-left: 90px;
 }
+
 
 /*mfg length handle length display*/
 .spacingData {
@@ -168,8 +174,8 @@
 /*<------- image on stats and DB views ------->*/
 /*rod image between tables*/
 #iceRod {
-  width: 80%;
-  margin-left: 200px;
+  width: 100%;
+  margin-left: 150px;
 
 }
 

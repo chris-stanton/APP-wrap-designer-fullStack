@@ -36,16 +36,16 @@
   </div>
 
 <!-- Guide size table -->
-  <table id="guideSizeTable" class="guideSizeTable">
+  <!-- <table class="guideSizeTable">
     <tr class="animated slideInRight">
-      <td class="tdSpacingHead"> Tip-Top Size </td>
-      <td class="tdSpacingHead"> 2nd Guide Size </td>
-      <td class="tdSpacingHead"> 3rd Guide Size </td>
-      <td class="tdSpacingHead"> 4th Guide Size </td>
-      <td class="tdSpacingHead"> 5th Guide Size </td>
-      <td class="tdSpacingHead"> 6th Guide Size </td>
+      <td class="tdSpacingHead"> Tip-Top </td>
+      <td class="tdSpacingHead"> 2nd </td>
+      <td class="tdSpacingHead"> 3rd </td>
+      <td class="tdSpacingHead"> 4th </td>
+      <td class="tdSpacingHead"> 5th </td>
+      <td class="tdSpacingHead"> 6th </td>
     </tr>
-  </table>
+  </table> -->
   <table class="guideSizeTable">
     <tr ng-repeat="blank in sc.specificBlankObject.list" class="animated slideInLeft">
       <td> {{"#" + blank.guidesizetiptop}} </td>
@@ -63,22 +63,22 @@
 <!-- guide spacing table -->
   <table class="guideSpacingTable">
     <tr ng-repeat="blank in sc.specificBlankObject.list" class="animated slideInLeft">
-      <td> {{blank.onetwo + '"'}} </td>
-      <td> {{blank.twothree + '"'}} </td>
-      <td> {{blank.twothree + '"'}} </td>
-      <td> {{blank.twothree + '"'}} </td>
-      <td> {{blank.twothree + '"'}} </td>
+      <td class="tdSpacingHead"> {{blank.onetwo + '"'}} </td>
+      <td class="tdSpacingHead"> {{blank.twothree + '"'}} </td>
+      <td class="tdSpacingHead"> {{blank.threefour + '"'}} </td>
+      <td class="tdSpacingHead"> {{blank.fourfive + '"'}} </td>
+      <td class="tdSpacingHead"> {{blank.fivesix + '"'}} </td>
     </tr>
   </table>
-  <table class="guideSpacingTable">
+  <!-- <table class="guideSpacingTable">
     <tr class="animated slideInRight">
-      <td class="tdSpacingHead"> TipTop - Second Guide </td>
-      <td class="tdSpacingHead"> Second - Third Guide </td>
-      <td class="tdSpacingHead"> Third - Fourth Guide </td>
-      <td class="tdSpacingHead"> Fourth - Fifth Guide </td>
-      <td class="tdSpacingHead"> Fifth - Sixth Guide  </td>
+      <td class="tdSpacingHead"> ----- </td>
+      <td class="tdSpacingHead"> ------- </td>
+      <td class="tdSpacingHead"> --------- </td>
+      <td class="tdSpacingHead"> ----------- </td>
+      <td class="tdSpacingHead"> ------------  </td>
     </tr>
-  </table>
+  </table> -->
 
 <!-- print button   -->
   <div class="animated slideInLeft">
