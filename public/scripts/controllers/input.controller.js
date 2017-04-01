@@ -3,17 +3,16 @@ myApp.controller('InputController',['FactoryFactory', '$firebaseAuth', '$locatio
   console.log('InputController running');
   var self = this;
   self.testMessage = 'IC WORKING STATUS';
-  self.newBlankOrder = {};
-  self.newThreadOrder = {};
 
 //new blank pass-through to factory
   self.addBlanks = function(){
     FactoryFactory.addBlanks(self.newBlankOrder);
+    self.newBlankOrder = {};
   };
 //new thread pass-through to factory
   self.addThreads = function(){
-    console.log(self.newThreadOrder)
     FactoryFactory.addThreads(self.newThreadOrder);
+    self.newThreadOrder = {};
   };
 
 //redirect after authentication
