@@ -5,171 +5,162 @@
     <button type="button" name="button" class="authButtons" ng-click="ic.deAuthUser()"> Logout </button>
     <button type="button" name="button" class="authButtons"><a ng-href="https://accounts.google.com/SignUp?hl=en"> Register </a></button>
   </div>
-
+<!-- element container -->
   <div class="center">
 <!-- blank stat's submit start -->
     <h1 class="animated slideInRight"> Add New Blank! </h1>
-
 <!-- top page inputs -->
-    <table id="inputDiv">
-      <td>
-        <div id="inputInputs" class="animated slideInLeft">
-          <label for="blankName"> Blank Name </label>
-          <input type="text" name="blankName" placeholder="blank name" ng-model="ic.newBlankOrder.blankName">
-        </div>
-      </td>
-      <td>
-        <div id="inputInputs" class="animated slideInLeft">
-          <label for="mfgName"> MFG Name </label>
-          <input type="text" name="mfgName" placeholder="mfg name" ng-model="ic.newBlankOrder.mfgName">
-        </div>
-      </td>
-      <td>
-        <div id="inputInputs" class="animated slideInLeft">
-          <label for="blankLength"> Blank Length </label>
-          <input type="text" name="blankLength" placeholder='blank length "' ng-model="ic.newBlankOrder.blankLength">
-        </div>
-      </td>
-      <td>
-        <div id="inputInputs" class="animated slideInLeft">
-          <label for="blankMaterial"> Blank Material </label>
-          <input type="text" name="blankMaterial" placeholder="blank material" ng-model="ic.newBlankOrder.blankMaterial">
-        </div>
-      </td>
-      <td>
-        <div id="inputInputs" class="animated slideInLeft">
-          <label for="handleLength"> Handle Length </label>
-          <input type="text" name="handleLength" placeholder='handle length "' ng-model="ic.newBlankOrder.handleLength">
-        </div>
-      </td>
-    </table>
-
+      <table id="inputDiv">
+        <td>
+          <div id="inputInputs" class="animated slideInLeft">
+            <label for="blankName"> Blank Name </label>
+              <input type="text" name="blankName" placeholder="blank name" ng-model="ic.newBlankOrder.blankName">
+          </div>
+        </td>
+        <td>
+          <div id="inputInputs" class="animated slideInLeft">
+            <label for="mfgName"> MFG Name </label>
+              <input type="text" name="mfgName" placeholder="mfg name" ng-model="ic.newBlankOrder.mfgName">
+          </div>
+        </td>
+        <td>
+          <div id="inputInputs" class="animated slideInLeft">
+            <label for="blankLength"> Blank Length </label>
+              <input type="text" name="blankLength" placeholder='blank length "' ng-model="ic.newBlankOrder.blankLength">
+          </div>
+        </td>
+        <td>
+          <div id="inputInputs" class="animated slideInLeft">
+            <label for="blankMaterial"> Blank Material </label>
+              <input type="text" name="blankMaterial" placeholder="blank material" ng-model="ic.newBlankOrder.blankMaterial">
+          </div>
+        </td>
+        <td>
+          <div id="inputInputs" class="animated slideInLeft">
+            <label for="handleLength"> Handle Length </label>
+              <input type="text" name="handleLength" placeholder='handle length "' ng-model="ic.newBlankOrder.handleLength">
+          </div>
+        </td>
+      </table>
 <!-- guide size input table -->
-    <table id="guideInputTable">
-      <thead>
-        <tr>
-          <h5 id="thCenter" class="animated slideInRight"> Guide Sizes </h5>
-        </tr>
-      </thead>
-      <tbody>
+      <table id="guideInputTable">
+        <thead>
+          <tr>
+            <h5 id="thCenter" class="animated slideInRight"> Guide Sizes </h5>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="animated slideInRight">
+              <div>
+                <label for="tipTip"> Tip-Top </label>
+                  <input type="text" name="tipTop" placeholder="guide #" ng-model="ic.newBlankOrder.guideSizeTipTop">
+              </div>
+            </td>
+            <td class="animated slideInRight" >
+              <div>
+                <label for="guideTwo"> Second </label>
+                  <input type="text" name="guidetwo" placeholder="guide #" ng-model="ic.newBlankOrder.guideSizeTwo">
+              </div>
+            </td>
+            <td class="animated slideInRight" >
+              <div>
+                <label for="guideThree"> Third </label>
+                  <input type="text" name="guideThree" placeholder="guide #" ng-model="ic.newBlankOrder.guideSizeThree">
+              </div>
+            </td>
+            <td class="animated slideInRight" >
+              <div>
+                <label for="guideFour"> Fourth </label>
+                  <input type="text" name="guideFour" placeholder="guide #" ng-model="ic.newBlankOrder.guideSizeFour">
+              </div>
+            </td>
+            <td class="animated slideInRight" >
+              <div>
+                <label for="guideFive"> Fifth </label>
+                  <input type="text" name="guideFive" placeholder="guide #" ng-model="ic.newBlankOrder.guideSizeFive">
+              </div>
+            </td>
+            <td class="animated slideInRight" >
+              <div>
+                <label for="guideSix"> Sixth </label>
+                  <input type="text" name="guideSix" placeholder="guide #" ng-model="ic.newBlankOrder.guideSizeSix">
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+<!-- referance image -->
+    <img id="iceRod" src="assets/images/iceRod.png" class="animated slideInLeft" alt="">
+<!-- guide spacing input table -->
+      <table id="spacingInputTable">
         <tr>
           <td class="animated slideInRight">
             <div>
-              <label for="tipTip"> Tip-Top </label>
-              <input type="text" name="tipTop" placeholder="guide #" ng-model="ic.newBlankOrder.guideSizeTipTop">
+              <label for="oneTwo"> TipTop - Second </label>
+                <input type="text" name="oneTwo" placeholder='measurement "' ng-model="ic.newBlankOrder.oneTwo">
             </div>
           </td>
-          <td class="animated slideInRight" >
+          <td class="animated slideInRight">
             <div>
-              <label for="guideTwo"> Second </label>
-              <input type="text" name="guidetwo" placeholder="guide #" ng-model="ic.newBlankOrder.guideSizeTwo">
+              <label for="twoThree"> Second Guide - Third </label>
+                <input type="text" name="twoThree" placeholder='measurement "' ng-model="ic.newBlankOrder.twoThree">
             </div>
           </td>
-          <td class="animated slideInRight" >
+          <td class="animated slideInRight">
             <div>
-              <label for="guideThree"> Third </label>
-              <input type="text" name="guideThree" placeholder="guide #" ng-model="ic.newBlankOrder.guideSizeThree">
+              <label for="threeFour"> Third Guide - Fourth </label>
+                <input type="text" name="threeFour" placeholder='measurement "' ng-model="ic.newBlankOrder.threeFour">
             </div>
           </td>
-          <td class="animated slideInRight" >
+          <td class="animated slideInRight">
             <div>
-              <label for="guideFour"> Fourth </label>
-              <input type="text" name="guideFour" placeholder="guide #" ng-model="ic.newBlankOrder.guideSizeFour">
+              <label for="fourFive"> Fourth Guide - Fifth </label>
+                <input type="text" name="fourFive" placeholder='measurement "' ng-model="ic.newBlankOrder.fourFive">
             </div>
           </td>
-          <td class="animated slideInRight" >
+          <td class="animated slideInRight">
             <div>
-              <label for="guideFive"> Fifth </label>
-              <input type="text" name="guideFive" placeholder="guide #" ng-model="ic.newBlankOrder.guideSizeFive">
-            </div>
-          </td>
-          <td class="animated slideInRight" >
-            <div>
-              <label for="guideSix"> Sixth </label>
-              <input type="text" name="guideSix" placeholder="guide #" ng-model="ic.newBlankOrder.guideSizeSix">
+              <label for="fiveSix"> Fifth Guide - Sixth </label>
+                <input type="text" name="fiveSix" placeholder='measurement "' ng-model="ic.newBlankOrder.fiveSix">
             </div>
           </td>
         </tr>
-      </tbody>
-    </table>
-
-<!-- referance image -->
-    <img id="iceRod" src="assets/images/iceRod.png" class="animated slideInLeft" alt="">
-
-<!-- guide spacing input table -->
-    <table id="spacingInputTable">
-      <tr>
-        <td class="animated slideInRight">
-          <div>
-            <label for="oneTwo"> TipTop - Second </label>
-            <input type="text" name="oneTwo" placeholder='measurement "' ng-model="ic.newBlankOrder.oneTwo">
-          </div>
-        </td>
-        <td class="animated slideInRight">
-          <div>
-            <label for="twoThree"> Second Guide - Third </label>
-            <input type="text" name="twoThree" placeholder='measurement "' ng-model="ic.newBlankOrder.twoThree">
-          </div>
-        </td>
-        <td class="animated slideInRight">
-          <div>
-            <label for="threeFour"> Third Guide - Fourth </label>
-            <input type="text" name="threeFour" placeholder='measurement "' ng-model="ic.newBlankOrder.threeFour">
-          </div>
-        </td>
-        <td class="animated slideInRight">
-          <div>
-            <label for="fourFive"> Fourth Guide - Fifth </label>
-            <input type="text" name="fourFive" placeholder='measurement "' ng-model="ic.newBlankOrder.fourFive">
-          </div>
-        </td>
-        <td class="animated slideInRight">
-          <div>
-            <label for="fiveSix"> Fifth Guide - Sixth </label>
-            <input type="text" name="fiveSix" placeholder='measurement "' ng-model="ic.newBlankOrder.fiveSix">
-          </div>
-        </td>
-      </tr>
-    </table>
-
+      </table>
     <h5 id="thCenter" class="animated slideInRight"> Measurements (guide to guide) </h5>
-
 <!-- new blank stats submit button -->
-    <div id="statsButton" class="animated slideInLeft">
-      <button ng-click="ic.addBlanks(ic.newBlankOrder)"  class="c-button c-button--rounded c-button--ghost-success"> SUBMIT New Blank </button>
+      <div id="statsButton" class="animated slideInLeft">
+        <button ng-click="ic.addBlanks(ic.newBlankOrder)"  class="c-button c-button--rounded c-button--ghost-success"> SUBMIT New Blank </button>
+      </div>
     </div>
-  </div>
-
 
 <!-- end of blank inputs start of threat input -->
 
-
-  <div class="center">
+<!-- element container div -->
+    <div class="center">
 <!-- thread color sumbit start -->
-    <h1 class="animated slideInRight" id="threadHeading"> Add New Thread! </h1>
-
-      <div id="threadInputDiv">
-        <div class="animated slideInLeft" id="threadInputDiv">
-          <label for="mfgName"> MFG Name </label>
-          <input type="text" name="mfgName" placeholder="mfg name" ng-model="ic.newThreadOrder.mfgName">
-        </div>
-        <div class="animated slideInLeft" id="threadInputDiv">
-          <label for="color"> Color </label>
-          <input type="text" name="color" placeholder="color" ng-model="ic.newThreadOrder.color">
-        </div>
-        <div class="animated slideInLeft" id="threadInputDiv">
-          <label for="threadNumber"> Thread Number </label>
-          <input type="text" name="threadNumber" placeholder="thread number" ng-model="ic.newThreadOrder.threadNumber">
-        </div>
-        <div class="animated slideInLeft" id="threadInputDiv">
-          <label for="image"> Image </label>
-          <input type="text" name="image" placeholder="url" ng-model="ic.newThreadOrder.image">
+      <h1 class="animated slideInRight" id="threadHeading"> Add New Thread! </h1>
+        <div id="threadInputDiv">
+          <div class="animated slideInLeft" id="threadInputDiv">
+            <label for="mfgName"> MFG Name </label>
+              <input type="text" name="mfgName" placeholder="mfg name" ng-model="ic.newThreadOrder.mfgName">
+          </div>
+          <div class="animated slideInLeft" id="threadInputDiv">
+            <label for="color"> Color </label>
+              <input type="text" name="color" placeholder="color" ng-model="ic.newThreadOrder.color">
+          </div>
+          <div class="animated slideInLeft" id="threadInputDiv">
+            <label for="threadNumber"> Thread Number </label>
+              <input type="text" name="threadNumber" placeholder="thread number" ng-model="ic.newThreadOrder.threadNumber">
+          </div>
+          <div class="animated slideInLeft" id="threadInputDiv">
+            <label for="image"> Image </label>
+              <input type="text" name="image" placeholder="url" ng-model="ic.newThreadOrder.image">
           <!-- <input type="file" name="image" ng-model="ic.newThreadOrder.image"> -->
+          </div>
         </div>
-      </div>
-
 <!-- new thread color submit button -->
-      <div class="animated slideInRight" id="threadButton">
-        <button class="c-button c-button--rounded c-button--ghost-success" type="button" name="button" ng-click="ic.addThreads(ic.newThreadOrder)"> SUBMIT New Thread Color </button>
-      </div>
-  </div>
+        <div class="animated slideInRight" id="threadButton">
+          <button class="c-button c-button--rounded c-button--ghost-success" type="button" name="button" ng-click="ic.addThreads(ic.newThreadOrder)"> SUBMIT New Thread Color </button>
+        </div>
+    </div>

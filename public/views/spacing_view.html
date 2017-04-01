@@ -1,7 +1,6 @@
 
 
   <h1> Spacing Calculator! </h1>
-
 <!-- blank model selectors -->
   <div class="animated slideInRight">
     <label for="blankName"> Blank Model: </label>
@@ -11,14 +10,12 @@
 <!-- submit button -->
       <button ng-click="sc.getSpecificBlank(sc.newBlank)" class="animated slideInRight"> SUBMIT </button>
   </div>
-
 <!-- current blank data display -->
   <div id="dataDisplay" ng-repeat="blank in sc.specificBlankObject.list">
     <h5 class="spacingData">MFG Name: </h5><div class="animated slideInRight"> {{blank.mfgname}} </div>
     <h5 class="spacingData">Blank Length: </h5><div class="animated slideInRight"> {{blank.blanklength + '"'}} </div>
     <h5 class="spacingData">Handle Length: </h5><div class="animated slideInRight"> {{blank.handlelength + '"'}} </div>
   </div>
-
 <!-- Guide size table -->
   <table class="guideSizeTable">
     <tr ng-repeat="blank in sc.specificBlankObject.list" class="animated slideInLeft">
@@ -30,10 +27,8 @@
       <td> {{"#" + blank.guidesizesix}} </td>
     </tr>
   </table>
-
 <!-- reference image -->
   <img id="iceRod" src="assets/images/iceRod.png" class="animated rotateIn">
-
 <!-- guide spacing table -->
   <table class="guideSpacingTable">
     <tr ng-repeat="blank in sc.specificBlankObject.list" class="animated slideInLeft">
@@ -44,20 +39,12 @@
       <td class="tdSpacingHead"> {{blank.fivesix + '"'}} </td>
     </tr>
   </table>
-  <!-- <table class="guideSpacingTable">
-    <tr class="animated slideInRight">
-      <td class="tdSpacingHead"> ----- </td>
-      <td class="tdSpacingHead"> ------- </td>
-      <td class="tdSpacingHead"> --------- </td>
-      <td class="tdSpacingHead"> ----------- </td>
-      <td class="tdSpacingHead"> ------------  </td>
-    </tr>
-  </table> -->
-
 <!-- print button   -->
   <div class="animated slideInLeft">
     <button type="button" name="print" ng-click="sc.print()" id="printButton" class="c-button c-button--rounded c-button--ghost-brand"> Print </button>
   </div>
+
+
 
 
 
