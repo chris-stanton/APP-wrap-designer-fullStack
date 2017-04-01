@@ -13,6 +13,8 @@ myApp.factory('FactoryFactory',['$http',function($http) {
   var adminThreadFactoryObject = { list : [] };
   var adminEmailFactoryObject = { list : [] };
 
+  var notyf = new Notyf();
+
   //--- gets all data on starup ---//
   init();
 
@@ -79,7 +81,8 @@ myApp.factory('FactoryFactory',['$http',function($http) {
           id_token: idToken
         }
       }).then(function(response){
-        swal("Blank Submitted For Approval", "", "success");
+        notyf.confirm('Blank Submitted For Approval');
+        // swal("Blank Submitted For Approval", "", "success");
         //console.log("addBlank Request: ", response);
         getBlanks();
         self.newblankOrder = {};
@@ -102,7 +105,8 @@ myApp.factory('FactoryFactory',['$http',function($http) {
         }
       }).then(function(response){
         //console.log("addThread Request: ", response);
-        swal("Thread Submitted For Approval", "", "success");
+        notyf.confirm('Thread Submitted For Approval');
+        // swal("Thread Submitted For Approval", "", "success");
         self.newThreadOrder = {};
         updateColor();
       }).catch(function(error) {
@@ -163,7 +167,8 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       url: '/admin/update/' + blank.id,
       data: blank
     }).then(function(response){
-      swal("Updated Blank Database", "", "success");
+      notyf.confirm('Updated Blank Database');
+      // swal("Updated Blank Database", "", "success");
       getAdminBlanks();
       getBlanks();
     }).catch(function(error) {
@@ -180,7 +185,8 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       url: '/admin/delete/' + blank.id,
       data: blank
     }).then(function(response){
-      swal("Entry Deleted", "", "success");
+      notyf.confirm('Entry Deleted');
+      // swal("Entry Deleted", "", "success");
       getAdminBlanks();
     }).catch(function(error) {
       swal("Values Are Incorrect", "Try Again!", "error");
@@ -196,7 +202,8 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       url: '/admin/updateThread/' + thread.id,
       data: thread
     }).then(function(response){
-      swal("Updated Thread Database", "", "success");
+      notyf.confirm('Updated Thread Database');
+      // swal("Updated Thread Database", "", "success");
       getAdminThreads();
       updateColor();
     }).catch(function(error) {
@@ -213,7 +220,8 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       url: '/admin/deleteThread/' + thread.id,
       data: thread
     }).then(function(response){
-      swal("Entry Deleted", "", "success");
+        notyf.confirm('Entry Deleted');
+      // swal("Entry Deleted", "", "success");
       getAdminThreads();
     }).catch(function(error) {
       swal("Values Are Incorrect", "Try Again!", "error");
