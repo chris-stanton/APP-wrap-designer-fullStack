@@ -4,9 +4,10 @@
 
 .views {
   font-size: 20px;
-  box-shadow: 0px 1px 2px 1px rgba(135, 182, 245, 0.1) inset, 0px -2px 20px #24ee08, 0px 1px 5px rgba(135, 182, 245, 0.1), 0px 2px 10px rgba(135, 182, 245, 0.1);
+  box-shadow: 0px 1px 2px 2px rgba(135, 182, 245, 0.1) inset, 0px -2px 20px #24ee08, 0px 1px 5px rgba(135, 182, 245, 0.1), 0px 2px 10px rgba(135, 182, 245, 0.1);
   color: #24ee08;
   background-color: #696868;
+
 }
 
 /*nav buttons background*/
@@ -15,11 +16,12 @@
   background-color: #000000;
 }
 
-/*admin nav button*/
+/*admin nav button area background*/
 #adminButtonDiv {
   background-color: #000000;
   text-align: right;
   font-size: 10px;
+  padding: 10px 20px 0px 0px;
 }
 
 /*nav buttons*/
@@ -76,12 +78,6 @@
 /*<------- WRAP DESIGNER VIEW ------->*/
 /*<---------------------------------->*/
 
-/*authentication buttons*/
-.authButtons {
-  text-align: right;
-  font-size: 10px;
-}
-
 /*label table*/
 .wrapTable {
   padding-top: 30px;
@@ -120,6 +116,13 @@
 /*<---------- DB INPUT VIEW --------->*/
 /*<---------------------------------->*/
 
+/*authentication buttons*/
+.authButtons {
+  text-align: right;
+  font-size: 10px;
+  margin: 5px 3px 0px 0px;
+}
+
 /*info input div container*/
 #inputInputs {
   display: inline-block;
@@ -152,19 +155,13 @@
   font-size: 15px;
 }
 
-/*add thread heading*/
-#threadHeading{
-  margin: 75px 0px 40px 0px;
-  /*font-family: fantasy;*/
+#statsButton {
+  margin: 20px 0px 100px 0px;
 }
 
 /*threat submit button*/
 #threadButton {
-  margin: 20px 0px 60px 0px;
-}
-
-#statsButton {
-  margin-top: 20px;
+  margin: 20px 0px 40px 0px;
 }
 
 /*centers 'measurements (guide to guide)'*/
@@ -178,7 +175,6 @@
 .center {
   text-align: center;
 }
-
 
 
 /*<----------------------------------->*/
@@ -196,6 +192,11 @@
 /*<---------------------------------->*/
 /*<----------- ADMIN VIEW ----------->*/
 /*<---------------------------------->*/
+
+#blankHeading {
+  font-size: 22px;
+  margin-left: 30px;
+}
 
 #adminTable {
   margin: 4px;
@@ -231,7 +232,7 @@
 }
 
 /*column headings*/
-.center {
+.titleCenter {
   text-align: center;
   font-size: 20px;
 }
@@ -239,6 +240,12 @@
 .cert {
   font-size: 10px;
   text-align: center;
+}
+
+#threadHeading {
+  font-size: 22px;
+  margin-bottom: 0px;
+  margin-left: 30px;
 }
 
 /*<---------------------------------->*/
@@ -253,7 +260,7 @@
   height: 20px;
   color: #24ee08;
   background-color: #000000;
-  box-shadow: 0px 1px 2px 1px rgba(135, 182, 245, 0.1) inset, 0px -2px 20px #24ee08, 0px 1px 5px rgba(135, 182, 245, 0.1), 0px 2px 10px rgba(135, 182, 245, 0.1);
+  box-shadow: 0px 1px 2px 2px rgba(135, 182, 245, 0.1) inset, 0px -2px 20px #24ee08, 0px 1px 5px rgba(135, 182, 245, 0.1), 0px 2px 10px rgba(135, 182, 245, 0.1);
   text-align: center;
 }
 
@@ -269,10 +276,3 @@ h1 {
   font-size: 50px;
   margin: 30px 0px 40px 0px;
 }
-
-
-/*body {
-  background-image: url('../assets/images/interSymbol.jpg');
-  background-repeat: no-repeat;
-  background-size: 80%;
-}*/
