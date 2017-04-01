@@ -12,6 +12,8 @@
         <td> <img ng-src="{{wc.newColor.colorFive}}" width={{wc.turns.colorFive*3}} class="tdThread"> </td>
         <td> <img ng-src="{{wc.newColor.colorSix}}" width={{wc.turns.colorSix*3}} class="tdThread"> </td>
         <td> <img ng-src="{{wc.newColor.colorSeven}}" width={{wc.turns.colorSeven*3}} class="tdThread"> </td>
+        <td> <img ng-src="{{wc.newColor.colorEight}}" width={{wc.turns.colorEight*3}} class="tdThread"> </td>
+        <td> <img ng-src="{{wc.newColor.colorNine}}" width={{wc.turns.colorNine*3}} class="tdThread"> </td>
         <td> <img ng-src="{{wc.newColorBlank.blankColor}}" class="tdBlank"> </td>
       </tr>
     </table>
@@ -77,6 +79,22 @@
         <label for="colorSevenTurn"> # of Turns: </label>
           <input type="text" name="colorSevenTurn" class="selectorInput" ng-model="wc.turns.colorSeven">
             <select name="colorSeven" ng-model="wc.newColor.colorSeven">
+              <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.mfgname}} - {{color.color}} - {{color.threadnumber}} </option>
+            </select>
+      </div>
+<!-- colorEight selector -->
+      <div class="animated slideInLeft" class="selectorDiv">
+        <label for="colorEightTurn"> # of Turns: </label>
+          <input type="text" name="colorEightTurn" class="selectorInput" ng-model="wc.turns.colorEight">
+            <select name="colorEight" ng-model="wc.newColor.colorEight">
+              <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.mfgname}} - {{color.color}} - {{color.threadnumber}} </option>
+            </select>
+      </div>
+<!-- colorNine selector -->
+      <div class="animated slideInLeft" class="selectorDiv">
+        <label for="colorNineTurn"> # of Turns: </label>
+          <input type="text" name="colorNineTurn" class="selectorInput" ng-model="wc.turns.colorNine">
+            <select name="colorNine" ng-model="wc.newColor.colorNine">
               <option ng-repeat="color in wc.colorObject.list" value='{{color.image}}'> {{color.mfgname}} - {{color.color}} - {{color.threadnumber}} </option>
             </select>
       </div>
