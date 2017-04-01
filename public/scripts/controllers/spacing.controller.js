@@ -17,7 +17,6 @@ self.getSpecificBlank = FactoryFactory.getSpecificBlank;
 //returned object from factory
 self.specificBlankObject = FactoryFactory.specificBlankObject;
 
-
 //print function
 self.print = function(){
   window.print();

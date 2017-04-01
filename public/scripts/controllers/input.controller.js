@@ -10,7 +10,6 @@ myApp.controller('InputController',['FactoryFactory', '$firebaseAuth', '$locatio
   self.addBlanks = function(){
     FactoryFactory.addBlanks(self.newBlankOrder);
   };
-
 //new thread pass-through to factory
   self.addThreads = function(){
     console.log(self.newThreadOrder)
@@ -21,7 +20,6 @@ myApp.controller('InputController',['FactoryFactory', '$firebaseAuth', '$locatio
   function wrapView() {
     $location.path('/input_view');
   }//wrapView()
-
 
 //google authenticate bellow
   var auth = $firebaseAuth();
@@ -47,7 +45,6 @@ myApp.controller('InputController',['FactoryFactory', '$firebaseAuth', '$locatio
         console.log('Logging the user out!');
      });
   };//end of self.deAuthUser()
-
 
 
 }]);//end of myApp.controller()

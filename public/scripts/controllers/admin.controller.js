@@ -24,24 +24,20 @@ myApp.controller('AdminController', ['FactoryFactory', function(FactoryFactory) 
     //console.log("updating blank ID number: ", blank);
     FactoryFactory.updateAdmin(blank);
   }
-
 //deletes garbage
   self.deleteAdmin = function(blank){
     //console.log("deleting blank ID number: ", blank);
     FactoryFactory.deleteAdmin(blank);
   }
-
 //sends to DB after admin updated/approved
   self.updateThread = function(thread){
     //console.log("updating thread ID number: ", thread);
     FactoryFactory.updateThread(thread);
   }
-
 //deletes the garbage
   self.deleteThread = function(thread){
     //console.log("deleting thread ID number: ", thread);
     FactoryFactory.deleteThread(thread);
   }
-
 
 }]);//end of myApp.controller()

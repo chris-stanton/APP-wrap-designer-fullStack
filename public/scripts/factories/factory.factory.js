@@ -2,7 +2,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
 
   console.log('FactoryFactory running');
 
-  //--- object containers ---//
+//--- object containers ---//
   var blankFactoryObject = { list: [] };
   var updateAuth = { list: [] };
   var updateDeAuth = { list: [] };
@@ -13,20 +13,21 @@ myApp.factory('FactoryFactory',['$http',function($http) {
   var adminThreadFactoryObject = { list : [] };
   var adminEmailFactoryObject = { list : [] };
 
+//--- notyf must have ---//
   var notyf = new Notyf();
 
-  //--- gets all data on starup ---//
+//--- gets all data on starup ---//
   init();
 
   function init(){
-    //--- gets blanks, blank/color and thread colors on startup ---//
+//--- gets blanks, blank/color and thread colors on startup ---//
     getBlanks();
     updateColor();
     updateColorBlank();
     getAdminEmail();
-  }//end of init()
+  }
 
-  //--- gets blanks for drop down options on spacing view ---//
+//--- gets blanks for drop down options on spacing view ---//
   function getBlanks() {
     $http({
       method: 'GET',
@@ -37,7 +38,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     });
   }//end of getblanks()
 
-  //--- gets all thread colors for wrap view selecters ---//
+//--- gets all thread colors for wrap view selecters ---//
   function updateColor() {
     $http({
       method: 'GET',
@@ -48,7 +49,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     });
   }//end of updatecolor()
 
-  //--- gets all blank colors for wrap view selecters ---//
+//--- gets all blank colors for wrap view selecters ---//
   function updateColorBlank() {
     $http({
       method: 'GET',
@@ -59,7 +60,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     });
   }//end of updatecolor()
 
-  //--- gets results from spacing view drop down menu ---//
+//--- gets results from spacing view drop down menu ---//
   function getSpecificBlank(newBlank) {
     $http({
       method: 'GET',
@@ -69,7 +70,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     });
   }//end of getblanks()
 
-  //--- add blank stats to Database ---//
+//--- add blank stats to Database ---//
   function addBlanks(newBlankOrder) {
     firebase.auth().currentUser.getToken().then(function(idToken) {
       //adds blank to database from input view inputs
@@ -81,8 +82,8 @@ myApp.factory('FactoryFactory',['$http',function($http) {
           id_token: idToken
         }
       }).then(function(response){
-        notyf.confirm('Blank Submitted For Approval');
-        // swal("Blank Submitted For Approval", "", "success");
+        // notyf.confirm('Blank Submitted For Approval');
+        swal("Blank Submitted For Approval", "", "success");
         //console.log("addBlank Request: ", response);
         getBlanks();
         self.newblankOrder = {};
@@ -93,7 +94,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     });//end of firebase.auth()
   }//end of addBlank()
 
-  //--- adds thread color to database from (input view) ---//
+//--- adds thread color to database from (input view) ---//
   function addThreads(newThreadOrder) {
     firebase.auth().currentUser.getToken().then(function(idToken) {
       $http({
@@ -104,9 +105,8 @@ myApp.factory('FactoryFactory',['$http',function($http) {
           id_token: idToken
         }
       }).then(function(response){
-        //console.log("addThread Request: ", response);
-        notyf.confirm('Thread Submitted For Approval');
-        // swal("Thread Submitted For Approval", "", "success");
+        // notyf.confirm('Thread Submitted For Approval');
+        swal("Thread Submitted For Approval", "", "success");
         self.newThreadOrder = {};
         updateColor();
       }).catch(function(error) {
@@ -160,7 +160,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
     //});//end of firebase.auth()
   }//end of getblanks()
 
-  //--- updates done to newly entered adding to DB (admin view) ---//
+//--- updates done to newly entered adding to DB (admin view) ---//
   function updateAdmin(blank){
     $http({
       method: 'PUT',
@@ -220,7 +220,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       url: '/admin/deleteThread/' + thread.id,
       data: thread
     }).then(function(response){
-        notyf.confirm('Entry Deleted');
+      notyf.confirm('Entry Deleted');
       // swal("Entry Deleted", "", "success");
       getAdminThreads();
     }).catch(function(error) {
@@ -231,7 +231,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
 
 
 
-  //--- API ---//
+//---------- API ----------//
   return {
     //gets blank stats for spacing view
     getBlanks : getBlanks,
