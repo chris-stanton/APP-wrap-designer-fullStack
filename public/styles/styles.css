@@ -67,6 +67,16 @@
   text-align: center;
 }
 
+#guideSize {
+  font-size: 20px;
+  font-family: serif;
+}
+
+#guideSpacing {
+  font-size: 20px;
+  font-family: serif;
+}
+
 /*print button*/
 #printButtonSpacing {
   margin-top: 50px;
@@ -108,7 +118,7 @@
 
 /*print button*/
 #printButtonWrap {
-  margin: 12px 0px 0px 1100px;
+  margin: 12px 0px 80px 1100px;
 }
 
 
@@ -128,7 +138,7 @@
   height: 25px;
   border-radius: 15px;
   border: 0px;
-  outline-color: #ffffff;
+  border-style: none;
 }
 
 /*info input div container*/

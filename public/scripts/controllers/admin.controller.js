@@ -10,10 +10,13 @@ myApp.controller('AdminController', ['FactoryFactory', function(FactoryFactory) 
 //all threads object from factory
   self.adminThreadFactoryObject = FactoryFactory.adminThreadFactoryObject;
 //all admin level email addresses
-  //self.adminEmailList = FactoryFactory.adminEmailFactoryObject;
+  self.adminEmailList = FactoryFactory.adminEmailFactoryObject;
 
-  getAdminStuff();
+  init();
 
+  function init(){
+    getAdminStuff();
+  }
 //button cick function to get all blanks
   function getAdminStuff(){
     FactoryFactory.getAdminBlanks();
@@ -39,5 +42,6 @@ myApp.controller('AdminController', ['FactoryFactory', function(FactoryFactory) 
     //console.log("deleting thread ID number: ", thread);
     FactoryFactory.deleteThread(thread);
   }
+
 
 }]);//end of myApp.controller()

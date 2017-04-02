@@ -19,6 +19,7 @@
 <!-- Guide size table -->
     <table class="guideSizeTable">
       <tr ng-repeat="blank in sc.specificBlankObject.list" class="animated slideInRight">
+        <!-- <h5 id="guideSize"> Guide Sizes: </h5> -->
         <td> {{"#" + blank.guidesizetiptop}} </td>
         <td> {{"#" + blank.guidesizetwo}} </td>
         <td> {{"#" + blank.guidesizethree}} </td>
@@ -37,8 +38,10 @@
         <td class="tdSpacingHead"> {{blank.threefour + '"'}} </td>
         <td ng-if="blank.fourfive !== null" class="tdSpacingHead"> {{blank.fourfive + '"'}} </td>
         <td ng-if="blank.fivesix !== null" class="tdSpacingHead"> {{blank.fivesix + '"'}} </td>
+        <!-- <h5 id="guideSpacing"> Guide Spacing: </h5> -->
       </tr>
     </table>
+    {{sc.specificBlankObject.list.blankname}}
 <!-- print button   -->
     <div class="animated slideInLeft">
       <button type="button" name="print" ng-click="sc.print()" id="printButtonSpacing" class="c-button c-button--rounded c-button--ghost-brand"> Print </button>
