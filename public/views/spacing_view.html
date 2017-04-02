@@ -23,8 +23,8 @@
         <td> {{"#" + blank.guidesizetwo}} </td>
         <td> {{"#" + blank.guidesizethree}} </td>
         <td> {{"#" + blank.guidesizefour}} </td>
-        <td> {{"#" + blank.guidesizefive}} </td>
-        <td> {{"#" + blank.guidesizesix}} </td>
+        <td <td ng-if="blank.guidesizefive !== null"> {{"#" + blank.guidesizefive}} </td>
+        <td <td ng-if="blank.guidesizesix !== null"> {{"#" + blank.guidesizesix}} </td>
       </tr>
     </table>
 <!-- reference image -->
@@ -35,8 +35,8 @@
         <td class="tdSpacingHead"> {{blank.onetwo + '"'}} </td>
         <td class="tdSpacingHead"> {{blank.twothree + '"'}} </td>
         <td class="tdSpacingHead"> {{blank.threefour + '"'}} </td>
-        <td class="tdSpacingHead"> {{blank.fourfive + '"'}} </td>
-        <td class="tdSpacingHead"> {{blank.fivesix + '"'}} </td>
+        <td ng-if="blank.fourfive !== null" class="tdSpacingHead"> {{blank.fourfive + '"'}} </td>
+        <td ng-if="blank.fivesix !== null" class="tdSpacingHead"> {{blank.fivesix + '"'}} </td>
       </tr>
     </table>
 <!-- print button   -->
