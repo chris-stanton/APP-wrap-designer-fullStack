@@ -12,13 +12,13 @@
     </div>
 <!-- current blank data display -->
     <div id="dataDisplay" ng-repeat="blank in sc.specificBlankObject.list">
-      <h5 class="spacingData"> MFG Name: </h5><div class="animated slideInRight"> {{blank.mfgname}} </div>
-      <h5 class="spacingData"> Blank Length: </h5><div class="animated slideInRight"> {{blank.blanklength + '"'}} </div>
-      <h5 class="spacingData"> Handle Length: </h5><div class="animated slideInRight"> {{blank.handlelength + '"'}} </div>
+      <h5 class="spacingData"> MFG Name: </h5><div class="animated slideInLeft"> {{blank.mfgname}} </div>
+      <h5 class="spacingData"> Blank Length: </h5><div class="animated slideInLeft"> {{blank.blanklength + '"'}} </div>
+      <h5 class="spacingData"> Handle Length: </h5><div class="animated slideInLeft"> {{blank.handlelength + '"'}} </div>
     </div>
 <!-- Guide size table -->
     <table class="guideSizeTable">
-      <tr ng-repeat="blank in sc.specificBlankObject.list" class="animated slideInLeft">
+      <tr ng-repeat="blank in sc.specificBlankObject.list" class="animated slideInRight">
         <td> {{"#" + blank.guidesizetiptop}} </td>
         <td> {{"#" + blank.guidesizetwo}} </td>
         <td> {{"#" + blank.guidesizethree}} </td>
@@ -31,7 +31,7 @@
     <img id="iceRod" src="assets/images/iceRod.png" class="animated rotateIn">
 <!-- guide spacing table -->
     <table class="guideSpacingTable">
-      <tr ng-repeat="blank in sc.specificBlankObject.list" class="animated slideInLeft">
+      <tr ng-repeat="blank in sc.specificBlankObject.list" class="animated slideInRight">
         <td class="tdSpacingHead"> {{blank.onetwo + '"'}} </td>
         <td class="tdSpacingHead"> {{blank.twothree + '"'}} </td>
         <td class="tdSpacingHead"> {{blank.threefour + '"'}} </td>
