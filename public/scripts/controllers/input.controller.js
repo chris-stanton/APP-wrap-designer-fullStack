@@ -29,7 +29,9 @@ myApp.controller('InputController',['FactoryFactory', '$firebaseAuth', '$locatio
       wrapView();
         swal("You Are Logged In!", "", "success");
         console.log("Firebase Authenticated as: ", firebaseUser.user.displayName);
+        console.log(firebaseUser.user.email)
         self.photo = firebaseUser.user.photoURL;
+        self.email = firebaseUser.user.email;
         //console.log("Firebase Authenticated as: ", firebaseUser.user.email);
     }).catch(function(error) {
         console.log("Authentication failed: ", error);

@@ -4,9 +4,11 @@
     <button type="button" name="button" class="authButtons" ng-click="ic.authUser()"> Login </button>
     <button type="button" name="button" class="authButtons" ng-click="ic.deAuthUser()"> Logout </button>
     <button type="button" name="button" class="authButtons"><a ng-href="https://accounts.google.com/SignUp?hl=en"> Register </a></button>
+    <img id="authImage" src="{{ic.photo}}" alt=""> {{ic.email}}
   </div>
+
 <!-- element container -->
-  <div class="center">
+  <div ng-hide="ic.email === NULL" class="center">
 <!-- blank stat's submit start -->
     <h1 class="animated slideInRight"> Add New Blank! </h1>
 <!-- top page inputs -->
@@ -137,7 +139,7 @@
 <!-- end of blank inputs start of threat input -->
 
 <!-- element container div -->
-    <div class="center">
+    <div ng-hide="ic.email === NULL" class="center">
 <!-- thread color sumbit start -->
       <h1 class="animated slideInRight"> Add New Thread! </h1>
         <div id="threadInputDiv">

@@ -123,6 +123,14 @@
   margin: 5px 3px 0px 0px;
 }
 
+#authImage {
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  border: 0px;
+  outline-color: #ffffff;
+}
+
 /*info input div container*/
 #inputInputs {
   display: inline-block;
