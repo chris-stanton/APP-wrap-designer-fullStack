@@ -22,12 +22,16 @@ myApp.controller('InputController',['FactoryFactory', '$firebaseAuth', '$locatio
 
 //google authenticate bellow
   var auth = $firebaseAuth();
+//notyf must have
+  var notyf = new Notyf();
 
+//google login authentication
   self.authUser = function(){
     // console.log("auth clicked");
     auth.$signInWithPopup("google").then(function(firebaseUser) {
       wrapView();
-        swal("You Are Logged In!", "", "success");
+        notyf.confirm('You Are Logged In');
+        // swal("You Are Logged In", "", "success");
         console.log("Firebase Authenticated as: ", firebaseUser.user.displayName);
         console.log(firebaseUser.user.email)
         self.photo = firebaseUser.user.photoURL;

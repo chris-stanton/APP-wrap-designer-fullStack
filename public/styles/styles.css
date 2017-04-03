@@ -92,30 +92,26 @@
 .wrapTable {
   padding-top: 30px;
 }
-
 /*table column thread image*/
 .tdThread {
   height: 30px;
+  border-radius: 1px;
 }
-
 /*table column blank image*/
 .tdBlank {
   height: 25px;
-  width: 300px;
+  width: 320px;
 }
-
 /*# of turns input*/
 .selectorInput {
   width: 40px;
 }
-
 /*container holding all selects and inputs*/
 #viewSelecterCenter{
   text-align: center;
   margin: 80px 0px 10px 0px;
   display: block;
 }
-
 /*print button*/
 #printButtonWrap {
   margin: 12px 0px 80px 1100px;
@@ -144,32 +140,27 @@
   border: 0px;
   border-style: none;
 }
-
 /*info input div container*/
 #inputInputs {
   display: inline-block;
   text-align: center;
 }
-
 /*guide input div container*/
 #guideInputTable {
   font-size: 12px;
   width: 80%;
 }
-
 /*guide input div container*/
 #spacingInputTable {
   font-size: 12px;
   width: 80%;
 }
-
 /*outer container for all input divs*/
 #inputDiv {
   margin: 40px 0px 40px 0px;
   font-size: 14px;
   display: block;
 }
-
 /*input divs*/
 #threadInputDiv {
   display: inline-block;
@@ -180,19 +171,16 @@
 #statsButton {
   margin: 20px 0px 100px 0px;
 }
-
 /*threat submit button*/
 #threadButton {
   margin: 20px 0px 40px 0px;
 }
-
 /*centers 'measurements (guide to guide)'*/
 #thCenter {
   text-align: center;
   font-size: 22px;
   margin: 20px 0px 20px 0px;
 }
-
 /*centers all threat elemnts*/
 .center {
   text-align: center;
@@ -214,17 +202,23 @@
 /*<----------- ADMIN VIEW ----------->*/
 /*<---------------------------------->*/
 
+/*login container*/
 #adminLoginDiv {
   text-align: center;
-  font-size: 25px;
   margin-top: 175px;
 }
-
+/*login heading*/
+#adminLoginHeading {
+  font-size: 35px;
+  text-align: center;
+  margin-top: 175px;
+}
+/*login input*/
 #adminLogin {
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
 }
-
+/*blankj stats heading*/
 #blankHeading {
   font-size: 22px;
   margin-left: 30px;
@@ -257,12 +251,10 @@
   padding: 3px;
   font-size: 12px;
 }
-
 /*delete/update buttons*/
 .upDelete {
   width: 75px;
 }
-
 /*column headings*/
 .titleCenter {
   text-align: center;
