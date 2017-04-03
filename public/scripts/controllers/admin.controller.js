@@ -3,7 +3,7 @@ myApp.controller('AdminController', ['FactoryFactory', function(FactoryFactory) 
   console.log('AdminController running');
 
   var self = this;
-
+  
   self.message = "Admin View Works";
 //all blanks object from factory
   self.adminBlankFactoryObject = FactoryFactory.adminBlankFactoryObject;
