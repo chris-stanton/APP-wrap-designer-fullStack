@@ -133,6 +133,10 @@
   margin: 5px 3px 0px 0px;
 }
 
+#loginView {
+  margin-top: 150px;
+}
+
 #authImage {
   width: 25px;
   height: 25px;
@@ -149,7 +153,7 @@
 
 /*guide input div container*/
 #guideInputTable {
-  font-size: 14px;
+  font-size: 12px;
   width: 80%;
 }
 

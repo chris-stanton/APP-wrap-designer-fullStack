@@ -1,12 +1,14 @@
 
+
 <!-- authentication login/logout/register -->
   <div class="authButtons">
-    <button type="button" name="button" class="authButtons" ng-click="ic.authUser()"> Login </button>
-    <button type="button" name="button" class="authButtons" ng-click="ic.deAuthUser()"> Logout </button>
-    <button type="button" name="button" class="authButtons"><a ng-href="https://accounts.google.com/SignUp?hl=en"> Register </a></button>
+    <button type="button" ng-show="ic.email === NULL" class="authButtons" ng-click="ic.authUser()"> Login </button>
+    <button type="button" ng-hide="ic.email === NULL" class="authButtons" ng-click="ic.deAuthUser()"> Logout </button>
+    <button type="button" ng-show="ic.email === NULL" class="authButtons"><a ng-href="https://accounts.google.com/SignUp?hl=en"> Register </a></button>
     <img ng-hide="ic.email === NULL" id="authImage" src="{{ic.photo}}" alt=""> {{ic.email}}
   </div>
-
+<!-- heading when not logged in -->
+  <h1 ng-show="ic.email === NULL" id="loginView"> Must Be Logged In To View </h1>
 <!-- element container -->
   <div ng-hide="ic.email === NULL" class="center">
 <!-- blank stat's submit start -->
@@ -16,31 +18,31 @@
         <td>
           <div id="inputInputs" class="animated slideInLeft">
             <label for="blankName"> Blank Name </label>
-              <input type="text" name="blankName" placeholder="blank name" ng-model="ic.newBlankOrder.blankName">
+              <input type="text" name="blankName" placeholder="" ng-model="ic.newBlankOrder.blankName">
           </div>
         </td>
         <td>
           <div id="inputInputs" class="animated slideInLeft">
             <label for="mfgName"> MFG Name </label>
-              <input type="text" name="mfgName" placeholder="mfg name" ng-model="ic.newBlankOrder.mfgName">
+              <input type="text" name="mfgName" placeholder="" ng-model="ic.newBlankOrder.mfgName">
           </div>
         </td>
         <td>
           <div id="inputInputs" class="animated slideInLeft">
             <label for="blankLength"> Blank Length </label>
-              <input type="text" name="blankLength" placeholder='blank length "' ng-model="ic.newBlankOrder.blankLength">
+              <input type="text" name="blankLength" placeholder='"' ng-model="ic.newBlankOrder.blankLength">
           </div>
         </td>
         <td>
           <div id="inputInputs" class="animated slideInLeft">
             <label for="blankMaterial"> Blank Material </label>
-              <input type="text" name="blankMaterial" placeholder="blank material" ng-model="ic.newBlankOrder.blankMaterial">
+              <input type="text" name="blankMaterial" placeholder="" ng-model="ic.newBlankOrder.blankMaterial">
           </div>
         </td>
         <td>
           <div id="inputInputs" class="animated slideInLeft">
             <label for="handleLength"> Handle Length </label>
-              <input type="text" name="handleLength" placeholder='handle length "' ng-model="ic.newBlankOrder.handleLength">
+              <input type="text" name="handleLength" placeholder='"' ng-model="ic.newBlankOrder.handleLength">
           </div>
         </td>
       </table>
@@ -56,37 +58,37 @@
             <td class="animated slideInRight">
               <div>
                 <label for="tipTip"> Tip-Top </label>
-                  <input type="text" name="tipTop" placeholder="guide #" ng-model="ic.newBlankOrder.guideSizeTipTop">
+                  <input type="text" name="tipTop" placeholder="#" ng-model="ic.newBlankOrder.guideSizeTipTop">
               </div>
             </td>
             <td class="animated slideInRight" >
               <div>
                 <label for="guideTwo"> Second </label>
-                  <input type="text" name="guidetwo" placeholder="guide #" ng-model="ic.newBlankOrder.guideSizeTwo">
+                  <input type="text" name="guidetwo" placeholder="#" ng-model="ic.newBlankOrder.guideSizeTwo">
               </div>
             </td>
             <td class="animated slideInRight" >
               <div>
                 <label for="guideThree"> Third </label>
-                  <input type="text" name="guideThree" placeholder="guide #" ng-model="ic.newBlankOrder.guideSizeThree">
+                  <input type="text" name="guideThree" placeholder="#" ng-model="ic.newBlankOrder.guideSizeThree">
               </div>
             </td>
             <td class="animated slideInRight" >
               <div>
                 <label for="guideFour"> Fourth </label>
-                  <input type="text" name="guideFour" placeholder="guide #" ng-model="ic.newBlankOrder.guideSizeFour">
+                  <input type="text" name="guideFour" placeholder="#" ng-model="ic.newBlankOrder.guideSizeFour">
               </div>
             </td>
             <td class="animated slideInRight" >
               <div>
                 <label for="guideFive"> Fifth </label>
-                  <input type="text" name="guideFive" placeholder="guide #" ng-model="ic.newBlankOrder.guideSizeFive">
+                  <input type="text" name="guideFive" placeholder="#" ng-model="ic.newBlankOrder.guideSizeFive">
               </div>
             </td>
             <td class="animated slideInRight" >
               <div>
                 <label for="guideSix"> Sixth </label>
-                  <input type="text" name="guideSix" placeholder="guide #" ng-model="ic.newBlankOrder.guideSizeSix">
+                  <input type="text" name="guideSix" placeholder="#" ng-model="ic.newBlankOrder.guideSizeSix">
               </div>
             </td>
           </tr>
@@ -100,31 +102,31 @@
           <td class="animated slideInRight">
             <div>
               <label for="oneTwo"> TipTop - Second </label>
-                <input type="text" name="oneTwo" placeholder='measurement "' ng-model="ic.newBlankOrder.oneTwo">
+                <input type="text" name="oneTwo" placeholder='"' ng-model="ic.newBlankOrder.oneTwo">
             </div>
           </td>
           <td class="animated slideInRight">
             <div>
               <label for="twoThree"> Second Guide - Third </label>
-                <input type="text" name="twoThree" placeholder='measurement "' ng-model="ic.newBlankOrder.twoThree">
+                <input type="text" name="twoThree" placeholder='"' ng-model="ic.newBlankOrder.twoThree">
             </div>
           </td>
           <td class="animated slideInRight">
             <div>
               <label for="threeFour"> Third Guide - Fourth </label>
-                <input type="text" name="threeFour" placeholder='measurement "' ng-model="ic.newBlankOrder.threeFour">
+                <input type="text" name="threeFour" placeholder='"' ng-model="ic.newBlankOrder.threeFour">
             </div>
           </td>
           <td class="animated slideInRight">
             <div>
               <label for="fourFive"> Fourth Guide - Fifth </label>
-                <input type="text" name="fourFive" placeholder='measurement "' ng-model="ic.newBlankOrder.fourFive">
+                <input type="text" name="fourFive" placeholder='"' ng-model="ic.newBlankOrder.fourFive">
             </div>
           </td>
           <td class="animated slideInRight">
             <div>
               <label for="fiveSix"> Fifth Guide - Sixth </label>
-                <input type="text" name="fiveSix" placeholder='measurement "' ng-model="ic.newBlankOrder.fiveSix">
+                <input type="text" name="fiveSix" placeholder='"' ng-model="ic.newBlankOrder.fiveSix">
             </div>
           </td>
         </tr>
