@@ -203,13 +203,23 @@
 #iceRod {
   width: 100%;
   margin-left: 150px;
-
 }
 
 
 /*<---------------------------------->*/
 /*<----------- ADMIN VIEW ----------->*/
 /*<---------------------------------->*/
+
+#adminLoginDiv {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 175px;
+}
+
+#adminLogin {
+  text-align: center;
+  font-size: 25px;
+}
 
 #blankHeading {
   font-size: 22px;
