@@ -140,6 +140,11 @@
   border: 0px;
   border-style: none;
 }
+/*google auth picture heading*/
+#authImageTitle {
+  height: 120px;
+  margin: 0px -10px 0px -10px;
+}
 /*info input div container*/
 #inputInputs {
   display: inline-block;
@@ -255,6 +260,7 @@
 .upDelete {
   width: 75px;
 }
+
 /*column headings*/
 .titleCenter {
   text-align: center;

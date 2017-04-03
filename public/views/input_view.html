@@ -8,7 +8,7 @@
     <img ng-hide="ic.email === NULL" id="authImage" src="{{ic.photo}}" alt=""> {{ic.email}}
   </div>
 <!-- heading when not logged in -->
-  <h1 ng-show="ic.email === NULL" id="loginView"> Must Be Logged In To View </h1>
+  <h1 ng-show="ic.email === NULL" id="loginView"> Must Be <img id="authImageTitle" src="assets/images/auth.jpg" alt=""> To View </h1>
 <!-- element container -->
   <div ng-hide="ic.email === NULL" class="center">
 <!-- blank stat's submit start -->

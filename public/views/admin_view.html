@@ -1,12 +1,12 @@
 
 
-<!-- admin rights -->
-<div ng-hide="ac.userEmail === 'test@gmail.com'" id="adminLoginDiv">
+<!-- admin rights email-->
+<div ng-hide="ac.userEmail === 'password'" id="adminLoginDiv">
   <h5 id="adminLoginHeading" class="animated slideInRight"> Login </h5>
-    <input id="adminLogin" class="animated slideInLeft" type="text" ng-hide="ac.userEmail === 'test@gmail.com'" placeholder="E-Mail Address" ng-model="ac.userEmail">
+    <input id="adminLogin" class="animated slideInLeft" type="password" ng-hide="ac.userEmail === 'test@gmail.com'" placeholder="E-Mail Address" ng-model="ac.userEmail">
 </div>
-<!-- container div -->
-  <div ng-show="ac.userEmail === 'test@gmail.com'">
+<!-- container div email-->
+  <div ng-show="ac.userEmail === 'password'">
     <h4 id="blankHeading"> Blanks Waiting Approval: </h4>
       <table id="adminTable" ng-repeat="blank in ac.adminBlankFactoryObject.list">
         <tr id="adminTable">
