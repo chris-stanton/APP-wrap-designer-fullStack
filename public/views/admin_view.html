@@ -1,7 +1,12 @@
 
 
-  <h1> Admin </h1>
-    <h4 id="blankHeading"> Blanks Waiting Approval: </h4>
+<h1> Admin </h1>
+
+<!-- admin rights -->
+<input type="text" ng-hide="ac.userEmail === 'prime@gmail.com'" ng-model="ac.userEmail">
+<!-- container div -->
+  <div ng-show="ac.userEmail === 'prime@gmail.com'">
+    <h4 ng-hide="" id="blankHeading"> Blanks Waiting Approval: </h4>
       <table id="adminTable" ng-repeat="blank in ac.adminBlankFactoryObject.list">
         <tr id="adminTable">
           <td class="adminTd">
@@ -130,3 +135,5 @@
         </tr>
       </table>
     </div>
+<!-- ending container div -->
+  </div>
