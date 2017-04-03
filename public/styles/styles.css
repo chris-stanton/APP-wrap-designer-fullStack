@@ -123,16 +123,16 @@
 /*<---------------------------------->*/
 
 /*authentication buttons*/
-.authButtons {
+#authButtonsInput {
   text-align: right;
   font-size: 10px;
   margin: 5px 3px 0px 0px;
 }
-
+/*heading and input container*/
 #loginView {
   margin-top: 150px;
 }
-
+/*google image*/
 #authImage {
   width: 25px;
   height: 25px;
@@ -140,10 +140,24 @@
   border: 0px;
   border-style: none;
 }
+/*adjusts the green arrow*/
+#arrow{
+  text-align: right;
+  margin: 10px 90px 0px 0px;
+  font-family: fantasy;
+  font-size: 16px;
+}
+/*text by arrow*/
+#arrowImage{
+  height: 30px;
+  text-align: right;
+  margin: 0px 8px 0px 0px;
+  font-family: fantasy;
+}
 /*google auth picture heading*/
 #authImageTitle {
-  height: 120px;
-  margin: 0px -10px 0px -10px;
+  height: 75px;
+  margin: 0px 0px 0px 0px;
 }
 /*info input div container*/
 #inputInputs {
