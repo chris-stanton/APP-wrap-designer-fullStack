@@ -15,7 +15,7 @@
 
 ###### Before the user can submit stats they must be Google Authenticated. To get authenticated, the user has two options in the upper right corner.  If the user has a Google account, they can simple click the login button to get authenticated.  If the user does not have an existing Google account, they can click register and be redirected to Google to create the account.  Once authenticated, the DOM will display input fields to allow the user to submit their stats.  The input fields, for guide sizes and spacing, are positioned next to a ice rod image referring to their real life relative spots.  User's stat are then passed on to be reviewed by an Admin before it is usable in the database.
 
-#### Admin View:
+#### Admin Rights/DB:
 
 ###### The admin must first be Google Authenticated before entering.  The admin will be asked to enter their Google email address that was used to authenticate with.  Once the admin has entered the view, they will have an option to edit an entry without updating to the DOM and will also have the option to delete the entry and all entry fields are editable. The Certify Entry checkbox must be checked for the submission to be seen on the view when clicking UPDATE.  All non-certified submissions will appear in this view.  
 
