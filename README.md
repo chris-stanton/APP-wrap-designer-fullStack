@@ -24,15 +24,15 @@
 ## Technologies Used:
   1. MEAN Stack
     - SQL
-    - Express.js - version 4.15.2
-    - Angular.js - version 1.6.3
+    - Express.js - version ``` 4.15.2 ```
+    - Angular.js - version ``` 1.6.3 ```
     - Node.js
-  2. Angular Animate - version 1.6.3
-  3. Firebase by Google Auth - version 3.7.2
+  2. Angular Animate - version ``` 1.6.3 ```
+  3. Firebase by Google Auth - version ``` 3.7.2 ```
   4. GIT / GitHub
   5. Sweatalerts
-  6. Notyf - version 2.0.1
-  7. Bootstrap - version 3.3.7
+  6. Notyf - version ``` 2.0.1 ```
+  7. Bootstrap - version ``` 3.3.7 ```
   8. Animate CSS
 
 ## How To Install App:

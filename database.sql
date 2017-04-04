@@ -79,4 +79,4 @@ CREATE TABLE adminEmail (
 );
 
 INSERT INTO adminEmail (userEmail)
-VALUES ('cstanton0760@yahoo.com');
+VALUES ('test@gmail.com');
