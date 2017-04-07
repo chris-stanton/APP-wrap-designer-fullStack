@@ -21,7 +21,7 @@
 
 ---
 
-## Technologies Used:
+## Technologies Used
   1. MEAN Stack
     - SQL
     - Express.js - version ``` 4.15.2 ```
@@ -35,7 +35,8 @@
   7. Bootstrap - version ``` 3.3.7 ```
   8. Animate CSS
 
-## How To Install App:
+
+## How To Install App
   1. Download zip file
   2. Open terminal and navigate into solo-project folder
   3. Run commands:
@@ -46,3 +47,14 @@
     - Download and install SQL DB client to aide in creating the DB
     - Cut and paste code from database.sql file into 3rd party software from the step pervious
     - You will be creating and populating four tables newBlanks, threads, adminEmail and blankColors
+
+---
+
+## License
+##### Copyright 2017 Chris Stanton
+
+###### Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+###### The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+###### THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
