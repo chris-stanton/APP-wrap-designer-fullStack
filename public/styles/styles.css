@@ -292,6 +292,13 @@
   margin-left: 30px;
 }
 
+#noData {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 150px;
+  text-shadow: 3px 3px #24ee08;
+}
+
 /*<---------------------------------->*/
 /*<------------- footer ------------->*/
 /*<---------------------------------->*/

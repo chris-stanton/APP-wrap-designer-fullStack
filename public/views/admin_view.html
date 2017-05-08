@@ -1,13 +1,14 @@
 
 
-<!-- admin rights email-->
+<!-- admin rights email login-->
 <div ng-hide="ac.userEmail === 'password'" id="adminLoginDiv">
   <h5 id="adminLoginHeading" class="animated slideInRight"> Login </h5>
     <input id="adminLogin" class="animated slideInLeft" type="password" ng-hide="ac.userEmail === 'test@gmail.com'" placeholder="E-Mail Address" ng-model="ac.userEmail">
 </div>
+
 <!-- container div email-->
   <div ng-show="ac.userEmail === 'password'">
-    <h4 id="blankHeading"> Blanks Waiting Approval: </h4>
+    <h4 ng-hide="ac.adminBlankFactoryObject.list.length === 0" id="blankHeading"> Blanks Waiting Approval: </h4>
       <table id="adminTable" ng-repeat="blank in ac.adminBlankFactoryObject.list">
         <tr id="adminTable">
           <td class="adminTd">
@@ -94,10 +95,9 @@
           </tr>
         </table>
 
-
 <!-- thread dims -->
   <div id="tableDiv">
-    <h4 id="threadHeading"> Threads Waiting Approval: </h4>
+    <h4 ng-hide="ac.adminThreadFactoryObject.list.length === 0" id="threadHeading"> Threads Waiting Approval: </h4>
     <!-- need to create path -->
       <table id="adminTable" ng-repeat="thread in ac.adminThreadFactoryObject.list">
         <tr id="adminTable">
@@ -136,5 +136,9 @@
         </tr>
       </table>
     </div>
-<!-- ending container div -->
+
+<!-- heading when no data to approve -->
+    <div ng-show="ac.adminThreadFactoryObject.list.length === 0 && ac.adminBlankFactoryObject.list.length  === 0" id="noData" class="animated bounceInUp"> You Have No Data To Approve </div>
+
+<!-- ending password container div -->
   </div>

@@ -3,12 +3,13 @@ myApp.controller('AdminController', ['FactoryFactory', function(FactoryFactory) 
   console.log('AdminController running');
 
   var self = this;
-  
+
   self.message = "Admin View Works";
 //all blanks object from factory
   self.adminBlankFactoryObject = FactoryFactory.adminBlankFactoryObject;
 //all threads object from factory
   self.adminThreadFactoryObject = FactoryFactory.adminThreadFactoryObject;
+console.log(self.adminThreadFactoryObject.list);
 //all admin level email addresses
   self.adminEmailList = FactoryFactory.adminEmailFactoryObject;
 
