@@ -5,11 +5,12 @@ myApp.controller('AdminController', ['FactoryFactory', function(FactoryFactory) 
   var self = this;
 
   self.message = "Admin View Works";
+  self.word = "password";
+  
 //all blanks object from factory
   self.adminBlankFactoryObject = FactoryFactory.adminBlankFactoryObject;
 //all threads object from factory
   self.adminThreadFactoryObject = FactoryFactory.adminThreadFactoryObject;
-console.log(self.adminThreadFactoryObject.list);
 //all admin level email addresses
   self.adminEmailList = FactoryFactory.adminEmailFactoryObject;
 

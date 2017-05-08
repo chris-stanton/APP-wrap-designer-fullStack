@@ -1,13 +1,13 @@
 
 
 <!-- admin rights email login-->
-<div ng-hide="ac.userEmail === 'password'" id="adminLoginDiv">
+<div ng-hide="ac.userEmail === ac.word" id="adminLoginDiv">
   <h5 id="adminLoginHeading" class="animated slideInRight"> Login </h5>
-    <input id="adminLogin" class="animated slideInLeft" type="password" ng-hide="ac.userEmail === 'test@gmail.com'" placeholder="E-Mail Address" ng-model="ac.userEmail">
+    <input id="adminLogin" class="animated slideInLeft" type="password" placeholder="E-Mail Address" ng-model="ac.userEmail">
 </div>
 
 <!-- container div email-->
-  <div ng-show="ac.userEmail === 'password'">
+  <div ng-show="ac.userEmail === ac.word">
     <h4 ng-hide="ac.adminBlankFactoryObject.list.length === 0" id="blankHeading"> Blanks Waiting Approval: </h4>
       <table id="adminTable" ng-repeat="blank in ac.adminBlankFactoryObject.list">
         <tr id="adminTable">
@@ -138,7 +138,7 @@
     </div>
 
 <!-- heading when no data to approve -->
-    <div ng-show="ac.adminThreadFactoryObject.list.length === 0 && ac.adminBlankFactoryObject.list.length  === 0" id="noData" class="animated bounceInUp"> You Have No Data To Approve </div>
+    <div ng-show="ac.adminThreadFactoryObject.list.length === 0 && ac.adminBlankFactoryObject.list.length  === 0" id="noData" class="animated bounceInUp"> There are no submitted stats to approve </div>
 
 <!-- ending password container div -->
   </div>
