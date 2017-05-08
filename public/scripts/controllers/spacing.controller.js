@@ -17,12 +17,6 @@ myApp.controller('SpacingController', ['FactoryFactory', function(FactoryFactory
 //returned object from factory
   self.specificBlankObject = FactoryFactory.specificBlankObject;
 
-  var blankImageGuides = FactoryFactory.specificBlankObject.list;
-  self.guidesizesix = blankImageGuides;
-  self.guidesizefive = blankImageGuides;
-  self.guidesizefour = blankImageGuides;
-  console.log(blankImageGuides);
-
 //print function
   self.print = function(){
     window.print();
