@@ -20,6 +20,11 @@ myApp.controller('InputController',['FactoryFactory', '$firebaseAuth', '$locatio
     $location.path('/input_view');
   }//wrapView()
 
+//redirect after logout
+  function spacingView() {
+    $location.path('/spacing_view');
+  }//wrapView()
+
 //google authenticate bellow
   var auth = $firebaseAuth();
 //notyf must have
@@ -48,6 +53,7 @@ myApp.controller('InputController',['FactoryFactory', '$firebaseAuth', '$locatio
     auth.$signOut().then(function() {
         swal("You've Logged Out!", "", "success");
         console.log('Logging the user out!');
+        spacingView();
      });
   };//end of self.deAuthUser()
 
