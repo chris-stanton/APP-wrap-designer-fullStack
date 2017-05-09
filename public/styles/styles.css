@@ -35,19 +35,48 @@
 /*<---------------------------------->*/
 
 /*guide size table*/
-.guideSizeTable{
-  width: 41%;
-  text-align: right;
-  margin-left: 90px;
+.guideSizeTable6 {
+  width: 48%;
+  text-align: center;
+  margin-left: 120px;
   margin-top: 30px;
   margin-bottom: -15px;
 }
 
+.guideSizeTable5 {
+  width: 45%;
+  margin-left: 160px;
+  margin-top: 30px;
+  margin-bottom: -15px;
+  text-align: center;
+}
+
+.guideSizeTable4 {
+  width: 41%;
+  text-align: center;
+  margin-left: 200px;
+  margin-top: 30px;
+  margin-bottom: -15px;
+}
+
+
 /*guide spacing table*/
-.guideSpacingTable {
-  width: 37%;
+.guideSpacingTable6 {
+  width: 34%;
+  text-align: center;
+  margin-left: 138px;
+}
+
+.guideSpacingTable5 {
+  width: 36%;
+  text-align: center;
+  margin-left: 185px;
+}
+
+.guideSpacingTable4 {
+  width: 28%;
   text-align: right;
-  margin-left: 90px;
+  margin-left: 225px;
 }
 
 /*mfg length handle length display*/
@@ -56,11 +85,222 @@
   font-family: serif;
 }
 
+
+
+
+
 /*headings for blank data*/
-.tdSpacingHead {
+#tdSix1 {
   font-size: 16px;
   font-family: serif;
 }
+
+#tdSix2 {
+  font-size: 16px;
+  font-family: serif;
+}
+
+#tdSix3 {
+  font-size: 16px;
+  font-family: serif;
+}
+
+#tdSix4 {
+  font-size: 16px;
+  font-family: serif;
+}
+
+#tdSix5 {
+  font-size: 16px;
+  font-family: serif;
+  padding-left: 15px;
+}
+
+#tdSix6 {
+  font-size: 16px;
+  font-family: serif;
+  padding-left: 20px;
+}
+
+#tdSix7 {
+  font-size: 16px;
+  font-family: serif;
+}
+
+#tdSix8 {
+  font-size: 16px;
+  font-family: serif;
+}
+
+#tdSix9 {
+  font-size: 16px;
+  font-family: serif;
+}
+
+#tdSix10 {
+  font-size: 16px;
+  font-family: serif;
+  padding-right: 28px;
+}
+
+#tdSix11 {
+  font-size: 16px;
+  font-family: serif;
+}
+
+
+
+#tdFive1 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+}
+
+#tdFive2 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+}
+
+#tdFive3 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+}
+
+#tdFive4 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+  padding-right: 18px;
+}
+
+#tdFive5 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+}
+
+#tdFive6 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+}
+
+#tdFive7 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+}
+
+#tdFive8 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+}
+
+#tdFive9 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+}
+
+#tdFive10 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+  padding-right: 15px;
+}
+
+#tdFive11 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+  padding-left: 10px;
+}
+
+
+
+#tdFour1 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+  border: 1px solid black;
+  margin-left: 800px;
+}
+
+#tdFour2 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+  border: 1px solid black;
+}
+
+#tdFour3 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+  border: 1px solid black;
+}
+
+#tdFour4 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+  border: 1px solid black;
+}
+
+#tdFour5 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+  border: 1px solid black;
+}
+
+#tdFour6 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+  border: 1px solid black;
+}
+
+#tdFour7 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+  border: 1px solid black;
+  padding-left: 30px;
+}
+
+#tdFour8 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+  border: 1px solid black;
+}
+
+#tdFour9 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+  border: 1px solid black;
+  width: 100px;
+  padding-left: 40px;
+}
+
+#tdFour10 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+  border: 1px solid black;
+}
+
+#tdFour11 {
+  font-size: 16px;
+  font-family: serif;
+  text-align: center;
+}
+
 
 /*bName, bLength, hLength container*/
 #dataDisplay {
@@ -215,6 +455,17 @@
   width: 100%;
   margin-left: 150px;
 }
+/*rod image between tables*/
+#iceRod5 {
+  width: 100%;
+  margin-left: 150px;
+}
+/*rod image between tables*/
+#iceRod4 {
+  width: 100%;
+  margin-left: 150px;
+}
+
 
 
 /*<---------------------------------->*/

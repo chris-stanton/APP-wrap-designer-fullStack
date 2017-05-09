@@ -20,26 +20,26 @@
 <!-- table for 6 guides -->
   <div ng-repeat="blank in sc.specificBlankObject.list" ng-show="blank.guidesizesix !== null && blank.guidesizefive !== null && blank.guidesizefour !== null">
 <!-- Guide size table -->
-    <table class="guideSizeTable">
+    <table class="guideSizeTable6">
       <tr ng-repeat="blank in sc.specificBlankObject.list" class="animated slideInRight">
-        <td> {{"#" + blank.guidesizetiptop}} </td>
-        <td> {{"#" + blank.guidesizetwo}} </td>
-        <td> {{"#" + blank.guidesizethree}} </td>
-        <td> {{"#" + blank.guidesizefour}} </td>
-        <td ng-if="blank.guidesizefive !== null"> {{"#" + blank.guidesizefive}} </td>
-        <td ng-if="blank.guidesizesix !== null"> {{"#" + blank.guidesizesix}} </td>
+        <td id="tdSix1"> {{"#" + blank.guidesizetiptop}} </td>
+        <td id="tdSix2"> {{"#" + blank.guidesizetwo}} </td>
+        <td id="tdSix3"> {{"#" + blank.guidesizethree}} </td>
+        <td id="tdSix4"> {{"#" + blank.guidesizefour}} </td>
+        <td id="tdSix5" ng-if="blank.guidesizefive !== null"> {{"#" + blank.guidesizefive}} </td>
+        <td id="tdSix6" ng-if="blank.guidesizesix !== null"> {{"#" + blank.guidesizesix}} </td>
       </tr>
     </table>
 <!-- reference image -->
     <img id="iceRod6" src="assets/images/iceRod6.png" class="animated rotateIn">
 <!-- guide spacing table -->
-    <table class="guideSpacingTable">
+    <table class="guideSpacingTable6">
       <tr ng-repeat="blank in sc.specificBlankObject.list" class="animated slideInRight">
-        <td class="tdSpacingHead"> {{blank.onetwo + '"'}} </td>
-        <td class="tdSpacingHead"> {{blank.twothree + '"'}} </td>
-        <td class="tdSpacingHead"> {{blank.threefour + '"'}} </td>
-        <td ng-if="blank.fourfive !== null" class="tdSpacingHead"> {{blank.fourfive + '"'}} </td>
-        <td ng-if="blank.fivesix !== null" class="tdSpacingHead"> {{blank.fivesix + '"'}} </td>
+        <td id="tdSix7"> {{blank.onetwo + '"'}} </td>
+        <td id="tdSix8"> {{blank.twothree + '"'}} </td>
+        <td id="tdSix9"> {{blank.threefour + '"'}} </td>
+        <td id="tdSix10" ng-if="blank.fourfive !== null"> {{blank.fourfive + '"'}} </td>
+        <td id="tdSix11" ng-if="blank.fivesix !== null"> {{blank.fivesix + '"'}} </td>
       </tr>
     </table>
   </div>
@@ -47,26 +47,26 @@
 <!-- table for 5 guides -->
   <div ng-repeat="blank in sc.specificBlankObject.list" ng-show="blank.guidesizesix === null && blank.guidesizefive !== null && blank.guidesizefour !== null">
 <!-- Guide size table -->
-    <table class="guideSizeTable">
+    <table class="guideSizeTable5">
       <tr ng-repeat="blank in sc.specificBlankObject.list" class="animated slideInRight">
-        <td> {{"#" + blank.guidesizetiptop}} </td>
-        <td> {{"#" + blank.guidesizetwo}} </td>
-        <td> {{"#" + blank.guidesizethree}} </td>
-        <td> {{"#" + blank.guidesizefour}} </td>
-        <td <td ng-if="blank.guidesizefive !== null"> {{"#" + blank.guidesizefive}} </td>
-        <td <td ng-if="blank.guidesizesix !== null"> {{"#" + blank.guidesizesix}} </td>
+        <td id="tdFive1"> {{"#" + blank.guidesizetiptop}} </td>
+        <td id="tdFive2"> {{"#" + blank.guidesizetwo}} </td>
+        <td id="tdFive3"> {{"#" + blank.guidesizethree}} </td>
+        <td id="tdFive4"> {{"#" + blank.guidesizefour}} </td>
+        <td id="tdFive5" ng-if="blank.guidesizefive !== null"> {{"#" + blank.guidesizefive}} </td>
+        <td id="tdFive6" ng-if="blank.guidesizesix !== null"> {{"#" + blank.guidesizesix}} </td>
       </tr>
     </table>
 <!-- reference image -->
     <img id="iceRod6" src="assets/images/iceRod5.png" class="animated rotateIn">
 <!-- guide spacing table -->
-    <table class="guideSpacingTable">
+    <table class="guideSpacingTable5">
       <tr ng-repeat="blank in sc.specificBlankObject.list" class="animated slideInRight">
-        <td class="tdSpacingHead"> {{blank.onetwo + '"'}} </td>
-        <td class="tdSpacingHead"> {{blank.twothree + '"'}} </td>
-        <td class="tdSpacingHead"> {{blank.threefour + '"'}} </td>
-        <td ng-if="blank.fourfive !== null" class="tdSpacingHead"> {{blank.fourfive + '"'}} </td>
-        <td ng-if="blank.fivesix !== null" class="tdSpacingHead"> {{blank.fivesix + '"'}} </td>
+        <td id="tdFive7"> {{blank.onetwo + '"'}} </td>
+        <td id="tdFive8"> {{blank.twothree + '"'}} </td>
+        <td id="tdFive9"> {{blank.threefour + '"'}} </td>
+        <td id="tdFive10" ng-if="blank.fourfive !== null"> {{blank.fourfive + '"'}} </td>
+        <td id="tdFive11" ng-if="blank.fivesix !== null"> {{blank.fivesix + '"'}} </td>
       </tr>
     </table>
   </div>
@@ -74,26 +74,26 @@
 <!-- table for 4 guides -->
   <div ng-repeat="blank in sc.specificBlankObject.list" ng-show="blank.guidesizesix === null && blank.guidesizefive === null && blank.guidesizefour !== null">
 <!-- Guide size table -->
-    <table class="guideSizeTable">
-      <tr ng-repeat="blank in sc.specificBlankObject.list" class="animated slideInRight">
-        <td> {{"#" + blank.guidesizetiptop}} </td>
-        <td> {{"#" + blank.guidesizetwo}} </td>
-        <td> {{"#" + blank.guidesizethree}} </td>
-        <td> {{"#" + blank.guidesizefour}} </td>
-        <td <td ng-if="blank.guidesizefive !== null"> {{"#" + blank.guidesizefive}} </td>
-        <td <td ng-if="blank.guidesizesix !== null"> {{"#" + blank.guidesizesix}} </td>
+    <table class="guideSizeTable4">
+      <tr id="tdFour1" ng-repeat="blank in sc.specificBlankObject.list" class="animated slideInRight">
+        <td id="tdFour1"> {{"#" + blank.guidesizetiptop}} </td>
+        <td id="tdFour2"> {{"#" + blank.guidesizetwo}} </td>
+        <td id="tdFour3"> {{"#" + blank.guidesizethree}} </td>
+        <td id="tdFour4"> {{"#" + blank.guidesizefour}} </td>
+        <td id="tdFour5" ng-if="blank.guidesizefive !== null"> {{"#" + blank.guidesizefive}} </td>
+        <td id="tdFour6" ng-if="blank.guidesizesix !== null"> {{"#" + blank.guidesizesix}} </td>
       </tr>
     </table>
 <!-- reference image -->
     <img id="iceRod6" src="assets/images/iceRod4.png" class="animated rotateIn">
 <!-- guide spacing table -->
-    <table class="guideSpacingTable">
+    <table class="guideSpacingTable4">
       <tr ng-repeat="blank in sc.specificBlankObject.list" class="animated slideInRight">
-        <td class="tdSpacingHead"> {{blank.onetwo + '"'}} </td>
-        <td class="tdSpacingHead"> {{blank.twothree + '"'}} </td>
-        <td class="tdSpacingHead"> {{blank.threefour + '"'}} </td>
-        <td ng-if="blank.fourfive !== null" class="tdSpacingHead"> {{blank.fourfive + '"'}} </td>
-        <td ng-if="blank.fivesix !== null" class="tdSpacingHead"> {{blank.fivesix + '"'}} </td>
+        <td id="tdFour7"> {{blank.onetwo + '"'}} </td>
+        <td id="tdFour8"> {{blank.twothree + '"'}} </td>
+        <td id="tdFour9"> {{blank.threefour + '"'}} </td>
+        <td id="tdFour10" ng-if="blank.fourfive !== null"> {{blank.fourfive + '"'}} </td>
+        <td id="tdFour11" ng-if="blank.fivesix !== null"> {{blank.fivesix + '"'}} </td>
       </tr>
     </table>
   </div>
@@ -102,15 +102,3 @@
     <div class="animated slideInLeft">
       <button type="button" name="print" ng-click="sc.print()" id="printButtonSpacing" class="c-button c-button--rounded c-button--ghost-brand"> Print </button>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-  
