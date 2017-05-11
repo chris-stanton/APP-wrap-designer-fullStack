@@ -1,8 +1,20 @@
 myApp.controller('InputController',['FactoryFactory', '$firebaseAuth', '$location', function(FactoryFactory, $firebaseAuth, $location) {
 
   console.log('InputController running');
+
   var self = this;
+
   self.testMessage = 'IC WORKING STATUS';
+
+//redirect after authentication
+  function wrapView() {
+    $location.path('/input_view');
+  }//wrapView()
+
+//redirect after logout
+  function spacingView() {
+    $location.path('/spacing_view');
+  }//wrapView()
 
 //new blank pass-through to factory
   self.addBlanks = function(){
@@ -15,19 +27,9 @@ myApp.controller('InputController',['FactoryFactory', '$firebaseAuth', '$locatio
     self.newThreadOrder = {};
   };
 
-//redirect after authentication
-  function wrapView() {
-    $location.path('/input_view');
-  }//wrapView()
-
-//redirect after logout
-  function spacingView() {
-    $location.path('/spacing_view');
-  }//wrapView()
-
-//google authenticate bellow
+//google authenticate global variable
   var auth = $firebaseAuth();
-//notyf must have
+//notyf global variable
   var notyf = new Notyf();
 
 //google login authentication
@@ -36,12 +38,9 @@ myApp.controller('InputController',['FactoryFactory', '$firebaseAuth', '$locatio
     auth.$signInWithPopup("google").then(function(firebaseUser) {
       wrapView();
         notyf.confirm('You Are Logged In');
-        // swal("You Are Logged In", "", "success");
         console.log("Firebase Authenticated as: ", firebaseUser.user.displayName);
-        console.log(firebaseUser.user.email)
-        self.photo = firebaseUser.user.photoURL;
-        self.email = firebaseUser.user.email;
-        //console.log("Firebase Authenticated as: ", firebaseUser.user.email);
+          self.photo = firebaseUser.user.photoURL;
+          self.email = firebaseUser.user.email;
     }).catch(function(error) {
         console.log("Authentication failed: ", error);
     });

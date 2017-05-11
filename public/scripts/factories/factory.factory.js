@@ -33,7 +33,6 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       method: 'GET',
       url: '/spacing/allBlanks'
     }).then(function(response) {
-      //console.log("getBlanks Request: ", response.data);
       blankFactoryObject.list = response.data;
     });
   }//end of getblanks()
@@ -55,7 +54,6 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       method: 'GET',
       url: '/color/blank'
     }).then(function(response) {
-      //console.log("update blank colors Request: ", response.data);
       blankColorFactoryObject.list = response.data;
     });
   }//end of updatecolor()
@@ -82,9 +80,7 @@ myApp.factory('FactoryFactory',['$http',function($http) {
           id_token: idToken
         }
       }).then(function(response){
-        // notyf.confirm('Blank Submitted For Approval');
         swal("Blank Submitted For Approval", "", "success");
-        //console.log("addBlank Request: ", response);
         getBlanks();
         self.newblankOrder = {};
       }).catch(function(error) {
@@ -105,7 +101,6 @@ myApp.factory('FactoryFactory',['$http',function($http) {
           id_token: idToken
         }
       }).then(function(response){
-        // notyf.confirm('Thread Submitted For Approval');
         swal("Thread Submitted For Approval", "", "success");
         self.newThreadOrder = {};
         updateColor();
@@ -122,7 +117,6 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       method: 'GET',
       url: '/admin/userEmail'
     }).then(function(response) {
-      //console.log("getBlanks Request: ", response.data);
       adminEmailFactoryObject.list = response.data;
     });
   }//end of getblanks()
@@ -134,7 +128,6 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       method: 'GET',
       url: '/admin/allBlanks'
     }).then(function(response) {
-      //console.log("getBlanks Request: ", response.data);
       adminBlankFactoryObject.list = response.data;
     }).catch(function(error) {
       swal("Values Are Incorrect", "Try Again!", "error");
@@ -150,7 +143,6 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       method: 'GET',
       url: '/admin/allThreads'
     }).then(function(response) {
-      //console.log("getBlanks Request: ", response.data);
       adminThreadFactoryObject.list = response.data;
       updateColor();
     }).catch(function(error) {
@@ -168,7 +160,6 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       data: blank
     }).then(function(response){
       notyf.confirm('Updated Blank Database');
-      // swal("Updated Blank Database", "", "success");
       getAdminBlanks();
       getBlanks();
     }).catch(function(error) {
@@ -186,7 +177,6 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       data: blank
     }).then(function(response){
       notyf.confirm('Entry Deleted');
-      // swal("Entry Deleted", "", "success");
       getAdminBlanks();
     }).catch(function(error) {
       swal("Values Are Incorrect", "Try Again!", "error");
@@ -203,7 +193,6 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       data: thread
     }).then(function(response){
       notyf.confirm('Updated Thread Database');
-      // swal("Updated Thread Database", "", "success");
       getAdminThreads();
       updateColor();
     }).catch(function(error) {
@@ -221,7 +210,6 @@ myApp.factory('FactoryFactory',['$http',function($http) {
       data: thread
     }).then(function(response){
       notyf.confirm('Entry Deleted');
-      // swal("Entry Deleted", "", "success");
       getAdminThreads();
     }).catch(function(error) {
       swal("Values Are Incorrect", "Try Again!", "error");
