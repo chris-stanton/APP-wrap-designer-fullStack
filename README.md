@@ -22,8 +22,10 @@
 
 ###### Before the user can submit stats they must be Google Authenticated. To get authenticated, the user has two options in the upper right corner.  If the user has a Google account, they can simple click the login button to get authenticated.  If the user does not have an existing Google account, they can click register and be redirected to Google to create the account.  Once authenticated, the DOM will display input fields to allow the user to submit their stats.  The input fields, for guide sizes and spacing, are positioned next to a ice rod image referring to their real life relative spots.  User's stat are then passed on to be reviewed by an Admin before it is usable in the database.
 
+
 ###### Login view:
 <img src="./public/assets/images/screenshots/statLogin.png" width="50%">
+
 
 ###### Logged in view:
 <img src="./public/assets/images/screenshots/statInput.png" width="50%">
