@@ -38,8 +38,7 @@
 <img src="./public/assets/images/screenshots/adminLogin.png" width="50%">
 
 ###### Admin stat approval:
-<img src="./public/assets/images/screenshots/adminApprove.png"
- width="50%">
+<img src="./public/assets/images/screenshots/adminApprove.png" width="50%">
 
 ###### All submittals approved:
 <img src="./public/assets/images/screenshots/adminEmpty.png" width="50%">
