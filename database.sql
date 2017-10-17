@@ -8,20 +8,23 @@ CREATE TABLE threads (
   id SERIAL PRIMARY KEY,
   mfgName VARCHAR(80) NOT NULL,
   color VARCHAR(80) NOT NULL,
-  image VARCHAR(80)
+  image VARCHAR(80),
+  threadNumber VARCHAR(80),
+  certified boolean DEFAULT false
 );
 
-INSERT INTO threads (mfgName, color, image)
-VALUES ('ProWrap', 'Neon Orange', 'assets/images/threads/neonOrange.png'),
-        ('ProWrap', 'Neon Pink', 'assets/images/threads/neonPink.png'),
-        ('ProWrap', 'Neon Green', 'assets/images/threads/neonGreen.png');
+INSERT INTO threads (mfgName, color, threadNumber, image, certified)
+VALUES ('GudeBrod', 'Black', '0001', 'assets/images/threads/001.jpg', 'TRUE'),
+        ('ProWrap', 'Neon Pink', '361', 'assets/images/threads/neonPink.png', 'TRUE'),
+        ('ProWrap', 'Neon Green', '552', 'assets/images/threads/neonGreen.png', 'FALSE');
 
 
 -- <--- blankColors database --->
 CREATE TABLE blankColors (
   id SERIAL PRIMARY KEY,
   color VARCHAR(80) NOT NULL,
-  image VARCHAR(80)
+  image VARCHAR(80),
+  mfgName VARCHAR(80)
 );
 
 INSERT INTO blankColors (color, image, mfgName)
@@ -61,15 +64,16 @@ CREATE TABLE newBlanks (
   twoThree INT NOT NULL,
   threeFour INT,
   fourFive INT,
-  fiveSix INT
+  fiveSix INT,
+  cartified boolean DEFAULT false
 );
 
 INSERT INTO newBlanks (blankName, mfgName, blankLength, blankMaterial, handleLength,
             guideSizeTipTop, guideSizeTwo, guideSizeThree, guideSizeFour, guideSizeFive, guideSizeSix
-            oneTwo, twoThree, threeFour, fourFive, fiveSix)
+            oneTwo, twoThree, threeFour, fourFive, fiveSix, certified)
 VALUES ('LongBoard', 'DH Custom Rods and Tackle', '32', 'Fiberglass', '5',
        2, 2, 3, 4, 5, 10,
-       3.25, 2.69, 3.19, 3.69, 4.25);
+       3.25, 2.69, 3.19, 3.69, 4.25, 'TRUE');
 
 
 -- <--- admin rights --->
